@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>Fredericton Street Age</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+  
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45765699-1', 'jonathancritchley.ca');
+      ga('send', 'pageview');
+    </script>  
+
+    <!-- Load D3-based reusable chart library from CDN -->
+    <link rel="stylesheet" type="text/css" href="http://rawgit.com/masayuki0812/c3/master/c3.css">
+
+    <!-- Load D3-based reusable chart library from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.14/d3.min.js"></script>
+
+    <!-- Load D3-based reusable chart library from CDN -->
+    <script src="https://rawgit.com/masayuki0812/c3/master/c3.js"></script>
+
+    <style>
+      .c3-region.y1 {
+        fill: #2b83ba;
+      }
+
+      .c3-region.y2 {
+        fill: #abdda4;
+      }
+
+      .c3-region.y3 {
+        fill: #fdae61;
+      }
+
+      .c3-region.y4 {
+        fill: #d7191c;
+      }    
+    </style>    
+
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toronto Ward Boundary Review</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" style="margin-left:5px;max-width:50px">JONATHAN CRITCHLEY</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.html">Home</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<section id="works"></section>
+	<div class="container">
+		<div class="row centered mt mb">
+			<div class="col-lg-8 col-lg-offset-2">
+				<h1>Fredericton, New Brunswick Street Age</h1>
+        <br>
+        <h3 class="lead">The following maps were produced using <a href="http://www.fredericton.ca/en/citygovernment/Catalogue.asp">City of Fredericton Open Data </a> 2016 Street Centreline.</h3> 
+        <br>                 
+        <p>Mapping street age can display interesting characteristics about a how a city has developed and grown over time.</p>          
+        <p>The City of Fredericon Open Data 2016 Street Centreline contains a "Year" attribute. While there is no metadata to explain exactly what the value in this column represents, it contains values from 1918-2015. </p>                                         
+			</div>
+
+			<div class="col-lg-10 col-lg-offset-1 mt">
+      <h2>Animated Map</h2>
+      <hr>
+				<img class="img-responsive" src="assets/img/fred/FredStr_age_dark_animated.gif">     
+			</div>
+
+      <div class="col-lg-10 col-lg-offset-1 mt">
+      <h2>Collection</h2>
+      <hr>
+        <img class="img-responsive" src="assets/img/fred/FredStr_age_dark_combo-01.png">      
+      </div>    
+
+
+      <div class="col-lg-10 col-lg-offset-1 mt">
+      <h2>Graph</h2>
+      <hr>
+                  <p>It is interesting to consider why certain road was developed at different times in the City of Fredericton’s history. In order to assess when the most road was constructed, the total road length was summed by year and graphed.
+                  </p>
+                  </br>
+                  <div id="chart" style="height:50%;width:95%; "></div>
+                  </br>
+                  <p>
+                  From this graph, it is clear that a very large amount of road in this dataset was recorded to 1973.
+                  </p>
+                  <p>
+                  While this drastic increase could be explained by the <a href="https://en.wikipedia.org/wiki/1973_Saint_John_River_Flood">1973 Saint John River Flood</a> and potential destruction and necessary rebuilding of road, it is more likely explained by the <a href="https://en.wikipedia.org/wiki/Fredericton">1973 annexation of the boroughs</a> of Silverwood, Nashwaaksis, Barker's Point and Marysville where existing roads year was assigned when the City of Fredericton took ownership.
+                  </p>
+
+                  <script>
+                  window.onload = function() {
+                    var chart = c3.generate({
+                        bindto: '#chart',
+                        data: {
+                          x: 'x',
+                          columns: [
+                            ['x', 1918,1920,1929,1931,1932,1936,1937,1938,1939,1940,1941,1942,1944,1946,1947,1948,1949,1950,1951,1952,1953,1954,1955,1956,1957,1958,1959,1960,1961,1962,1963,1964,1965,1966,1967,1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,],
+                            ['data1', 61.97,196.75,9908.16,988.16,202.67,761.16,120.28,306.36,1662.69,442.10,326.65,148.41,616.62,606.54,2645.95,159.38,3281.58,3219.51,2211.78,1373.64,5207.90,3795.26,5318.43,3861.06,1825.00,4780.82,3535.97,2082.95,6780.11,4261.41,4154.18,4364.32,4259.54,6599.73,4330.28,3375.39,3945.33,4577.10,1528.71,2721.10,194620.98,4397.92,6020.75,12439.64,11829.17,6288.80,9246.54,4930.62,5642.32,1165.00,5237.99,2434.25,3965.12,2361.69,3610.98,1305.24,6565.39,4306.01,5466.39,5807.83,12701.47,7890.12,4148.93,5772.53,15537.74,4562.17,2115.24,3259.86,685.45,6258.21,3096.96,50164.93,3074.45,4229.03,2550.60,4571.08,5444.40,3044.72,2735.20,4569.79,3580.44,5796.18,3282.52,],
+                          ],
+                        regions: {
+                          data1: [{'start':1918, 'end':2015, 'style':'dashed'}],
+                        }, 
+                        names: {
+                            data1: 'Road Length',
+                        },                        
+                        },                        
+                        legend: {
+                            show: false
+                        } ,
+                        point: {
+                          focus: {
+                            expand: {
+                              r: 1 * 8
+                            }
+                          }
+                        },
+                        regions: [
+                            {start:1918, end:1959, class:'y1'},
+                            {start:1960, end:1982, class:'y2'},
+                            {start:1983, end:1999, class:'y3'},
+                            {start:2000, end:2015, class:'y4'},
+                        ]                                                
+                    });  
+                    }                  
+
+                  </script>
+                  </br>   
+                  </p>
+                  <ul>           
+      </div>   
+
+		</div><!--/row -->
+	</div><!--/container -->
+	
+	<div id="social">
+		<div class="container" >
+			<div class="row centered">
+				<div class="col-md-4">
+					<a href="mailto:jonathan.critchley@me.com" ><i class="fa fa-envelope-o"></i></a>
+				</div>
+				<div class="col-md-4">
+					
+				</div>	
+				<div class="col-md-4">
+					<a href="https://twitter.com/Afrikanadese" target="_blank"><i class="fa fa-twitter"></i></a>
+				</div>			
+			</div><!--/row -->
+		</div><!--/container -->
+	</div><!--/social -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>

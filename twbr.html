@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>Toronto Ward Boundary Review</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Mapbox -->
+    <script src='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v2.2.1/mapbox.css' rel='stylesheet' />
+    
+    <!-- Mapbox CSS -->
+    <style>
+      #map { height: 600px; width:100%; min-width:100%; }
+      .menu-ui {
+        background:#fff;
+        position:absolute;
+        top:10px;right:10px;
+        z-index:1;
+        border-radius:3px;
+        width:120px;
+        border:1px solid rgba(0,0,0,0.4);
+        }
+        .menu-ui a {
+          font-size:13px;
+          color:#404040;
+          display:block;
+          margin:0;padding:0;
+          padding:5px 10px;
+          text-decoration:none;
+          border-bottom:1px solid rgba(0,0,0,0.25);
+          text-align:center;
+          }
+          .menu-ui a:first-child {
+            border-radius:3px 3px 0 0;
+            }
+          .menu-ui a:last-child {
+            border:none;
+            border-radius:0 0 3px 3px;
+            }
+          .menu-ui a:hover {
+            background:#f8f8f8;
+            color:#404040;
+            }
+          .menu-ui a.active {
+            background:#3887BE;
+            color:#FFF;
+            }
+            .menu-ui a.active:hover {
+              background:#3074a4;
+              }
+      </style>   
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45765699-1', 'jonathancritchley.ca');
+      ga('send', 'pageview');
+    </script>  
+
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toronto Ward Boundary Review</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" style="margin-left:5px;max-width:50px">JONATHAN CRITCHLEY</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.html">Home</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<section id="works"></section>
+	<div class="container">
+		<div class="row centered mt mb">
+			<div class="col-lg-8 col-lg-offset-2">
+				<h1>Toronto Ward Boundary Review</h1>
+        <br>
+				<h3 class="lead">As part of my work on the Toronto Ward Boundary Review Project at the Canadian Urban Institute, the following maps, posters and web map were created for the Ward Boundary Review <a href="http://www.drawthelines.ca/the-final-report">Final Report</a>, released May 2016. The Maps were laid out and styled in ESRI ArcMap, with custom legends created in Adobe Illustrator. The interactive web map was created using the <a href="https://mapbox.com">Mapbox</a> service.</h3>
+        <br>
+        <p>The Final Report presented a recommendation for a new ward structure consisting of 47 wards that achieves the principle of effective representation, which can be implemented for the 2018 municipal election and will last until the 2030 municipal election. A combination of physical and digital maps played an important role in presenting the location of the proposed wards boundary changes, helping to communicate the exact extents of proposed new boundaries. Printing maps at various sizes required a scalable template.</p> 
+        <p>Large size physical poster maps were printed for use in public engagements sessions. They consisted of printed color maps for each of the boundary options in combination with a clear overlay of existing ward boundary structure that could be laid on top for use in comparing and contrasting differences. </p>
+        <p>An interactive web map was also created allowing users to explore the proposed boundaries, allowing them to zoom in and out, and turn on and off boundary layers to see how they differ from each other.<p>
+        <p>These tools allowed the public and decision makers to view and assess how the different options would change the current ward structure.</p>                                
+			</div>
+
+			<div class="col-lg-10 col-lg-offset-1 mt">
+      <h2>Maps</h2>
+      <hr>
+				<img class="img-responsive" src="assets/img/twbr/TWBR_Existing.png">
+				<br>
+				<img class="img-responsive" src="assets/img/twbr/TWBR_REC.png">
+        <br>
+        <img class="img-responsive" src="assets/img/twbr/TWBR_REC_Zone.jpg">        
+			</div>
+
+      <div class="col-lg-10 col-lg-offset-1 mt">
+      <h2>Posters</h2>
+      <hr>
+        <img class="img-responsive" src="assets/img/twbr/TWBR_Physical_1.jpg">
+        <br>
+        <img class="img-responsive" src="assets/img/twbr/TWBR_Physical_2.jpg">
+      </div>
+
+      <div class="col-lg-10 col-lg-offset-1 mt">
+      <h2>Interactive Map</h2>
+      <hr>
+                  <div id='map'>
+<div class='menu-ui'>
+  <a href='#' id='existing' class='active'><b>Existing Wards</b> (44)</a>
+  <a href='#' id='FedRdng' ><b>Wards Consistent with Federal Riding Boundaries</b> (26)</a>
+  <a href='#' id='fourfourWard' ><b>Revised 44 Wards</b></a>
+  <a href='#' id='RecWard' ><b>Revised Recommended Wards</b> (47)</a>
+</div>
+</div>
+<script>
+L.mapbox.accessToken = 'pk.eyJ1IjoiY2FudXJiIiwiYSI6ImNpdDF1ZWY5ajBydTkyenBndG1kbWlwYWsifQ.iMI5KiA8YUk5Xrsc4S1dwA';
+var map = L.mapbox.map('map', 'mapbox.streets', {maxZoom: 16, minZoom:11})
+    .setView([43.7205, -79.3488], 11) ; 
+
+var tileLayer = L.mapbox.tileLayer('canurb.3mdt17jh').addTo(map);
+var gridLayer = L.mapbox.gridLayer('canurb.3mdt17jh').addTo(map);
+var gridControl = L.mapbox.gridControl(gridLayer, {follow: true}).addTo(map);
+
+var tileLayer2 = L.mapbox.tileLayer('canurb.2yaqhtmb');
+var gridLayer2 = L.mapbox.gridLayer('canurb.2yaqhtmb');
+var gridControl2 = L.mapbox.gridControl(gridLayer, {follow: true});    
+
+var tileLayer3 = L.mapbox.tileLayer('canurb.0tixl31i');
+var gridLayer3 = L.mapbox.gridLayer('canurb.0tixl31i');
+var gridControl3 = L.mapbox.gridControl(gridLayer, {follow: true});
+
+var tileLayer4 = L.mapbox.tileLayer('canurb.8emoluui');
+var gridLayer4 = L.mapbox.gridLayer('canurb.8emoluui');
+var gridControl4 = L.mapbox.gridControl(gridLayer, {follow: true}); 
+
+
+map.getContainer().querySelector('#existing').onclick = function() {
+    if (this.className === 'active') {
+        map.removeLayer(tileLayer);
+        map.removeLayer(gridLayer);
+        map.removeControl(gridControl);
+        this.className = '';
+    } else {
+        map.addLayer(tileLayer);
+        map.addLayer(gridLayer);
+        map.addControl(gridControl);
+        this.className = 'active';
+    }
+    return false;
+};
+
+map.getContainer().querySelector('#FedRdng').onclick = function() {
+    if (this.className === 'active') { 
+        map.removeLayer(tileLayer2);
+        map.removeLayer(gridLayer2);
+        map.removeControl(gridControl2);
+        map.legendControl.removeLegend(legend_Fed);
+        this.className = '';
+    } else {
+        map.addLayer(tileLayer2);
+        map.addLayer(gridLayer2);
+        map.addControl(gridControl2);
+        map.legendControl.addLegend(legend_Fed);             
+        this.className = 'active';
+    }
+    return false;
+};
+
+map.getContainer().querySelector('#fourfourWard').onclick = function() {
+    if (this.className === 'active') {   
+        map.removeLayer(tileLayer3);
+        map.removeLayer(gridLayer3);
+        map.removeControl(gridControl3);
+        map.legendControl.removeLegend(legend_44Ward);
+        this.className = '';
+    } else {         
+        map.addLayer(tileLayer3);
+        map.addLayer(gridLayer3);
+        map.addControl(gridControl3);
+        map.legendControl.addLegend(legend_44Ward);          
+        this.className = 'active';
+    }
+    return false;
+};
+
+map.getContainer().querySelector('#RecWard').onclick = function() {
+    if (this.className === 'active') {    
+        map.removeLayer(tileLayer4);
+        map.removeLayer(gridLayer4);
+        map.removeControl(gridControl4);
+        map.legendControl.removeLegend(legend_RecWard)
+        this.className = '';
+    } else {       
+        map.addLayer(tileLayer4);
+        map.addLayer(gridLayer4);
+        map.addControl(gridControl4);
+        map.legendControl.addLegend(legend_RecWard);      
+        this.className = 'active';
+    }
+    return false;
+};
+
+
+  var legend_Fed = '<b>AVG Ward Size:</b> 112,500 <br> <b>Number of Wards:</b> 26';
+  var legend_44Ward = '<b>AVG Ward Size:</b> 70,000 <br> <b>Number of Wards:</b> 44';
+  var legend_RecWard = '<b>AVG Ward Size:</b> 61,000 <br> <b>Number of Wards:</b> 47';
+
+</script>
+      </div>      
+
+		</div><!--/row -->
+	</div><!--/container -->
+	
+	<div id="social">
+		<div class="container" >
+			<div class="row centered">
+				<div class="col-md-4">
+					<a href="mailto:jonathan.critchley@me.com" ><i class="fa fa-envelope-o"></i></a>
+				</div>
+				<div class="col-md-4">
+					
+				</div>	
+				<div class="col-md-4">
+					<a href="https://twitter.com/Afrikanadese" target="_blank"><i class="fa fa-twitter"></i></a>
+				</div>			
+			</div><!--/row -->
+		</div><!--/container -->
+	</div><!--/social -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>

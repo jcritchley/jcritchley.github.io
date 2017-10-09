@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>Toronto 3D Zoning</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+  
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45765699-1', 'jonathancritchley.ca');
+      ga('send', 'pageview');
+    </script>  
+
+    <!-- Mapbox -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.26.0/mapbox-gl.css' rel='stylesheet' />
+
+    <style>
+    .mapboxgl-popup {
+        max-width: 500px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+    html .mapboxgl-popup-content {
+      padding: 0;
+      -webkit-box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
+      box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
+      opacity: 0.95;
+    }
+
+    .mapboxgl-popup h3 {
+        color: #000000;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        padding-left: 5px;
+        padding-right: 25px;
+        padding-top: 5px;
+        margin: 0;
+        -webkit-border-radius: 0 0 0 0;
+        border-radius: 0 0 0 0;
+        box-shadow: 0px 1px 0px  #888888;
+    }
+
+    .mapboxgl-popup p {
+        margin: 0;
+        padding-top:5px;
+    }
+
+    .Commercial-Residential-Employment {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #F44336;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Commercial-Residential {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #EF5350;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Commercial-Local {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #E57373;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Residential {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #FFAB00;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Residential-Apartment {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #880E4F;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Residential-Detached {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #FFC400;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Residential-Semi-Detached {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #FFD740;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Residential-Multiple {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #FFE57F;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Residential-Townhouse {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #FFFF00;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Institution-General {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #03A9F4;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Institution-Education {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #29B6F6;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Institution-Hospital {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #4FC3F7;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Institution-Place-Of-Worship {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #81D4FA;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Institutional-School {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #B3E5FC;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Open-Space {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #4CAF50;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Open-Space-Natural {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #66BB6A;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Open-Space-Recreational {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #81C784;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Open-Space-Cemetary {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #A5D6A7;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Open-Space-Golf {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #C8E6C9;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Open-Space-Marina {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #E8F5E9;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Employment-Industrial {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #4527A0;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Employment-Light-Industrial {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #512DA8;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Employment-Heavy-Industrial {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #5E35B1;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Employment-Industrial-Office {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #673AB7;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Utility-Transportation {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #795548;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    .Unassigned {
+      border-style:solid;
+      padding-left: 15px;
+      border-left: 15px solid #E0E0E0;
+      border-top: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+
+    #infoButton{
+      position: absolute;
+      bottom:1px;
+      padding-bottom: 2px;
+      left: 0px;
+      width:150px;
+      height:30px;
+      background:#1D1D1D;
+      z-index:1000000;
+      cursor: pointer;
+      color:#999999;
+      text-align: left;
+      padding-top:5px;
+      padding-left:15px;
+      border-left: 0px solid #999999;
+      border-right: 1px solid #999999;
+      border-bottom: 1px solid #999999;
+      border-top: 0px solid #999999;
+    }
+
+    #infoClose{
+      position: absolute;
+      bottom:1px;
+      left: 0px;
+      width:325px;
+      height:30px;
+      background:#1D1D1D;
+      z-index:1000000;
+      cursor: pointer;
+      color:#999999;
+      text-align: center;
+      padding-top:5px;
+      display:none;
+    }
+
+    #infoBox{
+      position: absolute;
+      top:72px;
+      left: 0px;
+      width: 325px;
+      height:auto;
+      background:#1D1D1D;
+      z-index:1000000;
+      cursor: pointer;
+      color:#999999;
+      text-align: center;
+      padding:8px;
+      display:none;
+      opacity:0.95;
+      bottom:32px;
+      overflow:auto;
+    }
+
+    #infoBox p {
+      margin: 5px;
+      padding:0px;
+      opacity:1;
+      color:#fff;
+      opacity:1;
+      text-align: left;
+    }
+
+    #infoBox li {
+      margin: 5px;
+      padding:0px;
+      opacity:1;
+      color:#fff;
+      opacity:1;
+      text-align: left;
+    }    
+</style>
+
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toronto Ward Boundary Review</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" style="margin-left:5px;max-width:50px">JONATHAN CRITCHLEY</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.html">Home</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<section id="works"></section>
+	<div class="container">
+		<div class="row centered mt mb">
+			<div class="col-lg-8 col-lg-offset-2">
+				<h1>Toronto 3D Zoning By-Law Map</h1>
+        <br>
+        <h3 class="lead">Interactive Toronto 3D Zoning By-law map was created by combining datasets from the <a href="http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=1a66e03bb8d1e310VgnVCM10000071d60f89RCRD">City of Toronto Open Data </a> website. The interactive map is powered by <a href="https://mapbox.com">Mapbox</a>.</h3>
+        <p>The building footprint, elevation and attribute data were sourced from the following datasets: </p>
+        <ul>
+        <li>
+        <strong> <a href="http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=d431d477f9a3a410VgnVCM10000071d60f89RCRD&vgnextchannel=1a66e03bb8d1e310VgnVCM10000071d60f89RCRD">3D Massing</a></strong>: The 3D Massing datasets provides a spatial representation of building footprints and the building height (EleZ attribute). Additional attributes from the other datasets were joined to this layer using a spatial join.
+        </li>
+
+        <li>
+        <strong> <a href="http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=91415f9cd70bb210VgnVCM1000003dd60f89RCRD&vgnextchannel=1a66e03bb8d1e310VgnVCM10000071d60f89RCRD">Address Points</a></strong>: A spatial join was used to associate property addresses to the building footprints.
+        </li>
+
+        <li>
+        <strong> <a href="http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=5a9923e69b4a6410VgnVCM10000071d60f89RCRD&vgnextchannel=1a66e03bb8d1e310VgnVCM10000071d60f89RCRD">Zoning By-Law</a></strong>: A spatial join was used to associate a land use zone category to the building footprints.
+        </li>
+        </ul> 
+
+        <p>Land-Use Zone colors were generally matched to the City of Toronto <a href="http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=905abe4436161410VgnVCM10000071d60f89RCRD&vgnextchannel=2a8a036318061410VgnVCM10000071d60f89RCRD">Zoning By-Law Maps.</a> In both cases, the map base layer is provided by the service that was used.</p>
+        <p>The data and maps went through a number of drafts and experiments using Carto before creating the final 3D Zoning By-law map using Mapbox GL.</p>                                       
+			</div>
+
+			<div class="col-lg-10 col-lg-offset-1 mt">
+      <h2>3D Zoning By-Law Mapbox GL (2016)</h2>
+      <hr>
+
+      <div id='mapcontainer' style="height:550px; width:100%">
+      </div>
+
+      <a href="tozone.html"><h4 style="color:orange;text-decoration: underline;">View Map Fullscreen</h4></a>
+
+      <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoiamNyaXRjaGxleSIsImEiOiIyZEU3dzdFIn0.gUdlGYUAAseVj0-pDzzNvQ';
+      var map = new mapboxgl.Map({
+          container: 'mapcontainer',
+          style: 'mapbox://styles/jcritchley/ciuf0mp6c007w2jmovqflo9u6',
+          zoom: 13,
+          maxZoom: 18,
+          minZoom: 13,
+          center: [-79.396,43.647],
+          pitch: 45,
+      });
+
+      // Add zoom and rotation controls to the map.
+      map.addControl(new mapboxgl.NavigationControl());
+
+      map.on('load', function() {
+
+        map.addSource('ZONING_ZONE_CATAGORIES_WGS84-38skdf', {
+              type: 'vector',
+              url: 'mapbox://jcritchley.4sdjp55g'
+          });
+          map.addLayer({
+              'id': 'ZONING_ZONE_CATAGORIES_WGS84-38skdf',
+          'interactive': true,
+              'type': 'fill',
+              'source': 'ZONING_ZONE_CATAGORIES_WGS84-38skdf',
+              'source-layer': 'ZONING_ZONE_CATAGORIES_WGS84-38skdf',
+              'paint': {
+            'fill-color': {
+              'property': 'Zone_Whole',
+              'type': 'categorical',
+              'stops': [
+                ['Commercial-Residential-Employment', '#D50000'],
+                ['Commercial-Residential', '#E53935'],
+                ['Commercial-Local', '#EF9A9A'],
+                ['Residential', '#FF6F00'], 
+                ['Residential-Apartment', '#880E4F'], 
+                ['Residential-Detached', '#FFA000'], 
+                ['Residential-Semi-Detached', '#FFC107'], 
+                ['Residential-Multiple', '#FFD54F'], 
+                ['Residential-Townhouse', '#FFECB3'], 
+                ['Institution-General', '#0277BD'],                 
+                ['Institution-Education', '#039BE5'],
+                ['Institution-Hospital', '#29B6F6'],
+                ['Institution-Place-Of-Worship', '#81D4FA'],
+                ['Institutional-School', '#B3E5FC'],
+                ['Open-Space', '#1B5E20'],
+                ['Open-Space-Natural', '#388E3C'],          
+                ['Open-Space-Recreational', '#4CAF50'],
+                ['Open-Space-Cemetary', '#81C784'],
+                ['Open-Space-Golf', '#A5D6A7'],
+                ['Open-Space-Marina', '#C8E6C9'],
+                ['Employment-Industrial', '#311B92'],
+                ['Employment-Light-Industrial', '#512DA8'],
+                ['Employment-Heavy-Industrial', '#673AB7'],
+                ['Employment-Industrial-Office', '#9575CD'],
+                ['Utility-Transportation', '#795548'],
+                ['Unassigned', '#E0E0E0'],         
+              ]
+            },
+            'fill-opacity': 0.4,
+              }
+        }, 'sand');
+
+        map.on('click', function (e) {
+            var features = map.queryRenderedFeatures(e.point, { layers: ['ZONING_ZONE_CATAGORIES_WGS84-38skdf'] });
+            if (!features.length) {
+                return;
+            }
+
+            var feature = features[0];
+
+            var popup = new mapboxgl.Popup()
+                .setLngLat(map.unproject(e.point))
+                .setHTML('<h3 class='+feature.properties.Zone_Whole+'>'+feature.properties.Zone_Whole+'</h3><p class='+feature.properties.Zone_Whole+'><b>&#9687   Zone:</b> '+feature.properties.ZN_STRING+'</br><b>&#9687   Section:</b> '+feature.properties.ZBL_SECTN+'</br><b>&#9687   Exception:</b> '+feature.properties.ZBL_EXCPTN+'</p>')
+                .addTo(map);
+        });
+
+        map.on('mousemove', function (e) {
+            var features = map.queryRenderedFeatures(e.point, { layers: ['ZONING_ZONE_CATAGORIES_WGS84-38skdf'] });
+            map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
+        });
+
+        map.addSource('odmassing_2014_wgs_w_address_-5becis', {
+          type: 'vector',
+          url: 'mapbox://jcritchley.019hb1y7'
+        });
+        map.addLayer({
+          id: 'BuildingFootprint',
+          type: 'fill',
+          source: 'odmassing_2014_wgs_w_address_-5becis',
+          'source-layer': 'odmassing_2014_wgs_w_address_-5becis',
+          layout: {
+            visibility: 'visible'
+          },
+          paint: {
+            'fill-extrude-height': {
+                'property': 'ele_z',
+              'stops': [
+                [{zoom: 12, value: 0},   0],
+                [{zoom: 12, value: 1000}, 0],
+                [{zoom: 13.5, value: 0}, 0],
+                [{zoom: 13.5, value: 1000}, 1000]
+              ]
+            },      
+            'fill-color': {
+              'property': 'zn_zone_ke',
+              'type': 'categorical',
+              'stops': [
+                ['Commercial-Residential-Employment', '#D50000'],
+                ['Commercial-Residential', '#E53935'],
+                ['Commercial-Local', '#EF9A9A'],
+                ['Residential', '#FF6F00'], 
+                ['Residential-Apartment', '#880E4F'], 
+                ['Residential-Detached', '#FFA000'], 
+                ['Residential-Semi-Detached', '#FFC107'], 
+                ['Residential-Multiple-Dwelling', '#FFD54F'], 
+                ['Residential-Townhouse', '#FFECB3'], 
+                ['Institutional General', '#0277BD'],
+                ['Institutional-General', '#0277BD'],                 
+                ['Institutional Educational', '#039BE5'],
+                ['Institutional Hospital', '#29B6F6'],
+                ['Institution-Education', '#039BE5'],
+                ['Institution-Hospital', '#29B6F6'],
+                ['Institution-Place-Of-Worship', '#81D4FA'],
+                ['Institutional Place of Worship', '#81D4FA'],
+                ['Institutional-School-Zone', '#B3E5FC'],
+                ['Open-Space', '#1B5E20'],
+                ['Natural Zone', '#388E3C'],          
+                ['Open-Space-Recreational', '#4CAF50'],
+                ['Open-Space-Cemetary', '#81C784'],
+                ['Open-Space-Golf', '#A5D6A7'],
+                ['Open-Space-Marina', '#C8E6C9'],
+                ['Employment-Industrial', '#311B92'],
+                ['Employment-Light-Industrial', '#512DA8'],
+                ['Employment-Heavy-Industrial', '#673AB7'],
+                ['Employment-Industrial-Office', '#9575CD'],
+                ['Utility-Transportation', '#795548'],
+                ['Unassigned', '#E0E0E0'],  
+              ]
+            },
+            'fill-opacity': 0.9,
+          }
+        }, 'waterway-label');
+
+      });
+
+      </script>         
+			</div>
+
+		</div><!--/row -->
+	</div><!--/container -->
+	
+	<div id="social">
+		<div class="container" >
+			<div class="row centered">
+				<div class="col-md-4">
+					<a href="mailto:jonathan.critchley@me.com" ><i class="fa fa-envelope-o"></i></a>
+				</div>
+				<div class="col-md-4">
+					
+				</div>	
+				<div class="col-md-4">
+					<a href="https://twitter.com/Afrikanadese" target="_blank"><i class="fa fa-twitter"></i></a>
+				</div>			
+			</div><!--/row -->
+		</div><!--/container -->
+	</div><!--/social -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>

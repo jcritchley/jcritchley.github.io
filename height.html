@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>Toronto Building Height Map</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- CartoDB -->
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>  
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45765699-1', 'jonathancritchley.ca');
+      ga('send', 'pageview');
+    </script>  
+
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toronto Ward Boundary Review</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" style="margin-left:5px;max-width:50px">JONATHAN CRITCHLEY</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.html">Home</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<section id="works"></section>
+	<div class="container">
+		<div class="row centered mt mb">
+			<div class="col-lg-8 col-lg-offset-2">
+				<h1>Toronto Building Height</h1>
+        <br>
+        <h3 class="lead">Interactive Toronto Height and Zoning By-law maps were created by combining datasets from the <a href="http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=1a66e03bb8d1e310VgnVCM10000071d60f89RCRD">City of Toronto Open Data </a> website. The interactive web maps are powered by <a href="https://cartodb.com">Carto</a>.</h3>
+        <p>The building footprint, elevation and attribute data were sourced from the following datasets: </p>
+        <ul>
+        <li>
+        <strong> <a href="http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=d431d477f9a3a410VgnVCM10000071d60f89RCRD&vgnextchannel=1a66e03bb8d1e310VgnVCM10000071d60f89RCRD">3D Massing</a></strong>: The 3D Massing datasets provides a spatial representation of building footprints and the building height (EleZ attribute). Additional attributes from the other datasets were joined to this layer using a spatial join.
+        </li>
+
+        <li>
+        <strong> <a href="http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=91415f9cd70bb210VgnVCM1000003dd60f89RCRD&vgnextchannel=1a66e03bb8d1e310VgnVCM10000071d60f89RCRD">Address Points</a></strong>: A spatial join was used to associate property addresses to the building footprints.
+        </li>
+
+        <li>
+        <strong> <a href="http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=5a9923e69b4a6410VgnVCM10000071d60f89RCRD&vgnextchannel=1a66e03bb8d1e310VgnVCM10000071d60f89RCRD">Zoning By-Law</a></strong>: A spatial join was used to associate a land use zone category to the building footprints.
+        </li>
+        </ul> 
+        <p>The data and maps went through a number of drafts and experiments using Carto before creating the final 3D Zoning By-law map using Mapbox GL. </p>                                
+			</div>
+
+			<div class="col-lg-10 col-lg-offset-1 mt">
+      <h1>Building Height using Carto (2016)</h1>
+      <hr>   
+      <div id='height' style="height:550px; width:100%"><div class="legends"></div>
+      </div>
+      <a href="height_full.html"><h4 style="color:orange;text-decoration: underline;">View Map Fullscreen</h4></a>
+      <br>
+      <h1>Zoning By-Law Original Draft using Carto (2015)</h1>
+      <hr>        
+      <div id='zoning_all' style="height:550px; width:100%">
+      </div> 
+      <br>
+      <h1>Zoning By-Law Original Draft using Carto - Commercial Zones Only (2015)</h1>
+      <hr>        
+      <div id='zoning_commercial' style="height:550px; width:100%">
+      </div> 
+      <br>
+      <h1>Zoning By-Law Original Draft using Carto - Residential Zones Only (2015)</h1>
+      <hr>        
+      <div id='zoning_res' style="height:550px; width:100%">
+      </div>          
+
+      <script>
+      window.onload = function() {
+      cartodb.createVis('zoning_all', 'https://critchley-ryerson.carto.com/api/v2/viz/431e286e-c5d2-4d31-be6c-72a9611a033c/viz.json');
+      cartodb.createVis('zoning_commercial', 'https://critchley-ryerson.carto.com/api/v2/viz/bbedc8c0-e214-4b60-84f2-25b2c0abf9a7/viz.json');
+      cartodb.createVis('zoning_res', 'https://critchley-ryerson.carto.com/api/v2/viz/0b69f7d8-b801-4003-b9a9-143957abdc18/viz.json');
+      cartodb.createVis('height', 'https://critchley-ryerson.carto.com/api/v2/viz/862915ac-742e-11e5-afcf-0e5db1731f59/viz.json');
+      }
+      </script> 
+
+			</div>
+
+		</div><!--/row -->
+	</div><!--/container -->
+	
+	<div id="social">
+		<div class="container" >
+			<div class="row centered">
+				<div class="col-md-4">
+					<a href="mailto:jonathan.critchley@me.com" ><i class="fa fa-envelope-o"></i></a>
+				</div>
+				<div class="col-md-4">
+					
+				</div>	
+				<div class="col-md-4">
+					<a href="https://twitter.com/Afrikanadese" target="_blank"><i class="fa fa-twitter"></i></a>
+				</div>			
+			</div><!--/row -->
+		</div><!--/container -->
+	</div><!--/social -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>

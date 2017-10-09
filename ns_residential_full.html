@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>NS Residential Dwelling Year of Construction</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45765699-1', 'jonathancritchley.ca');
+      ga('send', 'pageview');
+    </script>  
+
+    <!-- CartoDB -->
+    <link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+    <script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>  
+
+    <!-- Load perfect-scrollbar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/css/perfect-scrollbar.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/js/min/perfect-scrollbar.jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/js/min/perfect-scrollbar.min.js"></script>
+
+    <style>
+
+    /* Full Screen Mapbox + Navbar edits */
+
+    html, body, #cartofull {
+      height:100%;
+      width: 100%;
+      z-index:1;
+      position:relative;
+    }
+
+    .navbar-brand {
+      font-weight: 900;
+      font-size:20px;
+      margin-left: -50px;
+    }
+
+    .navbar-default .navbar-brand {
+    color: #000000;
+    }
+
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    font-weight: 900;
+    font-size:20px;  
+    color: #000000;
+    background-color: transparent;
+    border-bottom: 5px solid white
+    }
+
+    .navbar-default .navbar-nav > li > a {
+    color: #000000;
+    }
+
+    /* Infobox */
+
+    #infoButton{
+      margin-top:10px;
+      width:120px;
+      height:45px;
+      font-weight: 900;
+      font-size:20px;
+      z-index:1000000;
+      cursor: pointer;
+      text-align: center;
+      color: #000000;
+      background-color: transparent;
+      border-bottom: 5px solid white   
+    }
+
+    #infoClose{
+      position: absolute;
+      width: 600px;
+      height:auto;
+      background:#fff;
+      z-index:1000002;
+      cursor: pointer;
+      color:#000;
+      text-align: center;
+      padding:8px;
+      display:none;
+      opacity:0.9;
+      left: 0;
+      right: 0;
+      bottom:220px;
+      margin: auto;
+    }
+
+    #infoBox{
+      position: absolute;
+      width: 600px;
+      height:auto;
+      background:#fff;
+      z-index:1000000;
+      color:#999999;
+      text-align: center;
+      padding:8px;
+      display:none;
+      opacity:0.9;
+      top:100px;
+      left: 0;
+      right: 0;
+      bottom:260px;
+      margin: auto;
+    }
+
+    /* Resize for Mobile */
+    @media (max-width: 768px) {
+      
+      #infoClose{
+      width: 100%; 
+      bottom:0;     
+      }
+
+      #infoBox{
+      width: 100%;
+      top:0;
+      bottom:39px;      
+      }
+
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    font-weight: 900;
+    font-size:12px;  
+    color: #000000;
+    background-color: transparent;
+    border-bottom: 5px solid white
+    }
+
+    /* Infobox button open */
+    #infoButton{
+      margin-top:15px;
+      width:80px;
+      height:40px;
+      font-weight: 900;
+      font-size:12px;
+    }
+
+
+    }
+
+    /* Scrollbar */
+    #infoBox::-webkit-scrollbar {
+        width: 0 !important;
+    }
+
+    #infoBox p {
+      margin: 5px;
+      margin-left:15px;
+      padding:0px;
+      opacity:1;
+      color:#000;
+      opacity:1;
+      text-align: left;
+    }
+
+    #infoBox li {
+      margin: 5px;
+      padding:0px;
+      opacity:1;
+      color:#000;
+      opacity:1;
+      text-align: left;
+    }   
+
+    .zoomTextContainer{
+      bottom: 30px; 
+      z-index:100000; 
+      position: absolute; 
+      width:100%;
+      font-weight: 600;
+      font-size:14px;  
+      color: white;
+      pointer-events: none;
+    }
+
+    .zoomText{
+      text-align:center;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .zoomTextContainer{
+        top:30px;
+        max-width:150px;
+        left:30%;
+      }
+    }
+
+    #map .cartodb-legend-stack {
+      visibility: hidden
+    }
+
+  </style>
+
+  </head>
+
+  <body>
+<img src="assets/img/ns_residential/legend.png" style="z-index:100000; position:fixed; right:10px; top:10px; height:120px;">
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toronto Ward Boundary Review</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" style="margin-left:5px;max-width:50px;color:white">JONATHAN CRITCHLEY</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active" ><a href="index.html" style="color:white">HOME</a></li>
+            <li class="active" style="color:white" id='infoButton'>ABOUT</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="zoomTextContainer">
+      <div class="zoomText">
+      ENHANCE! <br>(Zoom in)
+      </div>
+    </div>
+
+    <!-- More Info - Infobox -->
+    <div id='infoClose'><b>CLOSE</b>
+    </div>
+    <div id='infoBox' > 
+    <br>
+    <p style="font-weight: 500; font-size:1.2em; color: #000;text-align: center;">NOVA SCOTIA RESIDENTIAL DWELLING YEAR OF CONSTRUCTION</p>
+    <br>
+    <p>The interactive Nova Scotia Dwelling Age map was created using <a href="https://www.thedatazone.ca/Assessment/Residential-Dwelling-Characteristics/a859-xvcs">Residential Dwelling Characteristics dataset</a> provided by the Property Valuation Services Corporation. The interactive web map is powered by <a href="https://cartodb.com">Carto</a> and <a href="https://developers.google.com/maps/documentation/streetview/">Google Street View Image API</a>.</p>
+    <br>
+    <p>Property Valuation Services Corporation is mandated under the Nova Scotia Assessment Act to assess every property in Nova Scotia, one of the variables that is collected is year of construction.</p>
+    <br>
+    <p>Use the map to zoom in and see how areas of Nova Scotia have developed over time and when. You can hover over a dwelling point to see the address and year of construction.</p>
+    <br>
+    <img class="img-responsive" src="assets/img/ns_residential/ns_dwelling2.png" style="padding:10px">
+    <br>
+    <p>Click on a point to display a picture of the development. The Google Street View Image API allows the user to view the property based on best available Street View imagery when clicking on an address point.</p>
+    <br>
+    <img class="img-responsive" src="assets/img/ns_residential/ns_dwelling3.png" style="padding:10px">
+    <br>
+    <p>An animated map was also created using Torque to help explore the spatio temporal growth of residential dwelling development in Nova Scotia, from the first year of constuction in the dataset 1469 to 2017, available <a href="ns_residential.html">here.</a></p>
+    <p>A special shout out to <a href="https://twitter.com/rapaport1010">Eric Rapaport</a> who made me aware of the data and provided inspiration for the maps through his own work.</p> 
+    </div>
+
+
+    <div id="cartofull">
+          <div id='map' style="height:100%; width:100%">
+          </div>
+    </div><!--/headerwrap -->
+
+      <script>
+
+      var map = new L.Map('map', {
+          center: [45.111331, -63.325195],
+          zoom: 8,
+          maxZoom: 18,
+          minZoom: 8
+        })
+
+      L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+        subdomains: 'abcd',
+      }).addTo(map);
+
+      cartodb.createLayer(map, 'https://critchley-ryerson.carto.com/api/v2/viz/ad3984c8-2e23-11e7-9cb9-0e05a8b3e3d7/viz.json')
+          .addTo(map);
+
+      map.on('zoomend', function (e) {
+          zoom_based_layerchange();
+      });
+
+      function zoom_based_layerchange() {
+          //console.log(map.getZoom());
+          var currentZoom = map.getZoom();
+          switch (currentZoom) {
+              case 8:
+                  $(".zoomText").html("ENHANCE! <br>(Zoom in)");
+                  break;
+              case 11:
+                  $(".zoomText").html("There must be more detail! <br> Enhance further.");
+                  break;
+              case 12:
+                  $(".zoomText").html("It's... beautiful");
+                  break;
+              case 13:
+                  $(".zoomText").html("Whoa woah woah, not so fast!");
+                  break;
+              case 16:
+                  $(".zoomText").html("All the lyttle dots!");
+                  break;                    
+              case 17:
+                  $(".zoomText").html("SUPER ENHANCE!");
+                  break;                  
+              case 18:
+                  $(".zoomText").html("SUCH MAP <img style='height:30px' src='assets/img/ns_residential/smiley.gif'>");
+                  break;
+
+              default:
+                  // do nothing
+                  break;
+      }}      
+
+      //Informaiton Pannel 
+      $(function() {
+      $('#infoBox').perfectScrollbar();
+      });
+
+      $(document).ready(function(){
+      $("#infoButton").click(function(){
+        $("#infoClose").toggle();
+        $("#infoBox").toggle();  
+
+      });
+      $("#infoClose").click(function(){
+        $("#infoClose").toggle();
+        $("#infoBox").toggle();  
+   
+      });  
+      });
+     
+      </script>
+
+    <!-- Bootstrap
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
