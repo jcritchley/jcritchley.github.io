@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Toronto Language Map</title>
+
+    <!-- Bootstrap -->
+    <link href="http://socialplanningtoronto.nationbuilder.com/themes/3/57cb3aad6ad575643a000001/0/attachments/14731658591502830775/default/theme.scss" rel="stylesheet" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/themes/cupertino/jquery-ui.css" type="text/css" media="all">
+    <script src="http://d3n8a8pro7vhmx.cloudfront.net/assets/liquid/main-efe7136106236b22a3021cc3fe689595.js"></script>
+    <link href="http://socialplanningtoronto.nationbuilder.com/themes/3/57cb3aad6ad575643a000001/0/attachments/14731658591502830775/default/style.css" rel="stylesheet" />
+    <script src="http://socialplanningtoronto.nationbuilder.com/themes/3/57cb3aad6ad575643a000001/0/attachments/14731658591502830775/default/bootstrap.js"></script>
+    <script src="http://socialplanningtoronto.nationbuilder.com/themes/3/57cb3aad6ad575643a000001/0/attachments/14731658591502830775/default/jquery.cookie.js"></script>
+    <script src="http://socialplanningtoronto.nationbuilder.com/themes/3/57cb3aad6ad575643a000001/0/attachments/14731658591502830775/default/jquery.easing.min.js"></script>
+    <script src="http://socialplanningtoronto.nationbuilder.com/themes/3/57cb3aad6ad575643a000001/0/attachments/14731658591502830775/default/jquery.validate.min.js"></script>
+    <script src="http://socialplanningtoronto.nationbuilder.com/themes/3/57cb3aad6ad575643a000001/0/attachments/14731658591502830775/default/jquery.sticky.js"></script>
+
+        <script>
+        $(document).ready(function() {
+          $('.btn-group').on('click', '.btn', function() {
+            $(this).addClass('active').siblings().removeClass('active');
+          });        
+        });
+        </script>      
+
+  </head>
+<body>
+<div class="main-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+<div class="row">
+  <div class="col-sm-12">
+<div id="content">
+  <div id="intro" class="intro">
+    <div class="content">
+      <p>Testing of our content</p><p>More testing of our content.</p>
+                <!-- Jonathan C. Code -->         
+      <div id="container">
+        <div id="mobilecontainer">
+        <iframe name="map" id="map" width="100%" height="800" frameborder="0" src="https://plannergrl.carto.com/builder/9aca9ea1-5091-45f5-a3e2-951c986ead7c/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+        </div>
+
+        <div class="btn-group btn-group-md " role="group">
+          <div type="button" class="btn btn-default " onClick="document.getElementById('map').src='https://plannergrl.carto.com/builder/009e622d-94bd-4ac6-b7fc-de78cf87facf/embed'">2006 Map</div>
+          <div type="button" class="btn btn-default " onClick="document.getElementById('map').src='https://plannergrl.carto.com/builder/2c731e63-9e03-40b8-b570-756141b80b85/embed'">2011 Map</div>
+          <div type="button" class="btn btn-default active" onClick="document.getElementById('map').src='https://plannergrl.carto.com/builder/9aca9ea1-5091-45f5-a3e2-951c986ead7c/embed'">2016 Map</div>
+        </div>     
+      </div>
+
+
+
+      <p>Testing of our content</p><p>More testing of our content.</p>
+                <p>Testing of our content</p><p>More testing of our content.</p>
+          <!-- end of Jonathan C. Code -->
+    </div>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+   
+
+
+</body>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+    #container{
+      width: 100%;
+      text-align: center;
+    }
+
+    /* bootstrap */
+    .btn {
+      background-color: #00b3f0; /* socialplanningtoronto.org colors */
+      border-color: #FFFFFF;
+      border-radius: 5px;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .btn:hover, .btn.btn-default.active {
+      background-color: #66D1F6 !important; 
+      color: white !important;
+      border-color: #FFFFFF !important;
+     }   
+
+    @media screen and (max-width: 1024px){  
+        #mobilecontainer{
+            overflow: hidden;
+            margin: 15px auto; 
+            max-width: 760px;
+        }
+        #map{
+            border: 0px none; 
+            margin-bottom: -224px; 
+            height: 859px; 
+            width: 100%
+        }
+      }
+    </style>
+
+
+
+
+  </body>
+</html>
