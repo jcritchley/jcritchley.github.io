@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>Toronto Lost Rivers Walking Maps</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">  
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45765699-1', 'jonathancritchley.ca');
+      ga('send', 'pageview');
+    </script>  
+
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">The Laneways Project</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" style="margin-left:5px;max-width:50px">JONATHAN CRITCHLEY</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.html">Home</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<section id="works"></section>
+	<div class="container">
+		<div class="row centered mt mb">
+			<div class="col-lg-8 col-lg-offset-2">
+				<h1>Lost Rivers of Toronto Web-mapping Pilot Project</h1>
+        		<br>
+				<h3 class="lead">The following interactive web maps were created as part of my work with <a href="http://geohist.ca/2017/10/lost-rivers-pilot-project/">Canadian Historical Geographic Information Systems Partnership</a> as part of a pilot project to create guided walking tours around the city of Toronto for the <a href="http://lostrivers.ca/">Lost Rivers Walks project</a> using open source tools and services. </h3>
+				<p>Templates containing only relevant code to certain features, along with all other development files, are available on GitHub for those interested:</p>
+		        <ul>
+		        <li>
+		        <strong> <a href="https://github.com/geohist-ca/lostrivers/blob/master/leaflet-storymap-github/Template_FilterSlider.html">GeoJSON Filter Slider</a></strong>: Code Hosted on GitHub
+		        </li>
+		        <li>
+		        <strong> <a href="https://github.com/geohist-ca/lostrivers/blob/master/leaflet-storymap-github/Template_OpacitySlider.html">Opacity Slider Code Hosted on GitHub</a></strong>: Code Hosted on GitHub
+		        </li>
+		        <li>
+		        <strong> <a href="https://github.com/geohist-ca/lostrivers/blob/master/leaflet-storymap-github/Template_StoryMap.html">Story Map Template (without Bootstrap Navigation)</a></strong>: Code Hosted on GitHub
+		        </li>
+		        </ul>					                    
+			</div>
+
+			<div class="col-lg-10 col-lg-offset-1 mt">
+		      <h2>Dissapearing Rivers of Toronto</h2>
+		      <hr>
+		        <br>
+		        <p>The main Dissapearing Rivers of Toronto map shows the original stream network of the city, and how those streams disappeared over time as they were buried for purposes of development. The map uses two jQuery sliders to adjust a historical map raster image overlay transparency and filter the GeoJSON Dissapearing River layer.</p>
+		        <br>		
+				<h4>Dissapearing Rivers </h4> 
+		        <a href="http://mercator.geog.utoronto.ca/georia/lostrivers/leaflet-storymap_webtest/disappearing.html"><img class="img-responsive" src="assets/img/lostriver/main-min.png"></a>  
+		        <br>
+		        <br>    
+		      <h2>Walk Maps</h2>
+		      <hr>
+		        <br>
+		        <p>The three walking tour maps were created using <a href="https://github.com/JackDougherty/leaflet-storymap">Jack Dougherty's Leaflet Story Map template</a> which provides a scroll-driven story map, with point markers and narrative text in GeoJSON, using Leaflet and jQuery.</p>
+		        <p>The walk maps interactivly display stops along the way for three of the walks offered by Lost Rivers in the area of Toronto’s eastern waterfront. A scrolling side pannel is used to drive the navigation of the maps, linking the locations of the stops on the map with and pictures and text related to eachother, in a “map tour” format. </p>
+		    	<p>The maps required customization of the story map template to improve layout on mobile, fixing bugs and issues encountered in development, and uses a custom styled jQuery sliders to adjust a historical map raster image overlay transparency.</p>  
+		        <br>
+		        <h4>Desktop Layout</h4> 
+		        <a href="http://mercator.geog.utoronto.ca/georia/lostrivers/leaflet-storymap_webtest/AshbridgeBay.html"><img class="img-responsive" src="assets/img/lostriver/walk_desktop.png"></a>
+		        <br>
+		        <h4>Mobile Layout</h4> 
+		        <center><a href="http://mercator.geog.utoronto.ca/georia/lostrivers/leaflet-storymap_webtest/AshbridgeBay.html"><img class="img-responsive" src="assets/img/lostriver/walk_mobile.png"></a></center>
+		        <br>
+		        <h4>Overlay Map Opacity Slider</h4> 
+		        <center><a href="http://mercator.geog.utoronto.ca/georia/lostrivers/leaflet-storymap_webtest/AshbridgeBay.html"><img class="img-responsive" src="assets/img/lostriver/gif1.gif"></a></center>
+		        <br>		        
+			</div>
+		</div><!--/row -->
+	</div><!--/container -->
+	
+	<div id="social">
+		<div class="container" >
+			<div class="row centered">
+				<div class="col-md-4">
+					<a href="mailto:jonathan.critchley@me.com" ><i class="fa fa-envelope-o"></i></a>
+				</div>
+				<div class="col-md-4">
+					
+				</div>	
+				<div class="col-md-4">
+					<a href="https://twitter.com/Afrikanadese" target="_blank"><i class="fa fa-twitter"></i></a>
+				</div>			
+			</div><!--/row -->
+		</div><!--/container -->
+	</div><!--/social -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
