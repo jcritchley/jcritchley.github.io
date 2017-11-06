@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>King Street Pilot</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45765699-1', 'jonathancritchley.ca');
+      ga('send', 'pageview');
+    </script>  
+
+    <!-- Mapbox -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.41.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- Load perfect-scrollbar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/css/perfect-scrollbar.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/js/min/perfect-scrollbar.jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/js/min/perfect-scrollbar.min.js"></script>
+
+    <style>
+
+    /* Full Screen Mapbox + Navbar edits */
+
+    html, body, #mapboxfull {
+      height:100%;
+      width: 100%;
+      z-index:1;
+      position:relative;
+    }
+
+    .navbar-brand {
+      font-weight: 900;
+      font-size:20px;
+      margin-left: -50px;
+    }
+
+    .navbar-default .navbar-brand {
+    color: #000000;
+    }
+
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    font-weight: 900;
+    font-size:20px;  
+    color: #000000;
+    background-color: transparent;
+    border-bottom: 5px solid #000000
+    }
+
+    .navbar-default .navbar-nav > li > a {
+    color: #000000;
+    }
+
+    /* Infobox */
+
+    #infoButton{
+      margin-top:10px;
+      width:120px;
+      height:45px;
+      font-weight: 900;
+      font-size:20px;
+      z-index:1000000;
+      cursor: pointer;
+      text-align: center;
+      color: #000000;
+      background-color: transparent;
+      border-bottom: 5px solid #000000   
+    }
+
+    #infoClose{
+      position: absolute;
+      width: 600px;
+      height:auto;
+      background:#fff;
+      z-index:1000002;
+      cursor: pointer;
+      color:#000;
+      text-align: center;
+      padding:8px;
+      display:none;
+      opacity:0.9;
+      left: 0;
+      right: 0;
+      bottom:220px;
+      margin: auto;
+    }
+
+    #infoBox{
+      position: absolute;
+      width: 600px;
+      height:auto;
+      background:#fff;
+      z-index:1000000;
+      color:#999999;
+      text-align: center;
+      padding:8px;
+      display:none;
+      opacity:0.9;
+      top:100px;
+      left: 0;
+      right: 0;
+      bottom:260px;
+      margin: auto;
+    }
+
+    /* Resize for Mobile */
+    @media (max-width: 768px) {
+      
+      #infoClose{
+      width: 100%; 
+      bottom:0;     
+      }
+
+      #infoBox{
+      width: 100%;
+      top:0;
+      bottom:39px;      
+      }
+
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    font-weight: 900;
+    font-size:12px;  
+    color: #000000;
+    background-color: transparent;
+    border-bottom: 5px solid #000000
+    }
+
+    /* Infobox button open */
+    #infoButton{
+      margin-top:15px;
+      width:80px;
+      height:40px;
+      font-weight: 900;
+      font-size:12px;
+    }
+
+
+    }
+
+    /* Scrollbar */
+    #infoBox::-webkit-scrollbar {
+        width: 0 !important;
+    }
+
+    #infoBox p {
+      margin: 5px;
+      margin-left:15px;
+      padding:0px;
+      opacity:1;
+      color:#000;
+      opacity:1;
+      text-align: left;
+    }
+
+    #infoBox li {
+      margin: 5px;
+      padding:0px;
+      opacity:1;
+      color:#000;
+      opacity:1;
+      text-align: left;
+    }   
+
+    /* Mapbox settings */
+
+    .mapboxgl-popup {
+        max-width: 500px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+
+    html .mapboxgl-popup-content {
+      padding: 0;
+      -webkit-box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
+      box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
+      opacity: 0.95;
+    }
+
+    .mapboxgl-popup h3 {
+        color: #000000;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: bold;
+        padding-left: 5px;
+        padding-right: 25px;
+        padding-top: 5px;
+        margin: 0;
+        -webkit-border-radius: 0 0 0 0;
+        border-radius: 0 0 0 0;
+        box-shadow: 0px 1px 0px  #888888;
+    }
+
+    .mapboxgl-popup p {
+        margin: 0;
+        padding-top:5px;
+    }
+
+    .marker {
+      background-image: url('mapbox-icon.png');
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+    }    
+
+    #btnholder {
+    position:absolute;
+    top:10px;
+    left:10px;
+    z-index:1;
+    }
+
+  </style>
+
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toronto Ward Boundary Review</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" style="margin-left:5px;max-width:50px">JONATHAN CRITCHLEY</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.html">HOME</a></li>
+            <li class="active" id='infoButton'>ABOUT</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+
+      </div>
+    </div>
+
+    <!-- More Info - Infobox -->
+    <div id='infoClose'><b>CLOSE</b>
+    </div>
+    <div id='infoBox' > 
+    <br>
+    <p style="font-weight: 500; font-size:1.2em; color: #000;text-align: center;">TORONTO 3D ZONING BY-LAW MAP</p>
+    <br>
+    <p>Inspired by <a href="https://twitter.com/rbrtwhite">Robert White's</a>  <a href="http://maps.nicholsonroad.com/zones/#13.5/49.2740/-123.1202">Vancouver Zoning By-Law map</a>, and made possible with the new Mapbox GL JS <a href="https://www.mapbox.com/blog/mapping-3d-buildings/
+    ">building extrusion feature.</a>
+    </p>
+    <p>The map is a proof of concept, making use of City of Toronto Open Data as it is made available. It is provided "as is".</p>
+
+    <br>
+    <p><b>DATA:</b></p>
+    <p>
+    The Zoning By-law Area and Building footprint and height data was downloaded from the City of Toronto Open Data website:
+    </p>
+
+    <ul>
+    <li>
+    <a href="http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=d431d477f9a3a410VgnVCM10000071d60f89RCRD&vgnextchannel=1a66e03bb8d1e310VgnVCM10000071d60f89RCRD">3D Massing</a>: The 3D Massing datasets provides a spatial representation of building footprints and the building height. 
+    </li>
+    <li>
+    <a href="http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=5a9923e69b4a6410VgnVCM10000071d60f89RCRD&vgnextchannel=1a66e03bb8d1e310VgnVCM10000071d60f89RCRD">Zoning By-Law</a>: A spatial join was used to associate a zone category to the building footprints. Due to the way that some building footprints intersect two zone areas, some building footprints may have the incorrect zone color. The source dataset contains ESRI shapefiles that are part of the Zoning By-law 569-2013, the most recently available in this format.
+    </li>
+    </ul>
+    <p>Colors were generally matched to the City of Toronto <a href="http://www1.toronto.ca/wps/portal/contentonly?vgnextoid=905abe4436161410VgnVCM10000071d60f89RCRD&vgnextchannel=2a8a036318061410VgnVCM10000071d60f89RCRD">Zoning By-Law Maps</a>.
+    </p>
+    <br>
+    <p><b>CONTROLS:</b></p>
+    <p>Click on the map to reaveal a pop-up window that displays the Zone Category, Zone Labels, By-law Section and Exceptions.</p>
+    <p>
+    The maps view angle can be manually adjusted by 
+    <ul>
+    <li>right clicking on the map and panning,</li> 
+    <li>holding Control while panning,</li> 
+    <li>or clicking and holding down on the button below the zoom controls.</li>
+    </ul> 
+    </p>
+    <br>
+    <a href="assets/img/tozone/cromulon.png" target="_blank"><img class="img-responsive" src="assets/img/tozone/cromulon.png"></a>
+    <a href="assets/img/tozone/cromulon.png"><h4 style="color:orange;text-decoration: underline;">View Cromulon Fullscreen</h4></a>
+    </div>
+
+
+    <div id="mapboxfull">
+          <div id="btnholder">
+              <div id="pause" style="visibility: hidden" class="mapbtn active">Replay</div>
+          </div>          
+          <div id='mapcontainer' style="height:100%; width:100%">
+          </div>         
+    </div><!--/headerwrap -->
+
+<script type="text/javascript" src="lines.js"></script>
+
+      <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoiamNyaXRjaGxleSIsImEiOiIyZEU3dzdFIn0.gUdlGYUAAseVj0-pDzzNvQ';
+
+      var followMarker = false;
+
+      var map = new mapboxgl.Map({
+          container: 'mapcontainer',
+          style: 'mapbox://styles/jcritchley/cj96f9jfm1sg52sldke1n46y0',
+          zoom: 15,
+          maxZoom:20,
+          minZoom: 7,
+          center: [-79.388100,43.646965],
+          bearing:343,
+      });
+        
+      var streetCar1 = {
+          "type": "FeatureCollection",
+          "features": [{
+              "type": "Feature",
+              "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                  [ [ -79.418560041353658, 43.640662402523205 ] ]
+                  ]
+              }
+          }]
+      };
+
+      var streetCar2 = {
+          "type": "FeatureCollection",
+          "features": [{
+              "type": "Feature",
+              "geometry": {
+                  "type": "LineString",
+                  "coordinates": [
+                  [ [ -79.367047914269619, 43.651565607034769 ] ]
+                  ]
+              }
+          }]
+      };      
+
+      var baseLine1 = {
+          "type": "FeatureCollection",
+          "features": [{
+              "type": "Feature",
+              "geometry": {
+                  "type": "LineString",
+                  "coordinates": coordinates
+              }
+          }]
+      };
+
+      var baseLine2 = {
+          "type": "FeatureCollection",
+          "features": [{
+              "type": "Feature",
+              "geometry": {
+                  "type": "LineString",
+                  "coordinates": coordinates2
+              }
+          }]
+      };      
+
+      var startButton = document.getElementById('pause');
+     
+// arbitrarily choose the line to be 20px at zoom 10.
+var baseWidth = 3; // 20px
+var baseZoom = 17; // zoom 10
+
+map.on('load', function() {
+      // Insert the layer beneath any symbol layer.
+      var layers = map.getStyle().layers.reverse();
+      var labelLayerIdx = layers.findIndex(function (layer) {
+          return layer.type !== 'symbol';
+      });
+      var labelLayerId = labelLayerIdx !== -1 ? layers[labelLayerIdx].id : undefined;
+      map.addLayer({
+          'id': '3d-buildings',
+          'source': 'composite',
+          'source-layer': 'building',
+          'filter': ['==', 'extrude', 'true'],
+          'type': 'fill-extrusion',
+          'minzoom': 13,
+          'paint': {
+              'fill-extrusion-color': '#BEBEBE',
+              'fill-extrusion-height': {
+                  'type': 'identity',
+                  'property': 'height'
+              },
+              'fill-extrusion-base': {
+                  'type': 'identity',
+                  'property': 'min_height'
+              },
+              'fill-extrusion-opacity': .3
+          }
+      }, labelLayerId);
+
+
+    map.addLayer({
+        'id': 'line-animation-base1',
+        'type': 'line',
+        'source': {
+            'type': 'geojson',
+            'data': baseLine1
+        },
+        'layout': {
+            'line-cap': 'round',
+            'line-join': 'round'
+        },
+        'paint': {
+            'line-color': '#EB2135',
+            'line-width': {
+                "type": "exponential",
+                "base": 2,
+                "stops": [
+                    [0, baseWidth * Math.pow(2, (0 - baseZoom))],
+                    [24, baseWidth * Math.pow(2, (24 - baseZoom))]
+                ]
+            },
+            'line-opacity': 0.2
+        }
+    }, labelLayerId);
+
+    map.addLayer({
+        'id': 'line-animation1',
+        'type': 'line',
+        'source': {
+            'type': 'geojson',
+            'data': streetCar1
+        },
+        'layout': {
+            'line-cap': 'round',
+            'line-join': 'round'
+        },
+        'paint': {
+            'line-color': '#EB2135',
+            'line-width': {
+                "type": "exponential",
+                "base": 2,
+                "stops": [
+                    [0, baseWidth * Math.pow(2, (0 - baseZoom))],
+                    [24, baseWidth * Math.pow(2, (24 - baseZoom))]
+                ]
+            },
+            'line-opacity': .8
+        }
+    }, labelLayerId);
+
+    map.addLayer({
+        'id': 'line-animation-base2',
+        'type': 'line',
+        'source': {
+            'type': 'geojson',
+            'data': baseLine2
+        },
+        'layout': {
+            'line-cap': 'round',
+            'line-join': 'round'
+        },
+        'paint': {
+            'line-color': '#EB2135',
+            'line-width': {
+                "type": "exponential",
+                "base": 2,
+                "stops": [
+                    [0, baseWidth * Math.pow(2, (0 - baseZoom))],
+                    [24, baseWidth * Math.pow(2, (24 - baseZoom))]
+                ]
+            },
+            'line-opacity': 0.2
+        }
+    }, labelLayerId);
+
+    map.addLayer({
+        'id': 'line-animation2',
+        'type': 'line',
+        'source': {
+            'type': 'geojson',
+            'data': streetCar2
+        },
+        'layout': {
+            'line-cap': 'round',
+            'line-join': 'round'
+        },
+        'paint': {
+            'line-color': '#EB2135',
+            'line-width': {
+                "type": "exponential",
+                "base": 2,
+                "stops": [
+                    [0, baseWidth * Math.pow(2, (0 - baseZoom))],
+                    [24, baseWidth * Math.pow(2, (24 - baseZoom))]
+                ]
+            },
+            'line-opacity': .8
+        }
+    }, labelLayerId);    
+
+    animateLine();
+
+    function resetLine1() {
+            for (var p = streetCar1.features[0].geometry.coordinates.length; p > 0; p--) {
+                    // removes last element from array
+                     streetCar1.features[0].geometry.coordinates.pop();
+                    }                 
+    }
+
+    function animateLine() {
+
+        function myLoop () {
+          var index = 0;
+          var index2 = 0;
+            // set speed
+           var mapInt = setInterval(function () {
+              index++;
+              index2++;
+
+              if (index < baseLine1.features[0].geometry.coordinates.length) {
+              var x = baseLine1.features[0].geometry.coordinates[index][0];
+              var y = baseLine1.features[0].geometry.coordinates[index][1];
+
+              // push() adds to array
+              // using coordinates from baseline1
+              streetCar1.features[0].geometry.coordinates.push([x, y]);
+
+                map.getSource('line-animation1').setData(streetCar1);
+
+                // set animated feature length, based on line point distance
+                // Once the index grows to 50
+                if (index > 5) {
+                    // removes first element in array
+                    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
+                    streetCar1.features[0].geometry.coordinates.shift();
+                    map.setPaintProperty('line-animation1', 'line-opacity', 1);                   
+                }
+
+                // geojson.features[0].geometry.coordinates.length -2 to remove streetCar when hitting end of line
+                if (index > baseLine1.features[0].geometry.coordinates.length - 2) {
+                    streetCar1.features[0].geometry.coordinates.shift();
+                    map.setPaintProperty('line-animation1', 'line-opacity', 0); 
+                    resetLine1();
+                    animateLine();
+                }
+              }
+
+              if (index2 < baseLine2.features[0].geometry.coordinates.length) {
+              var x = baseLine2.features[0].geometry.coordinates[index][0];
+              var y = baseLine2.features[0].geometry.coordinates[index][1];
+
+              // push() adds to array
+              // using coordinates from baseline1
+              streetCar2.features[0].geometry.coordinates.push([x, y]);
+
+                map.getSource('line-animation2').setData(streetCar2);
+
+                // set animated feature length, based on line point distance
+                // Once the index grows to 50
+                if (index2 > 5) {
+                    // removes first element in array
+                    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
+                    streetCar2.features[0].geometry.coordinates.shift();
+                    map.setPaintProperty('line-animation2', 'line-opacity', 1);                   
+                }
+
+                // geojson.features[0].geometry.coordinates.length -2 to remove streetCar when hitting end of line
+                if (index2 > baseLine2.features[0].geometry.coordinates.length - 2) {
+                    streetCar2.features[0].geometry.coordinates.shift();
+                    map.setPaintProperty('line-animation2', 'line-opacity', 0); 
+                    resetLine1();
+                    animateLine();
+                }
+              }
+
+            // speed
+           }, 250);
+        }
+        myLoop();
+        }
+});
+      
+      //Informaiton Pannel 
+      $(function() {
+      $('#infoBox').perfectScrollbar();
+      });
+
+      $(document).ready(function(){
+      $("#infoButton").click(function(){
+        $("#infoClose").toggle();
+        $("#infoBox").toggle();  
+
+      });
+      $("#infoClose").click(function(){
+        $("#infoClose").toggle();
+        $("#infoBox").toggle();  
+   
+      });  
+      });
+      </script>
+
+    <!-- Bootstrap
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
