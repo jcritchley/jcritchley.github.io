@@ -76,6 +76,8 @@
     #container{
       width: 100%;
       text-align: center;
+      -webkit-overflow-scrolling:touch; 
+      overflow:auto;
     }
 
     /* bootstrap */
@@ -96,9 +98,10 @@
 
     @media screen and (max-width: 1024px){  
         #mobilecontainer{
-            overflow: hidden;
             margin: 15px auto; 
             max-width: 760px;
+            -webkit-overflow-scrolling:touch; 
+            overflow:auto;
         }
         #map{
             border: 0px none; 
