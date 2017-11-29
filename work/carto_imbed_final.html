@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <head>
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toronto Language Map</title>
 
     <!-- Bootstrap -->
@@ -34,26 +34,20 @@
   <div class="col-sm-12">
 <div id="content">
   <div id="intro" class="intro">
-<div id="web">
-            <iframe name="map" id="map" width="100%" height="800"  frameborder="0" src="https://plannergrl.carto.com/builder/009e622d-94bd-4ac6-b7fc-de78cf87facf/embed" ></iframe>
+    <div class="content">
+      <p>Testing of our content</p><p>More testing of our content.</p>
+                <!-- Jonathan C. Code -->         
+      <div id="container">
+        <div id="mobilecontainer">
+        <iframe name="map" id="map" width="100%" height="800" frameborder="0" src="https://plannergrl.carto.com/builder/9aca9ea1-5091-45f5-a3e2-951c986ead7c/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+        </div>
 
-            <div class="btn-group btn-group-lg" role="group">
-              <div type="button" class="btn btn-default " onclick="document.getElementById('map').src='https://plannergrl.carto.com/builder/009e622d-94bd-4ac6-b7fc-de78cf87facf/embed'">2006 Map</div>
-              <div type="button" class="btn btn-default " onclick="document.getElementById('map').src='https://plannergrl.carto.com/builder/2c731e63-9e03-40b8-b570-756141b80b85/embed'">2011 Map</div>
-              <div type="button" class="btn btn-default  active" onclick="document.getElementById('map').src='https://plannergrl.carto.com/builder/9aca9ea1-5091-45f5-a3e2-951c986ead7c/embed'">2016 Map</div>
-            </div>      
-          </div>
-
-          <div id="mobile">
-            <iframe name="map2" id="map2" width="100%" height="800" frameborder="0" src="https://plannergrl.carto.com/builder/9aca9ea1-5091-45f5-a3e2-951c986ead7c/embed" ></iframe>
-
-            <div class="btn-group btn-group-lg" role="group">
-              <div type="button" class="btn btn-default " onclick="document.getElementById('map2').src='https://plannergrl.carto.com/builder/50ce6043-666d-4a73-bac6-7b390d35e7d5/embed'">2006 Map</div>
-              <div type="button" class="btn btn-default " onclick="document.getElementById('map2').src='https://plannergrl.carto.com/builder/81733342-2c8c-439a-a99c-393d564accb7/embed'">2011 Map</div>
-              <div type="button" class="btn btn-default  active" onclick="document.getElementById('map2').src='https://plannergrl.carto.com/builder/8bec3e0e-5632-4f66-a1b3-4d25eb53c453/embed'">2016 Map</div>
-            </div>      
-          </div>
-
+        <div class="btn-group btn-group-md " role="group">
+          <div type="button" class="btn btn-default " onClick="document.getElementById('map').src='https://plannergrl.carto.com/builder/009e622d-94bd-4ac6-b7fc-de78cf87facf/embed'">2006 Map</div>
+          <div type="button" class="btn btn-default " onClick="document.getElementById('map').src='https://plannergrl.carto.com/builder/2c731e63-9e03-40b8-b570-756141b80b85/embed'">2011 Map</div>
+          <div type="button" class="btn btn-default active" onClick="document.getElementById('map').src='https://plannergrl.carto.com/builder/9aca9ea1-5091-45f5-a3e2-951c986ead7c/embed'">2016 Map</div>
+        </div>     
+      </div>
 
 
 
@@ -79,20 +73,9 @@
     </div>
 
     <style>
-    <style>
-    #web{
+    #container{
       width: 100%;
       text-align: center;
-    }
-
-    #mobile{
-      display: none;
-    }
-
-    .map {
-    	min-width: 100%; 
-        width: 100px;
-        *width: 100%;
     }
 
     /* bootstrap */
@@ -109,26 +92,22 @@
       background-color: #66D1F6 !important; 
       color: white !important;
       border-color: #FFFFFF !important;
-     }    
+     }   
 
-
-    @media screen and (max-width: 736px){
-      #web{
-        display: none;
-        overflow: auto;
--webkit-overflow-scrolling:touch;
+    @media screen and (max-width: 1024px){  
+        #mobilecontainer{
+            overflow: hidden;
+            margin: 15px auto; 
+            max-width: 760px;
+        }
+        #map{
+            border: 0px none; 
+            margin-bottom: -250px; 
+            height: 859px; 
+            width: 760;
+            max-width: 760px;
+        }
       }
-
-      #mobile{
-        display: block;
-        width: 100%;
-        text-align: center;
-      }
-    }
-    </style>
-  
-
-
     </style>
 
 
