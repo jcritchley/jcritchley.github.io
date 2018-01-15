@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tornado By Fujita: Ontario</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      
+      #map {
+        height: 100%;
+      }
+      
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+      var map;
+
+
+      function initMap() {
+
+      var infowindow = new google.maps.InfoWindow();
+
+          map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 8,
+              center: {
+                  lat: 43.639380,
+                  lng: -79.381396
+              }
+          });
+
+          map.data.loadGeoJson(
+          // Link to the GeoJSON file that was created from a CSV file and displayed in geojson.io and then raw data url was added
+            'https://gist.githubusercontent.com/anonymous/3e08ef8ac2b96279bfa4c740d051ad60/raw/7a8bd8253f4748830665cd823f56a152a9b07aff/map.geojson');
+          
+          // set the style to allow the propety of Fujita to display proportionally:larger means greater Fuijita
+          map.data.setStyle(function(feature) {
+            var magnitude = feature.getProperty('Fujita');
+            return {
+              icon: getCircle(magnitude)
+            };
+          });
+ 
+           // add listener to close infowindow when clicking anywhere on map
+           // this is closing any open infowindows, if it is called after the open infowindow it will immediatly close the infowindow you attempted to open
+           // code runs in the order it is written, you need to be careful to order events correctly
+          google.maps.event.addListener(map.data, 'click', function (event) {
+              infowindow.close();
+          });  
+
+          // When the user clicks, open an infowindow
+          map.data.addListener('click', function(event) {
+            var myHTML = event.feature.getProperty("Fujita");
+            infowindow.setContent("<div style='width:100px; text-align: left;'>" + 'Hurricane Fujita Scale: ' + myHTML + "</div>");
+            // position the infowindow on the marker
+            infowindow.setPosition(event.feature.getGeometry().get());
+            // anchor the infowindow on the marker
+            infowindow.setOptions({pixelOffset: new google.maps.Size(0,-30)});
+            infowindow.open(map);
+          }); 
+            
+      }
+
+      // allows for styling of the cirlces to occur
+      function getCircle(magnitude) {
+        return {
+          path: google.maps.SymbolPath.CIRCLE,
+          fillColor: 'red',
+          fillOpacity: .7,
+          scale: Math.pow(3, magnitude) / 3,
+          strokeColor: 'black',
+          strokeWeight: .7
+        };
+            
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?callback=initMap">
+    </script>
+  </body>
+</html>
