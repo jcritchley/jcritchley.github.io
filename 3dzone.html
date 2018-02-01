@@ -517,28 +517,21 @@
           url: 'mapbox://jcritchley.019hb1y7'
         });
         map.addLayer({
-          id: 'BuildingFootprint',
-          type: 'fill',
-          source: 'odmassing_2014_wgs_w_address_-5becis',
+          'id': 'BuildingFootprint',
+          'source': 'odmassing_2014_wgs_w_address_-5becis',
           'source-layer': 'odmassing_2014_wgs_w_address_-5becis',
-          layout: {
-            visibility: 'visible'
-          },
-          paint: {
-            'fill-extrude-height': {
-                'property': 'ele_z',
-              'stops': [
-                [{zoom: 12, value: 0},   0],
-                [{zoom: 12, value: 1000}, 0],
-                [{zoom: 13.5, value: 0}, 0],
-                [{zoom: 13.5, value: 1000}, 1000]
-              ]
-            },      
-            'fill-color': {
+          'type': 'fill-extrusion',
+          'paint': {
+            'fill-extrusion-height': {
+                'type': 'identity',
+                'property': 'ele_z'
+            },    
+            'fill-extrusion-base':0,
+            'fill-extrusion-color': {
               'property': 'zn_zone_ke',
               'type': 'categorical',
               'stops': [
-                ['Commercial-Residential-Employment', '#D50000'],
+                ['Commercial-Residentail-Employment', '#D50000'],
                 ['Commercial-Residential', '#E53935'],
                 ['Commercial-Local', '#EF9A9A'],
                 ['Residential', '#FF6F00'], 
@@ -570,7 +563,7 @@
                 ['Unassigned', '#E0E0E0'],  
               ]
             },
-            'fill-opacity': 0.9,
+            'fill-extrusion-opacity': 0.9,
           }
         }, 'waterway-label');
 
