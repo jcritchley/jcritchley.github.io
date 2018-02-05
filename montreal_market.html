@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>Montréal Market Vendors ca 1880</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">  
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45765699-1', 'jonathancritchley.ca');
+      ga('send', 'pageview');
+    </script>  
+
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Montréal Market Vendors ca 1880</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" style="margin-left:5px;max-width:50px">JONATHAN CRITCHLEY</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.html">Home</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<section id="works"></section>
+	<div class="container">
+		<div class="row centered mt mb">
+			<div class="col-lg-8 col-lg-offset-2">
+				<h1>Montréal Market Vendors ca 1880</h1>
+        <br>
+				<h3 class="lead">The following interactive web maps were created as part of my work with the <a href="http://geohist.ca/2018/01/montreal-market-pilot-project/">Canadian Historical Geographic Information Systems Partnership</a>, as part of a pilot project to explore the use of online GIS tools to allow active exploration of historical GIS-enabled data.</h3> 
+				<p>The project allowed us to asses the ability of an online service to allow users to perform GIS operations in a browser, including posing new or unanticipated questions, drawing out new or unanticipated spatial relationships, and allowing the user to use GIS processes to explore and analyse data.</p>  
+				<p>We were not working with small files:</p>
+				<ul>
+				<li>12,000 Parcels</li>
+		        <li>370 Building Footprints</li>
+		        <li>34,500 Address Points</li>		        
+		    	</ul>
+		    	<p>CARTO proved to be a very capable online service to perform GIS functions to query and analyze data,  accessible to academic researchers, students and anyone wanting to explore data without requiring the use of a desktop GIS.</p>
+				<p>The final interactive map is available <a href="https://canadian-hgis.carto.com/builder/a20b5b37-52ed-417b-b6fa-f73d618d6fcd/embed">here</a>.</p>		    
+        	    <p>For step by step details about how the work was completed using the CARTO service and tools, a technical development documents is available on the CHGIS website <a href="http://geohist.ca/wp-content/uploads/2018/01/Montreal_Lovells_Market_Devt_OS.pdf">here</a>.</p>   		    	
+			<br>	
+			</div>
+
+			<div class="col-lg-8 col-lg-offset-2">   
+			    <h2>Processing Data using CARTO & Results</h2>
+			    <hr>
+			    <p>The following steps were completed using the online CARTO service in a web browser without the need for a desktop GIS.</p> 
+			    <br>
+			    <h4>Loading Parcels & Footprints</h4> 
+		        <center><a href="http://geohist.ca/2018/01/montreal-market-pilot-project/"><img class="img-responsive" src="assets/img/montreal/1.png" style="width:60%; min-width: 450px;display: block;margin: 0 auto;"></a></center>
+			    <br>
+			    <h4>Query Market Footprints by Attribute Value <h6>Using SQL query</h6></h4> 
+		        <center><a href="http://geohist.ca/2018/01/montreal-market-pilot-project/"><img class="img-responsive" src="assets/img/montreal/2.png" style="width:60%; min-width: 450px;display: block;margin: 0 auto;"></a></center>
+			    <br>
+			    <h4>Spatial Query to Identify Parcels that contain Market Footprints <h6> Using Intersect second layer Analysis</h6></h4> 
+		        <center><a href="http://geohist.ca/2018/01/montreal-market-pilot-project/"><img class="img-responsive" src="assets/img/montreal/3.png" style="width:60%; min-width: 450px;display: block;margin: 0 auto;"></a></center>
+			    <br>
+			    <h4>Add Address Points that are a mix of Home & Work Addresses</h4> 
+		        <center><a href="http://geohist.ca/2018/01/montreal-market-pilot-project/"><img class="img-responsive" src="assets/img/montreal/4.png" style="width:60%; min-width: 450px;display: block;margin: 0 auto;"></a></center>
+			    <br>
+			    <h4>Spatial Query to Identify Points that are contained inside Market Parcels <h6> Using Intersect second layer Analysis</h6></h4> 
+		        <center><a href="http://geohist.ca/2018/01/montreal-market-pilot-project/"><img class="img-responsive" src="assets/img/montreal/5.png" style="width:60%; min-width: 450px;display: block;margin: 0 auto;"></a></center>
+			    <br>
+			    <h4>Results are Market Address Points</h4> 
+		        <center><a href="http://geohist.ca/2018/01/montreal-market-pilot-project/"><img class="img-responsive" src="assets/img/montreal/6.png" style="width:60%; min-width: 450px;display: block;margin: 0 auto;"></a></center>
+			    <br>
+			    <h4>Query Matching Home Addresses based on Unique Identifier <h6>Using SQL Query</h6></h4> 
+		        <center><a href="http://geohist.ca/2018/01/montreal-market-pilot-project/"><img class="img-responsive" src="assets/img/montreal/7.png" style="width:60%; min-width: 450px;display: block;margin: 0 auto;"></a></center>	
+			    <h4>Generate Lines Between Home and Work <h6> Using Connect with lines Analysis</h6></h4> 
+		        <center><a href="http://geohist.ca/2018/01/montreal-market-pilot-project/"><img class="img-responsive" src="assets/img/montreal/8.png" style="width:60%; min-width: 450px;display: block;margin: 0 auto;"></a></center>
+			    <br>
+			    <h4>Apply Unique Styling by Vendor Categories</h4> 
+		        <center><a href="http://geohist.ca/2018/01/montreal-market-pilot-project/"><img class="img-responsive" src="assets/img/montreal/9.png" style="width:60%; min-width: 450px;display: block;margin: 0 auto;"></a></center>
+			    <br>
+			    <h4>Filter Individual Vendor Home/Work & Connection by Categories - Butcher <h6>Using Widgets</h6></h4> 
+		        <center><a href="http://geohist.ca/2018/01/montreal-market-pilot-project/"><img class="img-responsive" src="assets/img/montreal/10.png" style="width:60%; min-width: 450px;display: block;margin: 0 auto;"></a></center>
+			    <br>
+			    <h4>Filter Individual Vendor Home/Work & Connection by Categories - Trader <h6>Using Widgets</h6></h4> 
+		        <center><a href="http://geohist.ca/2018/01/montreal-market-pilot-project/"><img class="img-responsive" src="assets/img/montreal/11.png" style="width:60%; min-width: 450px;display: block;margin: 0 auto;"></a></center>
+			    <br>
+			    <h4>Filter Individual Vendor Home/Work & Connection by Categories - Grocer <h6> Using Widgets</h6></h4> 
+		        <center><a href="http://geohist.ca/2018/01/montreal-market-pilot-project/"><img class="img-responsive" src="assets/img/montreal/12.png" style="width:60%; min-width: 450px;display: block;margin: 0 auto;"></a></center>
+			    <br> 		        		        		        		        		        
+			</div>
+		</div><!--/row -->
+	</div><!--/container -->
+	
+	<div id="social">
+		<div class="container" >
+			<div class="row centered">
+				<div class="col-md-4">
+					<a href="mailto:jonathan.critchley@me.com" ><i class="fa fa-envelope-o"></i></a>
+				</div>
+				<div class="col-md-4">
+					
+				</div>	
+				<div class="col-md-4">
+					<a href="https://twitter.com/Afrikanadese" target="_blank"><i class="fa fa-twitter"></i></a>
+				</div>			
+			</div><!--/row -->
+		</div><!--/container -->
+	</div><!--/social -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
