@@ -1,0 +1,3106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <title>Social Planning Toronto - Toronto Language Map</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">  
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-45765699-1', 'jonathancritchley.ca');
+      ga('send', 'pageview');
+    </script>  
+
+    <script type="text/javascript">
+        (function() {
+            // only want one resizer on the page
+            if (document.documentElement.className.indexOf("g-resizer-v3-init") > -1) return;
+            document.documentElement.className += " g-resizer-v3-init";
+            // require IE9+
+            if (!("querySelector" in document)) return;
+            function resizer() {
+                var elements = Array.prototype.slice.call(document.querySelectorAll(".g-artboard[data-min-width]")),
+                    widthById = {};
+                elements.forEach(function(el) {
+                    var parent = el.parentNode,
+                        width = widthById[parent.id] || parent.getBoundingClientRect().width,
+                        minwidth = el.getAttribute("data-min-width"),
+                        maxwidth = el.getAttribute("data-max-width");
+                    widthById[parent.id] = width;
+
+                    if (+minwidth <= width && (+maxwidth >= width || maxwidth === null)) {
+                        el.style.display = "block";
+                    } else {
+                        el.style.display = "none";
+                    }
+                });
+                try {
+                    if (window.parent && window.parent.$) {
+                        window.parent.$("body").trigger("resizedcontent", [window]);
+                    }
+                    if (window.require) {
+                        require(['foundation/main'], function() {
+                            require(['shared/interactive/instances/app-communicator'], function(AppCommunicator) {
+                                AppCommunicator.triggerResize();
+                            });
+                        });
+                    }
+                } catch(e) { console.log(e); }
+            }
+
+            document.addEventListener('DOMContentLoaded', resizer);
+            // feel free to replace throttle with _.throttle, if available
+            window.addEventListener('resize', throttle(resizer, 200));        
+
+            function throttle(func, wait) {
+                // from underscore.js
+                var _now = Date.now || function() { return new Date().getTime(); },
+                    context, args, result, timeout = null, previous = 0;
+                var later = function() {
+                    previous = _now();
+                    timeout = null;
+                    result = func.apply(context, args);
+                    if (!timeout) context = args = null;
+                };
+                return function() {
+                    var now = _now(), remaining = wait - (now - previous);
+                    context = this;
+                    args = arguments;
+                    if (remaining <= 0 || remaining > wait) {
+                        if (timeout) {
+                            clearTimeout(timeout);
+                            timeout = null;
+                        }
+                        previous = now;
+                        result = func.apply(context, args);
+                        if (!timeout) context = args = null;
+                    } 
+                    // else if (!timeout && options.trailing !== false) {
+                    //     timeout = setTimeout(later, remaining);
+                    // }
+                    return result;
+                };
+            }
+
+           
+        })();
+    </script>
+
+<style type='text/css' media='screen,print'>
+  #g-Languages_900px-box .g-artboard {
+    margin:0 auto;
+  }
+  #g-Languages_900px-box .g-artboard p {
+    margin:0;
+  }
+  .g-aiAbs {
+    position:absolute;
+  }
+  .g-aiImg {
+    display:block;
+    width:100% !important;
+  }
+  .g-aiSymbol {
+    position: absolute;
+    box-sizing: border-box;
+  }
+  .g-aiPointText p { white-space: nowrap; }
+  #g-Languages_900px-Artboard_1 {
+    position:relative;
+    overflow:hidden;
+  }
+  #g-Languages_900px-Artboard_1 p {
+    font-family:ITC Franklin Gothic Std;
+    /*font-weight:bold;*/
+    font-size:10px;
+    line-height:14px;
+    height:auto;
+    filter:alpha(opacity=100);
+    -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity:1;
+    letter-spacing:0em;
+    text-align:left;
+    color:rgb(0,0,0);
+    text-transform:none;
+    padding-bottom:0;
+    padding-top:0;
+    mix-blend-mode:normal;
+    font-style:normal;
+  }
+  #g-Languages_900px-Artboard_1 .g-pstyle0 {
+    font-family:ITCFranklinGothicStd-BkCp;
+    font-size:33px;
+    line-height:34px;
+    height:34px;
+  }
+
+  #g-Languages_900px-Artboard_1 .g-pstyle4 {
+    font-family:'Montserrat', sans-serif;
+    font-size:0.9em;
+    height: 19px;
+  }
+
+  #g-Languages_900px-Artboard_1 .g-pstyle1 {
+    font-family:ITCFranklinGothicStd-BkXCp;
+    font-weight:regular;
+    font-size:18px;
+    line-height:21px;
+    height:21px;
+    padding-left: 15px;
+  }
+  #g-Languages_900px-Artboard_1 .g-pstyle2 {
+    font-family:ITCFranklinGothicStd-BkXCp;
+    height:20px;
+    font-size: 16px;
+    text-align: center;
+  }
+  #g-Languages_900px-Artboard_1 .g-cstyle0 {
+    color:rgb(43, 150 ,51);
+  }
+  #g-Languages_900px-Artboard_1 .g-cstyle1 {
+    font-family:ITC Franklin Gothic Std;
+    font-weight:heavy;
+    color:rgb(244,147,26);
+    font-size: 20px;
+  }
+  #g-Languages_900px-Artboard_1 .g-cstyle2 {
+    font-family:ITC Franklin Gothic Std;
+    font-weight:heavy;
+    color:rgb(246,68,24);
+  }
+  #g-Languages_900px-Artboard_2 {
+    position:relative;
+    overflow:hidden;
+  }
+  #g-Languages_900px-Artboard_2 p {
+    font-family:ITC Franklin Gothic Std;
+    /*font-weight:bold;*/
+    font-size:8px;
+    line-height:10px;
+    height:auto;
+    filter:alpha(opacity=100);
+    -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity:1;
+    letter-spacing:0em;
+    text-align:left;
+    color:rgb(0,0,0);
+    text-transform:none;
+    padding-bottom:0;
+    padding-top:0;
+    mix-blend-mode:normal;
+    font-style:normal;
+  }
+  #g-Languages_900px-Artboard_2 .g-pstyle0 {
+    font-family:ITCFranklinGothicStd-BkCp;
+    font-size:26px;
+    line-height:23px;
+    height:23px;
+  }
+  #g-Languages_900px-Artboard_2 .g-pstyle1 {
+    font-family:ITCFranklinGothicStd-BkXCp;
+    font-weight:regular;
+    font-size:12px;
+    line-height:14px;
+    height:14px;
+    padding-left: 15px;
+  }
+  #g-Languages_900px-Artboard_2 .g-pstyle2 {
+    font-family:ITCFranklinGothicStd-BkXCp;
+    height:10px;
+    font-size: 11px;
+    text-align: center;
+  }
+  #g-Languages_900px-Artboard_2 .g-cstyle0 {
+    color:rgb(43,150,51);
+  }
+  #g-Languages_900px-Artboard_2 .g-cstyle1 {
+    font-family:ITC Franklin Gothic Std;
+    font-weight:heavy;
+    color:rgb(244,147,26);
+    font-size: 16px;
+  }
+  #g-Languages_900px-Artboard_2 .g-cstyle2 {
+    font-family:ITC Franklin Gothic Std;
+    font-weight:heavy;
+    color:rgb(250,68,24);
+  }
+  #g-Languages_900px-Artboard_3 {
+    position:relative;
+    overflow:hidden;
+  }
+  #g-Languages_900px-Artboard_3 p {
+    font-family:ITC Franklin Gothic Std;
+    /*font-weight:bold;*/
+    font-size:5px;
+    line-height:6px;
+    height:auto;
+    filter:alpha(opacity=100);
+    -ms-filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity:1;
+    letter-spacing:0em;
+    text-align:center;
+    color:rgb(0,0,0);
+    text-transform:none;
+    padding-bottom:0;
+    padding-top:0;
+    mix-blend-mode:normal;
+    font-style:normal;
+  }
+  #g-Languages_900px-Artboard_3 .g-pstyle0 {
+    font-family:ITCFranklinGothicStd-BkCp;
+    font-size:13px;
+    line-height:13px;
+    height:13px;
+  }
+  #g-Languages_900px-Artboard_3 .g-pstyle1 {
+    font-family:ITCFranklinGothicStd-BkXCp;
+    font-weight:regular;
+    font-size:7px;
+    line-height:8px;
+    height:8px;
+    padding-left: 15px;
+  }
+  #g-Languages_900px-Artboard_3 .g-pstyle2 {
+    font-family:ITCFranklinGothicStd-BkXCp;
+    height:6px;
+    font-size: 6px;
+    text-align: center;
+  }
+  #g-Languages_900px-Artboard_3 .g-cstyle0 {
+    color:rgb(43, 150 ,51);
+  }
+  #g-Languages_900px-Artboard_3 .g-cstyle1 {
+    font-family:ITC Franklin Gothic Std;
+    font-weight:heavy;
+    color:rgb(244,147,26);
+    font-size: 10px;
+  }
+  #g-Languages_900px-Artboard_3 .g-cstyle2 {
+    font-family:ITC Franklin Gothic Std;
+    font-weight:heavy;
+    color:rgb(246,68,24);
+  }
+
+/*  .row{
+    max-width: 1260px;
+    min-width: 1260px;
+    margin-left: 60px;
+  }*/
+
+/*  @media (max-width: 1024px) {
+      
+      .row{
+        max-width: 900px;
+        min-width: 900px;
+        margin-left: 14px; 
+      }
+
+      p{
+      padding-left: 0;    
+      }
+
+      #g-Languages_900px-Artboard_1 .g-pstyle0 {
+        font-family:ITCFranklinGothicStd-BkCp;
+        font-size:33px;
+        line-height:13px;
+        height:13px;
+      }
+
+  }*/
+
+  @media (max-width: 899px) {
+      
+      .row{
+        max-width: 700px;
+        min-width: 700px;
+        margin-left: 14px; 
+      }
+
+      p{
+      padding-left: 0;    
+      }
+
+  }
+
+  @media (max-width: 460px) {
+      
+      p{
+      padding-left: 0;     
+      }
+
+      .row{
+        max-width: 405px;
+        min-width: 405px;
+        margin-left: -15px; 
+      }
+
+  }
+
+  @media (max-width: 380px) {
+      
+      p{
+      padding-left: 0;   
+      }
+
+      .row{
+        max-width: 360px;
+        min-width: 360px;
+        margin-left: -15px; 
+      }
+
+      #g-Languages_900px-Artboard_3 .g-pstyle0 {
+        font-family:ITCFranklinGothicStd-BkCp;
+        font-size:13px;
+        line-height:13px;
+        height:13px;
+      }
+
+  }
+
+  @media (max-width: 320px) {
+      
+      p{
+      padding-left: 0;   
+      }
+
+      .row{
+        max-width: 360px;
+        min-width: 360px;
+        margin-left: -15px; 
+      }
+
+      #g-Languages_900px-Artboard_3 .g-pstyle0 {
+        font-family:ITCFranklinGothicStd-BkCp;
+        font-size:13px;
+        line-height:13px;
+        height:13px;
+      }
+
+  }
+
+
+</style>
+
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toronto Language Map</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html" style="margin-left:5px;max-width:50px">JONATHAN CRITCHLEY</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="index.html">Home</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<section id="works"></section>
+	<div class="container">
+    <div class="row centered mt mb">
+      
+      <div class="col-lg-8 col-lg-offset-2">
+        <h1>Social Planning Toronto - Language Map</h1>
+        <br>
+         <h3 class="lead">
+          As part of my work on the <a href="https://www.socialplanningtoronto.org/languages_map">Toronto Language Map</a> with <a href="https://twitter.com/bethwilson416">Beth Wilson</a> for <a href="https://www.socialplanningtoronto.org">Social Planning Toronto</a>, the following maps were created using Statistics Canada census data and the <a href="https://carto.com">Carto</a> online mapping platform.
+         </h3>
+         <p style="margin-left: 10px;padding-right: 0">The final project resulted in three interactive maps that allows users to explore spatiotemporal trends in Toronto’s non-official language makeup over the past 10 years, using 2006, 2011 and 2016 census data.</p> 
+         <p style="margin-left: 10px;padding-right: 0">The Carto mapping plaform provided a drag and drop interface to create the maps, and widgets to allow easy customisation of a single layer restyled for each map. Each map was created with one single data table. The widgets on the right of the map can be used to re-style the map to just one language, or filter the layers based on categories (% ranges).
+          <br>
+          <br> 
+          <br>  
+         </p>
+<!--           <div class="col-lg-10 col-lg-offset-1 mt"> -->
+            <!-- Image viewer -->
+            <div class="iv" style="margin-left: 10px;padding-right: 0">
+              <div class="iv-main pxs">
+                <img  src="assets/img/language_spt/language_widget.png" class="img-responsive">
+              </div> 
+            </div>
+<!--           </div>  -->       
+         <p style="margin-left: 10px;">
+          <br>
+          <br>  
+            One challenge that influenced the development on the final maps was that we were aiming to display a total of 72 maps, with an intuitave and simple to navigate interactive interface: </p>
+            <ul>
+            <li>
+            <strong>2006:</strong>  23 maps
+            </li>
+            <li>
+            <strong>2011:</strong>  24 maps
+            </li>     
+            <li>
+            <strong>2016:</strong>  25 maps
+            </li>                  
+          </ul>
+         
+         <p style="margin-left: 10px; padding-right: 0">
+          Carto proved to be the perfect fit to handle the requirements, with an out of box solution to allow on the fly layer restyling.   
+         </p>   
+         <p style="margin-left: 10px; padding-right: 0"> The primary layer that the user views when first loading the map is a combined map of top languages. Each language was assigned a unique color and a color range made up of shadings from darker to lighter based on a Census Tract's language % value. An attempt was made to assign related but different colors for different regions that languages originate from.
+         </p>      
+         <p style="margin-left: 10px; padding-right: 0">Languages in the widgets are ordered based on the percent the language represents of the total single responses to the census question, for each of the Census years. 
+          <br><br>
+          The maps summarised below are ordered by 2016 values. 
+        <br> 
+        <br>
+        </p>
+                                   
+      </div>
+
+
+        <!-- START OF AI2HTML -->      
+<div id="g-Languages_900px-box" class="ai2html ai2html-box-v5">
+
+  <!-- Artboard: Artboard_1 -->
+  <div id="g-Languages_900px-Artboard_1" class="g-artboard" style="width:900px; height:8175.21441777442px;" data-aspect-ratio="0.11" data-min-width="900">
+    <img id="g-Languages_900px-Artboard_1-img" class="g-aiImg g-aiAbs" src="./assets/img/language_spt/Languages_900px-Artboard_1.jpg"/>
+    <div id="g-ai0-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:0.4553%;margin-top:-18.2px;left:3.2597%;width:865px;">
+      <p class="g-pstyle0">CITY OF TORONTO TOP NON-OFFICIAL LANGUAGES SPOKEN MOST OFTEN AT HOME</p>
+    </div>
+    <div id="g-ai0-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:1.2217%;margin-top:-20.9px;left:18.8972%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:1.2217%;margin-top:-20.9px;left:49.3441%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:1.2217%;margin-top:-20.9px;left:79.6285%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:3.3407%;margin-top:-11.1px;left:18.8054%;margin-left:-68.5px;width:137px;">
+      <p class="g-pstyle2">2,372,060 Total Responses</p>
+    </div>
+    <div id="g-ai0-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:3.3407%;margin-top:-11.1px;left:49.1184%;margin-left:-77.5px;width:155px;">
+      <p class="g-pstyle2">2,406,525 Total Responses <span class="g-cstyle0">&uarr;</span>  </p>
+    </div>
+    <div id="g-ai0-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:3.4714%;margin-top:-21.8px;left:79.5066%;margin-left:-76px;width:152px;">
+      <p class="g-pstyle2">2,458,460 Total Responses <span class="g-cstyle0">&uarr;</span> </p>
+    </div>
+    <div id="g-ai0-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.4429%;margin-top:-18.2px;left:3.1594%;width:114px;">
+      <p class="g-pstyle0">CHINESE</p>
+    </div>
+    <div id="g-ai0-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.4208%;margin-top:-7.4px;left:61.2447%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.4208%;margin-top:-7.4px;left:69.9301%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-11" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.4208%;margin-top:-7.4px;left:76.6863%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-12" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.4208%;margin-top:-7.4px;left:83.2777%;width:81px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai0-13" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.4208%;margin-top:-7.4px;left:92.0961%;width:51px;">
+      <p class="g-pstyle3">50% +</p>
+    </div>
+    <div id="g-ai0-14" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:5.1972%;margin-top:-20.9px;left:79.696%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-15" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:5.1972%;margin-top:-20.9px;left:18.9648%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-16" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:5.1972%;margin-top:-20.9px;left:49.4116%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-17" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:7.5774%;margin-top:-32.5px;left:79.3779%;margin-left:-85px;width:170px;">
+      <p class="g-pstyle2">  # 1 <span class="g-cstyle1">-</span> / 7. 3 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 90.2 % </p>
+    </div>
+    <div id="g-ai0-18" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:7.459%;margin-top:-21.8px;left:18.8998%;margin-left:-79.5px;width:159px;">
+      <p class="g-pstyle2"> # 1 / 8.3 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 63.3 % </p>
+    </div>
+    <div id="g-ai0-19" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:7.459%;margin-top:-21.8px;left:49.0878%;margin-left:-86.5px;width:173px;">
+      <p class="g-pstyle2"> # 1<span class="g-cstyle1"> -</span> / 7. 56 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 90.1 % </p>
+    </div>
+    <div id="g-ai0-20" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.4184%;margin-top:-18.2px;left:3.2289%;width:117px;">
+      <p class="g-pstyle0">TAGALOG</p>
+    </div>
+    <div id="g-ai0-21" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.3473%;margin-top:-7.4px;left:67.916%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-22" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.3473%;margin-top:-7.4px;left:76.7091%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-23" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.3473%;margin-top:-7.4px;left:83.4651%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-24" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.3473%;margin-top:-7.4px;left:90.0564%;width:81px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai0-25" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:9.1726%;margin-top:-20.9px;left:18.7079%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-26" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:9.1726%;margin-top:-20.9px;left:49.1547%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-27" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:9.1726%;margin-top:-20.9px;left:79.4391%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-28" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:11.4222%;margin-top:-21.8px;left:48.9502%;margin-left:-88.5px;width:177px;">
+      <p class="g-pstyle2"> # 4 <span class="g-cstyle0">&uarr;</span> / 1.54 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 15.6 % </p>
+    </div>
+    <div id="g-ai0-29" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:11.4222%;margin-top:-21.8px;left:79.3167%;margin-left:-88.5px;width:177px;">
+      <p class="g-pstyle2"> # 2 <span class="g-cstyle0">&uarr;</span> / 1.73 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 14.5 % </p>
+    </div>
+    <div id="g-ai0-30" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:11.4345%;margin-top:-21.8px;left:19.0668%;margin-left:-82.5px;width:165px;">
+      <p class="g-pstyle2"> # 6 / 1.42 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 14 % </p>
+    </div>
+    <div id="g-ai0-31" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.4183%;margin-top:-18.2px;left:3.3674%;width:82px;">
+      <p class="g-pstyle0">TAMIL</p>
+    </div>
+    <div id="g-ai0-32" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.3349%;margin-top:-7.4px;left:67.916%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-33" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.3349%;margin-top:-7.4px;left:76.7091%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-34" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.3349%;margin-top:-7.4px;left:83.4651%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-35" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.3349%;margin-top:-7.4px;left:90.0564%;width:81px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai0-36" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:13.1725%;margin-top:-20.9px;left:18.7754%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-37" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:13.1725%;margin-top:-20.9px;left:49.2222%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-38" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:13.1725%;margin-top:-20.9px;left:79.5066%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-39" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:15.4344%;margin-top:-21.8px;left:19.0668%;margin-left:-82.5px;width:165px;">
+      <p class="g-pstyle2"> # 2 / 2.12 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 19.1 % </p>
+    </div>
+    <div id="g-ai0-40" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:15.4344%;margin-top:-21.8px;left:49.1954%;margin-left:-85.5px;width:171px;">
+      <p class="g-pstyle2"> # 2 <span class="g-cstyle1">-</span> / 2.03 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 30.9 % </p>
+    </div>
+    <div id="g-ai0-41" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:15.4344%;margin-top:-21.8px;left:79.427%;margin-left:-88.5px;width:177px;">
+      <p class="g-pstyle2"> # 3 <span class="g-cstyle2">&darr;</span> / 1.71 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 32.5 % </p>
+    </div>
+    <div id="g-ai0-42" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.4304%;margin-top:-18.2px;left:3.2652%;width:114px;">
+      <p class="g-pstyle0">SPANISH</p>
+    </div>
+    <div id="g-ai0-43" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.3471%;margin-top:-7.4px;left:83.2728%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-44" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.3471%;margin-top:-7.4px;left:67.7396%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-45" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.3471%;margin-top:-7.4px;left:76.5168%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-46" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.3471%;margin-top:-7.4px;left:89.8641%;width:81px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai0-47" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:17.1846%;margin-top:-20.9px;left:18.9648%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-48" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:17.1846%;margin-top:-20.9px;left:49.4116%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-49" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:17.1846%;margin-top:-20.9px;left:79.696%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-50" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:19.4465%;margin-top:-21.8px;left:18.7909%;margin-left:-82.5px;width:165px;">
+      <p class="g-pstyle2"> # 4 / 1.84 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 14.9 % </p>
+    </div>
+    <div id="g-ai0-51" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:19.4465%;margin-top:-21.8px;left:49.3793%;margin-left:-87px;width:174px;">
+      <p class="g-pstyle2"> # 3 <span class="g-cstyle0">&uarr;</span> / 1.88 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 15.8 % </p>
+    </div>
+    <div id="g-ai0-52" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:19.4465%;margin-top:-21.8px;left:79.4963%;margin-left:-88.5px;width:177px;">
+      <p class="g-pstyle2"> # 4 <span class="g-cstyle2">&darr;</span> / 1.69 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 13.1 % </p>
+    </div>
+    <div id="g-ai0-53" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.418%;margin-top:-18.2px;left:3.1836%;width:163px;">
+      <p class="g-pstyle0">PORTUGUESE</p>
+    </div>
+    <div id="g-ai0-54" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.3347%;margin-top:-7.4px;left:68.1421%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-55" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.3347%;margin-top:-7.4px;left:77.0139%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-56" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.3347%;margin-top:-7.4px;left:83.7701%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-57" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.3347%;margin-top:-7.4px;left:90.3615%;width:81px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai0-58" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.1723%;margin-top:-20.9px;left:19.0323%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-59" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.1723%;margin-top:-20.9px;left:49.4791%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-60" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.1723%;margin-top:-20.9px;left:79.7635%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-61" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:23.4342%;margin-top:-21.8px;left:49.3793%;margin-left:-87px;width:174px;">
+      <p class="g-pstyle2"># 6 <span class="g-cstyle2">&darr;</span> / 1.44 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 25.9 % </p>
+    </div>
+    <div id="g-ai0-62" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:23.4342%;margin-top:-21.8px;left:79.4834%;margin-left:-85.5px;width:171px;">
+      <p class="g-pstyle2"> # 5 <span class="g-cstyle0">&uarr;</span>/ 1.36 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 25.5 % </p>
+    </div>
+    <div id="g-ai0-63" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:23.4342%;margin-top:-21.8px;left:19.0668%;margin-left:-82.5px;width:165px;">
+      <p class="g-pstyle2"> # 5 / 1.58 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 28 % </p>
+    </div>
+    <div id="g-ai0-64" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.4057%;margin-top:-18.2px;left:2.9997%;width:81px;">
+      <p class="g-pstyle0">FARSI</p>
+    </div>
+    <div id="g-ai0-65" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.3346%;margin-top:-7.4px;left:67.7208%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-66" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.3346%;margin-top:-7.4px;left:76.5137%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-67" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.3346%;margin-top:-7.4px;left:83.2696%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-68" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.3346%;margin-top:-7.4px;left:89.8611%;width:81px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai0-69" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:25.16%;margin-top:-20.9px;left:79.5741%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-70" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:25.16%;margin-top:-20.9px;left:18.8429%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-71" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:25.16%;margin-top:-20.9px;left:49.2897%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-72" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:27.4218%;margin-top:-21.8px;left:18.9737%;margin-left:-81px;width:162px;">
+      <p class="g-pstyle2"> # 9 / 1.15 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 12.8 % </p>
+    </div>
+    <div id="g-ai0-73" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:27.4218%;margin-top:-21.8px;left:49.2575%;margin-left:-87px;width:174px;">
+      <p class="g-pstyle2"> # 7 <span class="g-cstyle0">&uarr;</span> / 1.27 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 16.3 % </p>
+    </div>
+    <div id="g-ai0-74" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:27.4218%;margin-top:-21.8px;left:79.5242%;margin-left:-83px;width:166px;">
+      <p class="g-pstyle2"> 6 <span class="g-cstyle0">&uarr;</span> / 1.36 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 17.9 % </p>
+    </div>
+    <div id="g-ai0-75" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.3811%;margin-top:-18.2px;left:3.159%;width:98px;">
+      <p class="g-pstyle0">ITALIAN</p>
+    </div>
+    <div id="g-ai0-76" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.3101%;margin-top:-7.4px;left:67.7963%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-77" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.3101%;margin-top:-7.4px;left:76.7004%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-78" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.3101%;margin-top:-7.4px;left:83.4564%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-79" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.3101%;margin-top:-7.4px;left:90.0479%;width:81px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai0-80" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:29.1354%;margin-top:-20.9px;left:79.5741%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-81" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:29.1354%;margin-top:-20.9px;left:18.8429%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-82" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:29.1354%;margin-top:-20.9px;left:49.2897%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-83" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:31.3972%;margin-top:-21.8px;left:19.0604%;margin-left:-81px;width:162px;">
+      <p class="g-pstyle2"> # 3 / 1.86 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 24.2 % </p>
+    </div>
+    <div id="g-ai0-84" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:31.3972%;margin-top:-21.8px;left:49.2325%;margin-left:-84.5px;width:169px;">
+      <p class="g-pstyle2"># 5<span class="g-cstyle2">&darr;</span> / 1.46 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 20 % </p>
+    </div>
+    <div id="g-ai0-85" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:31.3972%;margin-top:-21.8px;left:79.5982%;margin-left:-84.5px;width:169px;">
+      <p class="g-pstyle2"># 7 <span class="g-cstyle2">&darr;</span>/ 1.10 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 17.7 % </p>
+    </div>
+    <div id="g-ai0-86" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.381%;margin-top:-18.2px;left:2.9714%;width:83px;">
+      <p class="g-pstyle0">URDU</p>
+    </div>
+    <div id="g-ai0-87" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.2977%;margin-top:-7.4px;left:67.8957%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-88" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.2977%;margin-top:-7.4px;left:76.8%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-89" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.2977%;margin-top:-7.4px;left:83.556%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-90" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.2977%;margin-top:-7.4px;left:90.1474%;width:81px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai0-91" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:33.1353%;margin-top:-20.9px;left:79.4663%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-92" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:33.1353%;margin-top:-20.9px;left:18.735%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-93" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:33.1353%;margin-top:-20.9px;left:49.1818%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-94" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:35.3971%;margin-top:-21.8px;left:19.0474%;margin-left:-78px;width:156px;">
+      <p class="g-pstyle2"> # 7 / 1.3 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 44.2 % </p>
+    </div>
+    <div id="g-ai0-95" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:35.3971%;margin-top:-21.8px;left:48.9674%;margin-left:-87px;width:174px;">
+      <p class="g-pstyle2"># 9 <span class="g-cstyle2">&darr; </span>/ 1.10 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 37.6 % </p>
+    </div>
+    <div id="g-ai0-96" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:35.3971%;margin-top:-21.8px;left:79.4964%;margin-left:-88.5px;width:177px;">
+      <p class="g-pstyle2"> # 8 <span class="g-cstyle0">&uarr;</span> / 0.96 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 33.6 % </p>
+    </div>
+    <div id="g-ai0-97" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.3565%;margin-top:-18.2px;left:3.0399%;width:109px;">
+      <p class="g-pstyle0">KOREAN</p>
+    </div>
+    <div id="g-ai0-98" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.2732%;margin-top:-7.4px;left:67.9518%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-99" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.2732%;margin-top:-7.4px;left:76.8561%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-100" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.2732%;margin-top:-7.4px;left:83.6121%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-101" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.2732%;margin-top:-7.4px;left:90.2035%;width:81px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai0-102" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:37.1107%;margin-top:-20.9px;left:79.5741%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-103" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:37.1107%;margin-top:-20.9px;left:18.8429%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-104" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:37.1107%;margin-top:-20.9px;left:49.2897%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-105" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:39.3726%;margin-top:-21.8px;left:18.8583%;margin-left:-82.5px;width:165px;">
+      <p class="g-pstyle2"># 10 / 0.99 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 11.2 % </p>
+    </div>
+    <div id="g-ai0-106" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:39.3726%;margin-top:-21.8px;left:48.9491%;margin-left:-85.5px;width:171px;">
+      <p class="g-pstyle2"># 10 <span class="g-cstyle1">-</span> / 0.97 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 14 % </p>
+    </div>
+    <div id="g-ai0-107" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:39.3726%;margin-top:-21.8px;left:79.4834%;margin-left:-85.5px;width:171px;">
+      <p class="g-pstyle2"># 9 <span class="g-cstyle0">&uarr;</span> / 0.96 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 13.6 % </p>
+    </div>
+    <div id="g-ai0-108" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.3441%;margin-top:-18.2px;left:3.0679%;width:117px;">
+      <p class="g-pstyle0">RUSSIAN</p>
+    </div>
+    <div id="g-ai0-109" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.2731%;margin-top:-7.4px;left:67.8065%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-110" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.2731%;margin-top:-7.4px;left:76.7109%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-111" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.2731%;margin-top:-7.4px;left:83.467%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-112" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.2731%;margin-top:-7.4px;left:90.0585%;width:81px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai0-113" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:41.0984%;margin-top:-20.9px;left:18.5967%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-114" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:41.0984%;margin-top:-20.9px;left:49.0435%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-115" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:41.0984%;margin-top:-20.9px;left:79.3279%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-116" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:43.3602%;margin-top:-21.8px;left:18.8997%;margin-left:-79.5px;width:159px;">
+      <p class="g-pstyle2"># 8 / 1.18 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 36.2 % </p>
+    </div>
+    <div id="g-ai0-117" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:43.3602%;margin-top:-21.8px;left:49.1301%;margin-left:-83px;width:166px;">
+      <p class="g-pstyle2"># 8 <span class="g-cstyle1">-</span> / 1.12 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 35.1 % </p>
+    </div>
+    <div id="g-ai0-118" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:43.3602%;margin-top:-21.8px;left:79.2821%;margin-left:-90px;width:180px;">
+      <p class="g-pstyle2"> # 10 <span class="g-cstyle2">&darr;</span> / 0.94 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 26.9 % </p>
+    </div>
+    <div id="g-ai0-119" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.3318%;margin-top:-18.2px;left:3.1883%;width:113px;">
+      <p class="g-pstyle0">BENGALI</p>
+    </div>
+    <div id="g-ai0-120" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.2607%;margin-top:-7.4px;left:67.6108%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-121" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.2607%;margin-top:-7.4px;left:76.5151%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-122" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.2607%;margin-top:-7.4px;left:83.2712%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-123" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.2607%;margin-top:-7.4px;left:89.8625%;width:81px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai0-124" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:45.0983%;margin-top:-20.9px;left:18.8025%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-125" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:45.0983%;margin-top:-20.9px;left:49.2493%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-126" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:45.0983%;margin-top:-20.9px;left:79.5337%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-127" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.3479%;margin-top:-21.8px;left:18.7233%;margin-left:-82.5px;width:165px;">
+      <p class="g-pstyle2"># 16 / 0.61 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 23.4 % </p>
+    </div>
+    <div id="g-ai0-128" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.3479%;margin-top:-21.8px;left:49.2639%;margin-left:-88.5px;width:177px;">
+      <p class="g-pstyle2"># 12 <span class="g-cstyle0">&uarr;</span> / 0.74 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 28.6 % </p>
+    </div>
+    <div id="g-ai0-129" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.3479%;margin-top:-21.8px;left:79.3849%;margin-left:-88.5px;width:177px;">
+      <p class="g-pstyle2"># 11 <span class="g-cstyle0">&uarr;</span> / 0.77 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 29.2 % </p>
+    </div>
+    <div id="g-ai0-130" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.3195%;margin-top:-18.2px;left:3.0297%;width:154px;">
+      <p class="g-pstyle0">VIETNAMESE</p>
+    </div>
+    <div id="g-ai0-131" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.2361%;margin-top:-7.4px;left:67.8818%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-132" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.2361%;margin-top:-7.4px;left:76.8972%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-133" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.2361%;margin-top:-7.4px;left:83.6534%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-134" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.2361%;margin-top:-7.4px;left:90.2448%;width:81px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai0-135" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:49.0737%;margin-top:-20.9px;left:18.6642%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-136" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:49.0737%;margin-top:-20.9px;left:49.111%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-137" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:49.0737%;margin-top:-20.9px;left:79.3954%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-138" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.3356%;margin-top:-21.8px;left:18.8179%;margin-left:-82.5px;width:165px;">
+      <p class="g-pstyle2"># 12 / 0.88 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 12.3 % </p>
+    </div>
+    <div id="g-ai0-139" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.3356%;margin-top:-21.8px;left:79.562%;margin-left:-88.5px;width:177px;">
+      <p class="g-pstyle2"># 12 <span class="g-cstyle0">&uarr;</span> / 0.69 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 11.7 % </p>
+    </div>
+    <div id="g-ai0-140" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.3356%;margin-top:-21.8px;left:49.0177%;margin-left:-88.5px;width:177px;">
+      <p class="g-pstyle2"># 13 <span class="g-cstyle2">&darr;</span> / 0.74 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 10.9 % </p>
+    </div>
+    <div id="g-ai0-141" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:52.3071%;margin-top:-18.2px;left:3.1121%;width:106px;">
+      <p class="g-pstyle0">FRENCH</p>
+    </div>
+    <div id="g-ai0-142" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:52.2238%;margin-top:-7.4px;left:74.8085%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-143" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:52.2238%;margin-top:-7.4px;left:83.7129%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-144" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:52.2238%;margin-top:-7.4px;left:90.4689%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-145" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:53.0614%;margin-top:-20.9px;left:18.7754%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-146" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:53.0614%;margin-top:-20.9px;left:49.2222%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-147" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:53.0614%;margin-top:-20.9px;left:79.5066%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-148" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.3232%;margin-top:-21.8px;left:79.3851%;margin-left:-88.5px;width:177px;">
+      <p class="g-pstyle2"># 13 <span class="g-cstyle0">&uarr;</span> / 0.69 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 2.97 % </p>
+    </div>
+    <div id="g-ai0-149" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.3232%;margin-top:-21.8px;left:19.0668%;margin-left:-82.5px;width:165px;">
+      <p class="g-pstyle2"># 18 / 0.56 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 3.72 % </p>
+    </div>
+    <div id="g-ai0-150" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.3232%;margin-top:-21.8px;left:49.3793%;margin-left:-87px;width:174px;">
+      <p class="g-pstyle2"># 16 <span class="g-cstyle0">&uarr;</span>/ 0.65 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 2.65 % </p>
+    </div>
+    <div id="g-ai0-151" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.2826%;margin-top:-18.2px;left:3.0923%;width:118px;">
+      <p class="g-pstyle0">GUJARATI</p>
+    </div>
+    <div id="g-ai0-152" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.1992%;margin-top:-7.4px;left:83.4486%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-153" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.1992%;margin-top:-7.4px;left:67.7883%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-154" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.1992%;margin-top:-7.4px;left:76.6925%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-155" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.1992%;margin-top:-7.4px;left:90.0399%;width:81px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai0-156" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:57.0368%;margin-top:-20.9px;left:18.7754%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-157" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:57.0368%;margin-top:-20.9px;left:49.2222%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-158" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:57.0368%;margin-top:-20.9px;left:79.5066%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-159" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:59.2987%;margin-top:-21.8px;left:18.8583%;margin-left:-82.5px;width:165px;">
+      <p class="g-pstyle2"># 11 / 0.93 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 31.8 % </p>
+    </div>
+    <div id="g-ai0-160" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:59.2987%;margin-top:-21.8px;left:48.9491%;margin-left:-85.5px;width:171px;">
+      <p class="g-pstyle2"># 11 <span class="g-cstyle1">-</span> / 0.80 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 33.2 %</p>
+    </div>
+    <div id="g-ai0-161" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:59.2987%;margin-top:-21.8px;left:79.4205%;margin-left:-87px;width:174px;">
+      <p class="g-pstyle2"># 14 <span class="g-cstyle2">&darr;</span>/ 0.67 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 27.1 % </p>
+    </div>
+    <div id="g-ai0-162" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:60.258%;margin-top:-18.2px;left:2.9886%;width:100px;">
+      <p class="g-pstyle0">ARABIC</p>
+    </div>
+    <div id="g-ai0-163" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:60.1869%;margin-top:-7.4px;left:83.4009%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-164" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:60.1869%;margin-top:-7.4px;left:67.6293%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-165" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:60.1869%;margin-top:-7.4px;left:76.6449%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-166" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:60.1869%;margin-top:-7.4px;left:89.9924%;width:81px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai0-167" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:61.0122%;margin-top:-20.9px;left:18.8701%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-168" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:61.0122%;margin-top:-20.9px;left:49.3168%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-169" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:61.0122%;margin-top:-20.9px;left:79.6012%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-170" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:63.2741%;margin-top:-21.8px;left:18.6121%;margin-left:-82.5px;width:165px;">
+      <p class="g-pstyle2"># 17 / 0.59 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 12.3 % </p>
+    </div>
+    <div id="g-ai0-171" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:63.2741%;margin-top:-21.8px;left:49.4533%;margin-left:-88.5px;width:177px;">
+      <p class="g-pstyle2"># 15 <span class="g-cstyle0">&uarr;</span> / 0.66 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 11.2 %</p>
+    </div>
+    <div id="g-ai0-172" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:63.2741%;margin-top:-21.8px;left:79.4531%;margin-left:-85.5px;width:171px;">
+      <p class="g-pstyle2"># 15 <span class="g-cstyle1">-</span> / 0.67 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 10.6 % </p>
+    </div>
+    <div id="g-ai0-173" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:64.2701%;margin-top:-18.2px;left:3.0992%;width:93px;">
+      <p class="g-pstyle0">GREEK</p>
+    </div>
+    <div id="g-ai0-174" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:64.1868%;margin-top:-7.4px;left:74.9062%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-175" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:64.1868%;margin-top:-7.4px;left:83.8103%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-176" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:64.1868%;margin-top:-7.4px;left:90.5663%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-177" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:65.0243%;margin-top:-20.9px;left:18.9648%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-178" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:65.0243%;margin-top:-20.9px;left:49.4116%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-179" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:65.0243%;margin-top:-20.9px;left:79.696%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-180" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:67.2862%;margin-top:-21.8px;left:18.7504%;margin-left:-82.5px;width:165px;">
+      <p class="g-pstyle2"># 15 / 0.68 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 11.3 % </p>
+    </div>
+    <div id="g-ai0-181" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:67.2862%;margin-top:-21.8px;left:49.4533%;margin-left:-88.5px;width:177px;">
+      <p class="g-pstyle2"># 17 <span class="g-cstyle2">&darr;</span> / 0.60 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 10 %</p>
+    </div>
+    <div id="g-ai0-182" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:67.2862%;margin-top:-21.8px;left:79.3102%;margin-left:-87px;width:174px;">
+      <p class="g-pstyle2"># 16 <span class="g-cstyle0">&uarr;</span>/ 0.53 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 8.31 % </p>
+    </div>
+    <div id="g-ai0-183" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:68.2455%;margin-top:-18.2px;left:2.9564%;width:110px;">
+      <p class="g-pstyle0">PUNJABI</p>
+    </div>
+    <div id="g-ai0-184" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:68.1745%;margin-top:-7.4px;left:68.0272%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-185" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:68.1745%;margin-top:-7.4px;left:76.9315%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-186" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:68.1745%;margin-top:-7.4px;left:83.6876%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-187" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:68.1745%;margin-top:-7.4px;left:90.2791%;width:81px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai0-188" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:69.012%;margin-top:-20.9px;left:18.748%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-189" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:69.012%;margin-top:-20.9px;left:49.1948%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-190" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:69.012%;margin-top:-20.9px;left:79.4793%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-191" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:71.2739%;margin-top:-21.8px;left:18.9802%;margin-left:-82.5px;width:165px;">
+      <p class="g-pstyle2"># 13 / 0.79 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 31.2 % </p>
+    </div>
+    <div id="g-ai0-192" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:71.2739%;margin-top:-21.8px;left:49.1965%;margin-left:-88.5px;width:177px;">
+      <p class="g-pstyle2"># 14 <span class="g-cstyle2">&darr;</span> / 0.66 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 22.8 %</p>
+    </div>
+    <div id="g-ai0-193" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:71.2739%;margin-top:-21.8px;left:79.3167%;margin-left:-88.5px;width:177px;">
+      <p class="g-pstyle2"># 17 <span class="g-cstyle2">&darr;</span> / 0.49 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 19.8 % </p>
+    </div>
+    <div id="g-ai0-194" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:72.2332%;margin-top:-18.2px;left:3.0965%;width:98px;">
+      <p class="g-pstyle0">POLISH</p>
+    </div>
+    <div id="g-ai0-195" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:72.1499%;margin-top:-7.4px;left:74.6794%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-196" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:72.1499%;margin-top:-7.4px;left:83.5837%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-197" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:72.1499%;margin-top:-7.4px;left:90.3397%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-198" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:72.9874%;margin-top:-20.9px;left:18.8536%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-199" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:72.9874%;margin-top:-20.9px;left:49.3003%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-200" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:72.9874%;margin-top:-20.9px;left:79.5847%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-201" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.2371%;margin-top:-21.8px;left:18.7104%;margin-left:-79.5px;width:159px;">
+      <p class="g-pstyle2"># 14 / 0.7 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 9.79 % </p>
+    </div>
+    <div id="g-ai0-202" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.2371%;margin-top:-21.8px;left:49.0917%;margin-left:-90px;width:180px;">
+      <p class="g-pstyle2"># 18 <span class="g-cstyle2">&darr;</span> / 0.55 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 8.07 %</p>
+    </div>
+    <div id="g-ai0-203" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.2371%;margin-top:-21.8px;left:79.384%;margin-left:-85.5px;width:171px;">
+      <p class="g-pstyle2"># 18 <span class="g-cstyle1">-</span> / 0.43 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 6.15 % </p>
+    </div>
+    <div id="g-ai0-204" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:76.2086%;margin-top:-18.2px;left:3.0725%;width:115px;">
+      <p class="g-pstyle0">SERBIAN</p>
+    </div>
+    <div id="g-ai0-205" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:76.1498%;margin-top:-7.4px;left:90.5752%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-206" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:76.1498%;margin-top:-7.4px;left:74.9148%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-207" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:76.1498%;margin-top:-7.4px;left:83.8189%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-208" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:76.9629%;margin-top:-20.9px;left:18.8429%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-209" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:76.9629%;margin-top:-20.9px;left:49.2898%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-210" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:76.9629%;margin-top:-20.9px;left:79.5741%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-211" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:79.2247%;margin-top:-21.8px;left:19.0477%;margin-left:-82.5px;width:165px;">
+      <p class="g-pstyle2"># 19 / 0.39 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 7.41 % </p>
+    </div>
+    <div id="g-ai0-212" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:79.2247%;margin-top:-21.8px;left:49.4533%;margin-left:-88.5px;width:177px;">
+      <p class="g-pstyle2"># 20 <span class="g-cstyle2">&darr;</span> / 0.37 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 5.34 %</p>
+    </div>
+    <div id="g-ai0-213" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:79.2247%;margin-top:-21.8px;left:79.5892%;margin-left:-88.5px;width:177px;">
+      <p class="g-pstyle2"># 19 <span class="g-cstyle0">&uarr;</span> / 0.33 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 6.72 % </p>
+    </div>
+    <div id="g-ai0-214" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:80.1963%;margin-top:-18.2px;left:3.5763%;width:82px;">
+      <p class="g-pstyle0">HINDI</p>
+    </div>
+    <div id="g-ai0-215" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:80.113%;margin-top:-7.4px;left:75.0712%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-216" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:80.113%;margin-top:-7.4px;left:83.864%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-217" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:80.113%;margin-top:-7.4px;left:90.6203%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-218" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:80.9505%;margin-top:-20.9px;left:79.5741%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-219" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:83.2124%;margin-top:-21.8px;left:79.3032%;margin-left:-82.5px;width:165px;">
+      <p class="g-pstyle2"># 20 / 0.32 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 2.46 % </p>
+    </div>
+    <div id="g-ai0-220" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:84.1717%;margin-top:-18.2px;left:3.1211%;width:131px;">
+      <p class="g-pstyle0">UKRANIAN</p>
+    </div>
+    <div id="g-ai0-221" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:84.0884%;margin-top:-7.4px;left:67.9086%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-222" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:84.0884%;margin-top:-7.4px;left:76.8128%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-223" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:84.0884%;margin-top:-7.4px;left:83.569%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-224" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:84.0884%;margin-top:-7.4px;left:90.1604%;width:81px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai0-225" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:84.926%;margin-top:-20.9px;left:18.7318%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-226" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:84.926%;margin-top:-20.9px;left:49.1785%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-227" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:84.926%;margin-top:-20.9px;left:79.463%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-228" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:87.1878%;margin-top:-21.8px;left:18.8855%;margin-left:-82.5px;width:165px;">
+      <p class="g-pstyle2"># 20 / 0.36 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 11.6 % </p>
+    </div>
+    <div id="g-ai0-229" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:87.1878%;margin-top:-21.8px;left:49.0852%;margin-left:-88.5px;width:177px;">
+      <p class="g-pstyle2"># 21 <span class="g-cstyle2">&darr;</span> / 0.32 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 8.07 %</p>
+    </div>
+    <div id="g-ai0-230" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:87.1878%;margin-top:-21.8px;left:79.3823%;margin-left:-85.5px;width:171px;">
+      <p class="g-pstyle2"># 21 <span class="g-cstyle1">-</span> / 0.30 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 8.29 % </p>
+    </div>
+    <div id="g-ai0-231" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:88.1716%;margin-top:-18.2px;left:3.1593%;width:103px;">
+      <p class="g-pstyle0">SOMALI</p>
+    </div>
+    <div id="g-ai0-232" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:88.0883%;margin-top:-7.4px;left:67.5829%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-233" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:88.0883%;margin-top:-7.4px;left:76.4872%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-234" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:88.0883%;margin-top:-7.4px;left:83.2432%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-235" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:88.0883%;margin-top:-7.4px;left:89.8345%;width:81px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai0-236" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:88.9259%;margin-top:-20.9px;left:49.2897%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-237" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:88.9259%;margin-top:-20.9px;left:79.5741%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-238" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:91.1877%;margin-top:-21.8px;left:48.9777%;margin-left:-82.5px;width:165px;">
+      <p class="g-pstyle2"># 19 / 0.37 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 15.8 %</p>
+    </div>
+    <div id="g-ai0-239" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:91.1877%;margin-top:-21.8px;left:79.5892%;margin-left:-88.5px;width:177px;">
+      <p class="g-pstyle2"># 22 <span class="g-cstyle2">&darr;</span> / 0.28 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 18 % </p>
+    </div>
+    <div id="g-ai0-240" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:92.1838%;margin-top:-18.2px;left:3.0545%;width:148px;">
+      <p class="g-pstyle0">CANTONESE</p>
+    </div>
+    <div id="g-ai0-241" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:92.1004%;margin-top:-7.4px;left:60.745%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-242" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:92.1004%;margin-top:-7.4px;left:69.4306%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-243" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:92.1004%;margin-top:-7.4px;left:76.1865%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-244" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:92.1004%;margin-top:-7.4px;left:82.778%;width:81px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai0-245" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:92.1004%;margin-top:-7.4px;left:91.5964%;width:51px;">
+      <p class="g-pstyle3">50% +</p>
+    </div>
+    <div id="g-ai0-246" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:92.938%;margin-top:-20.9px;left:18.4551%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-247" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:92.938%;margin-top:-20.9px;left:48.902%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-248" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:92.938%;margin-top:-20.9px;left:79.1863%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-249" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:95.1999%;margin-top:-21.8px;left:18.5108%;margin-left:-67px;width:134px;">
+      <p class="g-pstyle2">3.19 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 41.5 %</p>
+    </div>
+    <div id="g-ai0-250" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:95.1999%;margin-top:-21.8px;left:49.0452%;margin-left:-78.5px;width:157px;">
+      <p class="g-pstyle2"><span class="g-cstyle0">&uarr; </span>/ 2.80 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 57.8 %</p>
+    </div>
+    <div id="g-ai0-251" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:95.1999%;margin-top:-21.8px;left:79.4544%;margin-left:-78.5px;width:157px;">
+      <p class="g-pstyle2"><span class="g-cstyle0">&uarr; </span>/ 3.39 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 78.7 %</p>
+    </div>
+    <div id="g-ai0-252" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.1714%;margin-top:-18.2px;left:2.9761%;width:136px;">
+      <p class="g-pstyle0">MANDARIN</p>
+    </div>
+    <div id="g-ai0-253" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.1003%;margin-top:-7.4px;left:67.7195%;width:84px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai0-254" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.1003%;margin-top:-7.4px;left:76.6239%;width:69px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai0-255" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.1003%;margin-top:-7.4px;left:83.3799%;width:75px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai0-256" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.1003%;margin-top:-7.4px;left:89.9712%;width:81px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai0-257" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.9257%;margin-top:-20.9px;left:18.5902%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai0-258" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.9257%;margin-top:-20.9px;left:49.037%;margin-left:-23.5px;width:47px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai0-259" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.9257%;margin-top:-20.9px;left:79.3214%;margin-left:-22px;width:44px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai0-260" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:99.1875%;margin-top:-21.8px;left:18.898%;margin-left:-67px;width:134px;">
+      <p class="g-pstyle2">1.61 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 13.7 %</p>
+    </div>
+    <div id="g-ai0-261" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:99.1875%;margin-top:-21.8px;left:48.9439%;margin-left:-67px;width:134px;">
+      <p class="g-pstyle2"><span class="g-cstyle0">&uarr; </span>/ 2.10 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 18.2 %</p>
+    </div>
+    <div id="g-ai0-262" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:99.1875%;margin-top:-21.8px;left:79.3869%;margin-left:-78.5px;width:157px;">
+      <p class="g-pstyle2"><span class="g-cstyle0">&uarr; </span>/ 3.57 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 34.4 %</p>
+    </div>
+  </div>
+
+  <!-- Artboard: Artboard_2 -->
+  <div id="g-Languages_900px-Artboard_2" class="g-artboard" style="width:602px; height:5507.74427030716px;" data-aspect-ratio="0.109" data-min-width="602" data-max-width="899">
+    <img id="g-Languages_900px-Artboard_2-img" class="g-aiImg g-aiAbs" src="./assets/img/language_spt/Languages_900px-Artboard_2.jpg"/>
+    <div id="g-ai1-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:0.4573%;margin-top:-12.2px;left:3.2611%;width:586px;">
+      <p class="g-pstyle0">CITY OF TORONTO TOP NON-OFFICIAL LANGUAGES SPOKEN MOST OFTEN AT HOME</p>
+    </div>
+    <div id="g-ai1-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:1.2068%;margin-top:-14.5px;left:49.3883%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:1.2068%;margin-top:-14.5px;left:79.6869%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:1.2068%;margin-top:-14.5px;left:18.9288%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:3.4421%;margin-top:-14.6px;left:79.5423%;margin-left:-54.5px;width:109px;">
+      <p class="g-pstyle2">2,458,460 Total Responses <span class="g-cstyle0">&uarr;</span> </p>
+    </div>
+    <div id="g-ai1-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:3.3123%;margin-top:-7.4px;left:18.8173%;margin-left:-49.5px;width:99px;">
+      <p class="g-pstyle2">2,372,060 Total Responses</p>
+    </div>
+    <div id="g-ai1-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:3.3123%;margin-top:-7.4px;left:49.1401%;margin-left:-55.5px;width:111px;">
+      <p class="g-pstyle2">2,406,525 Total Responses <span class="g-cstyle0">&uarr;</span>  </p>
+    </div>
+    <div id="g-ai1-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.4153%;margin-top:-12.2px;left:3.1609%;width:84px;">
+      <p class="g-pstyle0">CHINESE</p>
+    </div>
+    <div id="g-ai1-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.3809%;margin-top:-5.3px;left:61.2718%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.3809%;margin-top:-5.3px;left:69.9611%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-11" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.3809%;margin-top:-5.3px;left:76.7203%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-12" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.3809%;margin-top:-5.3px;left:83.3146%;width:61px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai1-13" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.3809%;margin-top:-5.3px;left:92.1371%;width:42px;">
+      <p class="g-pstyle3">50% +</p>
+    </div>
+    <div id="g-ai1-14" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:5.1649%;margin-top:-14.5px;left:18.9963%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-15" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:5.1649%;margin-top:-14.5px;left:49.4559%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-16" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:5.1649%;margin-top:-14.5px;left:79.7543%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-17" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:7.5299%;margin-top:-21.7px;left:79.4099%;margin-left:-60.5px;width:121px;">
+      <p class="g-pstyle2">  # 1 <span class="g-cstyle1">-</span> / 7. 3 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 90.2 % </p>
+    </div>
+    <div id="g-ai1-18" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:7.4001%;margin-top:-14.6px;left:18.9349%;margin-left:-57px;width:114px;">
+      <p class="g-pstyle2"> # 1 / 8.3 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 63.3 % </p>
+    </div>
+    <div id="g-ai1-19" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:7.4001%;margin-top:-14.6px;left:49.1059%;margin-left:-61.5px;width:123px;">
+      <p class="g-pstyle2"> # 1<span class="g-cstyle1"> -</span> / 7. 56 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 90.1 % </p>
+    </div>
+    <div id="g-ai1-20" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.3552%;margin-top:-12.2px;left:3.2304%;width:86px;">
+      <p class="g-pstyle0">TAGALOG</p>
+    </div>
+    <div id="g-ai1-21" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.2845%;margin-top:-5.3px;left:67.946%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-22" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.2845%;margin-top:-5.3px;left:76.7431%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-23" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.2845%;margin-top:-5.3px;left:83.5021%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-24" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.2845%;margin-top:-5.3px;left:90.0963%;width:61px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai1-25" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:9.1048%;margin-top:-14.5px;left:79.4974%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-26" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:9.1048%;margin-top:-14.5px;left:18.7393%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-27" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:9.1048%;margin-top:-14.5px;left:49.1988%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-28" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:11.34%;margin-top:-14.6px;left:48.9947%;margin-left:-63px;width:126px;">
+      <p class="g-pstyle2"> # 4 <span class="g-cstyle0">&uarr;</span> / 1.54 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 15.6 % </p>
+    </div>
+    <div id="g-ai1-29" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:11.34%;margin-top:-14.6px;left:79.3747%;margin-left:-63px;width:126px;">
+      <p class="g-pstyle2"> # 2 <span class="g-cstyle0">&uarr;</span> / 1.73 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 14.5 % </p>
+    </div>
+    <div id="g-ai1-30" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:11.3582%;margin-top:-14.6px;left:19.1007%;margin-left:-59px;width:118px;">
+      <p class="g-pstyle2"> # 6 / 1.42 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 14 % </p>
+    </div>
+    <div id="g-ai1-31" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.3314%;margin-top:-12.2px;left:3.369%;width:62px;">
+      <p class="g-pstyle0">TAMIL</p>
+    </div>
+    <div id="g-ai1-32" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.2607%;margin-top:-5.3px;left:67.946%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-33" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.2607%;margin-top:-5.3px;left:76.7431%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-34" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.2607%;margin-top:-5.3px;left:83.5021%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-35" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.2607%;margin-top:-5.3px;left:90.0963%;width:61px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai1-36" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:13.081%;margin-top:-14.5px;left:79.5649%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-37" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:13.081%;margin-top:-14.5px;left:18.8068%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-38" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:13.081%;margin-top:-14.5px;left:49.2664%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-39" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:15.3344%;margin-top:-14.6px;left:19.1007%;margin-left:-59px;width:118px;">
+      <p class="g-pstyle2"> # 2 / 2.12 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 19.1 % </p>
+    </div>
+    <div id="g-ai1-40" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:15.3344%;margin-top:-14.6px;left:49.2413%;margin-left:-61px;width:122px;">
+      <p class="g-pstyle2"> # 2 <span class="g-cstyle1">-</span> / 2.03 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 30.9 % </p>
+    </div>
+    <div id="g-ai1-41" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:15.3344%;margin-top:-14.6px;left:79.4851%;margin-left:-63px;width:126px;">
+      <p class="g-pstyle2"> # 3 <span class="g-cstyle2">&darr;</span> / 1.71 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 32.5 % </p>
+    </div>
+    <div id="g-ai1-42" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.3077%;margin-top:-12.2px;left:3.2666%;width:83px;">
+      <p class="g-pstyle0">SPANISH</p>
+    </div>
+    <div id="g-ai1-43" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.2369%;margin-top:-5.3px;left:83.3097%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-44" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.2369%;margin-top:-5.3px;left:67.7695%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-45" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.2369%;margin-top:-5.3px;left:76.5508%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-46" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.2369%;margin-top:-5.3px;left:89.9041%;width:61px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai1-47" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:17.0572%;margin-top:-14.5px;left:18.9963%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-48" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:17.0572%;margin-top:-14.5px;left:49.4559%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-49" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:17.0572%;margin-top:-14.5px;left:79.7543%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-50" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:19.3106%;margin-top:-14.6px;left:18.8246%;margin-left:-59px;width:118px;">
+      <p class="g-pstyle2"> # 4 / 1.84 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 14.9 % </p>
+    </div>
+    <div id="g-ai1-51" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:19.3106%;margin-top:-14.6px;left:49.4248%;margin-left:-62px;width:124px;">
+      <p class="g-pstyle2"> # 3 <span class="g-cstyle0">&uarr;</span> / 1.88 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 15.8 % </p>
+    </div>
+    <div id="g-ai1-52" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:19.3106%;margin-top:-14.6px;left:79.5545%;margin-left:-63px;width:126px;">
+      <p class="g-pstyle2"> # 4 <span class="g-cstyle2">&darr;</span> / 1.69 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 13.1 % </p>
+    </div>
+    <div id="g-ai1-53" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.2839%;margin-top:-12.2px;left:3.1849%;width:116px;">
+      <p class="g-pstyle0">PORTUGUESE</p>
+    </div>
+    <div id="g-ai1-54" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.2131%;margin-top:-5.3px;left:68.1723%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-55" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.2131%;margin-top:-5.3px;left:77.048%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-56" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.2131%;margin-top:-5.3px;left:83.8071%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-57" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.2131%;margin-top:-5.3px;left:90.4016%;width:61px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai1-58" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.0335%;margin-top:-14.5px;left:19.0639%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-59" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.0335%;margin-top:-14.5px;left:49.5234%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-60" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.0335%;margin-top:-14.5px;left:79.822%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-61" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:23.2687%;margin-top:-14.6px;left:79.5426%;margin-left:-61px;width:122px;">
+      <p class="g-pstyle2"> # 5 <span class="g-cstyle0">&uarr;</span>/ 1.36 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 25.5 % </p>
+    </div>
+    <div id="g-ai1-62" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:23.2687%;margin-top:-14.6px;left:49.4248%;margin-left:-62px;width:124px;">
+      <p class="g-pstyle2"># 6 <span class="g-cstyle2">&darr;</span> / 1.44 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 25.9 % </p>
+    </div>
+    <div id="g-ai1-63" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:23.2868%;margin-top:-14.6px;left:19.1007%;margin-left:-59px;width:118px;">
+      <p class="g-pstyle2"> # 5 / 1.58 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 28 % </p>
+    </div>
+    <div id="g-ai1-64" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.2419%;margin-top:-12.2px;left:3.0011%;width:62px;">
+      <p class="g-pstyle0">FARSI</p>
+    </div>
+    <div id="g-ai1-65" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.1712%;margin-top:-5.3px;left:67.7507%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-66" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.1712%;margin-top:-5.3px;left:76.5477%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-67" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.1712%;margin-top:-5.3px;left:83.3066%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-68" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.1712%;margin-top:-5.3px;left:89.901%;width:61px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai1-69" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.9915%;margin-top:-14.5px;left:18.8744%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-70" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.9915%;margin-top:-14.5px;left:49.3339%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-71" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.9915%;margin-top:-14.5px;left:79.6325%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-72" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:27.2449%;margin-top:-14.6px;left:19.0083%;margin-left:-58px;width:116px;">
+      <p class="g-pstyle2"> # 9 / 1.15 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 12.8 % </p>
+    </div>
+    <div id="g-ai1-73" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:27.2449%;margin-top:-14.6px;left:49.3029%;margin-left:-62px;width:124px;">
+      <p class="g-pstyle2"> # 7 <span class="g-cstyle0">&uarr;</span> / 1.27 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 16.3 % </p>
+    </div>
+    <div id="g-ai1-74" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:27.2449%;margin-top:-14.6px;left:79.5293%;margin-left:-59px;width:118px;">
+      <p class="g-pstyle2"> 6 <span class="g-cstyle0">&uarr;</span> / 1.36 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 17.9 % </p>
+    </div>
+    <div id="g-ai1-75" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.2%;margin-top:-12.2px;left:3.1604%;width:73px;">
+      <p class="g-pstyle0">ITALIAN</p>
+    </div>
+    <div id="g-ai1-76" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.1111%;margin-top:-5.3px;left:67.8263%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-77" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.1111%;margin-top:-5.3px;left:76.7345%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-78" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.1111%;margin-top:-5.3px;left:83.4933%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-79" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.1111%;margin-top:-5.3px;left:90.0877%;width:61px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai1-80" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.9496%;margin-top:-14.5px;left:18.8744%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-81" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.9496%;margin-top:-14.5px;left:49.3339%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-82" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.9496%;margin-top:-14.5px;left:79.6325%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-83" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:31.1848%;margin-top:-14.6px;left:19.095%;margin-left:-58px;width:116px;">
+      <p class="g-pstyle2"> # 3 / 1.86 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 24.2 % </p>
+    </div>
+    <div id="g-ai1-84" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:31.1848%;margin-top:-14.6px;left:49.2236%;margin-left:-60px;width:120px;">
+      <p class="g-pstyle2"># 5<span class="g-cstyle2">&darr;</span> / 1.46 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 20 % </p>
+    </div>
+    <div id="g-ai1-85" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:31.1848%;margin-top:-14.6px;left:79.6027%;margin-left:-60px;width:120px;">
+      <p class="g-pstyle2"># 7 <span class="g-cstyle2">&darr;</span>/ 1.10 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 17.7 % </p>
+    </div>
+    <div id="g-ai1-86" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.1581%;margin-top:-12.2px;left:2.9727%;width:63px;">
+      <p class="g-pstyle0">URDU</p>
+    </div>
+    <div id="g-ai1-87" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.0873%;margin-top:-5.3px;left:67.9258%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-88" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.0873%;margin-top:-5.3px;left:76.8341%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-89" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.0873%;margin-top:-5.3px;left:83.5929%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-90" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.0873%;margin-top:-5.3px;left:90.1873%;width:61px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai1-91" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.9077%;margin-top:-14.5px;left:18.7664%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-92" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.9077%;margin-top:-14.5px;left:49.2261%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-93" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.9077%;margin-top:-14.5px;left:79.5245%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-94" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:35.161%;margin-top:-14.6px;left:19.083%;margin-left:-56px;width:112px;">
+      <p class="g-pstyle2"> # 7 / 1.3 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 44.2 % </p>
+    </div>
+    <div id="g-ai1-95" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:35.161%;margin-top:-14.6px;left:49.0127%;margin-left:-62px;width:124px;">
+      <p class="g-pstyle2"># 9 <span class="g-cstyle2">&darr; </span>/ 1.10 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 37.6 % </p>
+    </div>
+    <div id="g-ai1-96" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:35.161%;margin-top:-14.6px;left:79.5545%;margin-left:-63px;width:126px;">
+      <p class="g-pstyle2"> # 8 <span class="g-cstyle0">&uarr;</span> / 0.96 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 33.6 % </p>
+    </div>
+    <div id="g-ai1-97" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.1161%;margin-top:-12.2px;left:3.0413%;width:80px;">
+      <p class="g-pstyle0">KOREAN</p>
+    </div>
+    <div id="g-ai1-98" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.0272%;margin-top:-5.3px;left:67.9819%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-99" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.0272%;margin-top:-5.3px;left:76.8902%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-100" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.0272%;margin-top:-5.3px;left:83.6491%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-101" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.0272%;margin-top:-5.3px;left:90.2435%;width:61px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai1-102" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.8657%;margin-top:-14.5px;left:18.8744%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-103" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.8657%;margin-top:-14.5px;left:49.3339%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-104" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.8657%;margin-top:-14.5px;left:79.6325%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-105" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:39.1009%;margin-top:-14.6px;left:18.8923%;margin-left:-59px;width:118px;">
+      <p class="g-pstyle2"># 10 / 0.99 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 11.2 % </p>
+    </div>
+    <div id="g-ai1-106" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:39.1009%;margin-top:-14.6px;left:48.9949%;margin-left:-61px;width:122px;">
+      <p class="g-pstyle2"># 10 <span class="g-cstyle1">-</span> / 0.97 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 14 % </p>
+    </div>
+    <div id="g-ai1-107" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:39.1009%;margin-top:-14.6px;left:79.5428%;margin-left:-61px;width:122px;">
+      <p class="g-pstyle2"># 9 <span class="g-cstyle0">&uarr;</span> / 0.96 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 13.6 % </p>
+    </div>
+    <div id="g-ai1-108" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.0742%;margin-top:-12.2px;left:3.0692%;width:85px;">
+      <p class="g-pstyle0">RUSSIAN</p>
+    </div>
+    <div id="g-ai1-109" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.0035%;margin-top:-5.3px;left:67.8365%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-110" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.0035%;margin-top:-5.3px;left:76.7448%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-111" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.0035%;margin-top:-5.3px;left:83.5039%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-112" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.0035%;margin-top:-5.3px;left:90.0983%;width:61px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai1-113" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.8238%;margin-top:-14.5px;left:79.3863%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-114" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.8238%;margin-top:-14.5px;left:18.628%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-115" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.8238%;margin-top:-14.5px;left:49.0875%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-116" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:43.0772%;margin-top:-14.6px;left:49.1217%;margin-left:-59px;width:118px;">
+      <p class="g-pstyle2"># 8 <span class="g-cstyle1">-</span> / 1.12 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 35.1 % </p>
+    </div>
+    <div id="g-ai1-117" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:43.0772%;margin-top:-14.6px;left:79.3395%;margin-left:-64px;width:128px;">
+      <p class="g-pstyle2"> # 10 <span class="g-cstyle2">&darr;</span> / 0.94 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 26.9 % </p>
+    </div>
+    <div id="g-ai1-118" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:43.0772%;margin-top:-14.6px;left:18.9348%;margin-left:-57px;width:114px;">
+      <p class="g-pstyle2"># 8 / 1.18 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 36.2 % </p>
+    </div>
+    <div id="g-ai1-119" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.0323%;margin-top:-12.2px;left:3.1897%;width:83px;">
+      <p class="g-pstyle0">BENGALI</p>
+    </div>
+    <div id="g-ai1-120" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:43.9615%;margin-top:-5.3px;left:67.6407%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-121" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:43.9615%;margin-top:-5.3px;left:76.5489%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-122" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:43.9615%;margin-top:-5.3px;left:83.3081%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-123" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:43.9615%;margin-top:-5.3px;left:89.9023%;width:61px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai1-124" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.7818%;margin-top:-14.5px;left:18.8339%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-125" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.7818%;margin-top:-14.5px;left:49.2935%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-126" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.7818%;margin-top:-14.5px;left:79.5921%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-127" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.0352%;margin-top:-14.6px;left:18.757%;margin-left:-59px;width:118px;">
+      <p class="g-pstyle2"># 16 / 0.61 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 23.4 % </p>
+    </div>
+    <div id="g-ai1-128" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.0352%;margin-top:-14.6px;left:49.3086%;margin-left:-63px;width:126px;">
+      <p class="g-pstyle2"># 12 <span class="g-cstyle0">&uarr;</span> / 0.74 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 28.6 % </p>
+    </div>
+    <div id="g-ai1-129" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.0352%;margin-top:-14.6px;left:79.443%;margin-left:-63px;width:126px;">
+      <p class="g-pstyle2"># 11 <span class="g-cstyle0">&uarr;</span> / 0.77 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 29.2 % </p>
+    </div>
+    <div id="g-ai1-130" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.9903%;margin-top:-12.2px;left:3.0311%;width:110px;">
+      <p class="g-pstyle0">VIETNAMESE</p>
+    </div>
+    <div id="g-ai1-131" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.9196%;margin-top:-5.3px;left:67.912%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-132" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.9196%;margin-top:-5.3px;left:76.9312%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-133" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.9196%;margin-top:-5.3px;left:83.6904%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-134" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.9196%;margin-top:-5.3px;left:90.2848%;width:61px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai1-135" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.7399%;margin-top:-14.5px;left:18.6957%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-136" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.7399%;margin-top:-14.5px;left:49.1552%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-137" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.7399%;margin-top:-14.5px;left:79.4537%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-138" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:50.9933%;margin-top:-14.6px;left:18.8517%;margin-left:-59px;width:118px;">
+      <p class="g-pstyle2"># 12 / 0.88 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 12.3 % </p>
+    </div>
+    <div id="g-ai1-139" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:50.9933%;margin-top:-14.6px;left:79.6202%;margin-left:-63px;width:126px;">
+      <p class="g-pstyle2"># 12 <span class="g-cstyle0">&uarr;</span> / 0.69 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 11.7 % </p>
+    </div>
+    <div id="g-ai1-140" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:50.9933%;margin-top:-14.6px;left:49.0624%;margin-left:-63px;width:126px;">
+      <p class="g-pstyle2"># 13 <span class="g-cstyle2">&darr;</span> / 0.74 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 10.9 % </p>
+    </div>
+    <div id="g-ai1-141" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.9484%;margin-top:-12.2px;left:3.1135%;width:79px;">
+      <p class="g-pstyle0">FRENCH</p>
+    </div>
+    <div id="g-ai1-142" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.8776%;margin-top:-5.3px;left:74.8417%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-143" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.8776%;margin-top:-5.3px;left:83.75%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-144" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.8776%;margin-top:-5.3px;left:90.5089%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-145" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:52.698%;margin-top:-14.5px;left:18.8068%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-146" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:52.698%;margin-top:-14.5px;left:49.2664%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-147" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:52.698%;margin-top:-14.5px;left:79.565%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-148" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:54.9513%;margin-top:-14.6px;left:19.1009%;margin-left:-59px;width:118px;">
+      <p class="g-pstyle2"># 18 / 0.56 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 3.72 % </p>
+    </div>
+    <div id="g-ai1-149" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:54.9513%;margin-top:-14.6px;left:49.4246%;margin-left:-62px;width:124px;">
+      <p class="g-pstyle2"># 16 <span class="g-cstyle0">&uarr;</span>/ 0.65 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 2.65 % </p>
+    </div>
+    <div id="g-ai1-150" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:54.9513%;margin-top:-14.6px;left:79.443%;margin-left:-63px;width:126px;">
+      <p class="g-pstyle2"># 13 <span class="g-cstyle0">&uarr;</span> / 0.69 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 2.97 % </p>
+    </div>
+    <div id="g-ai1-151" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.9065%;margin-top:-12.2px;left:3.0937%;width:87px;">
+      <p class="g-pstyle0">GUJARATI</p>
+    </div>
+    <div id="g-ai1-152" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.8176%;margin-top:-5.3px;left:83.4856%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-153" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.8176%;margin-top:-5.3px;left:67.8184%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-154" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.8176%;margin-top:-5.3px;left:76.7265%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-155" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.8176%;margin-top:-5.3px;left:90.0798%;width:61px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai1-156" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.656%;margin-top:-14.5px;left:18.8069%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-157" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.656%;margin-top:-14.5px;left:49.2664%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-158" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.656%;margin-top:-14.5px;left:79.565%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-159" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:58.9094%;margin-top:-14.6px;left:18.8923%;margin-left:-59px;width:118px;">
+      <p class="g-pstyle2"># 11 / 0.93 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 31.8 % </p>
+    </div>
+    <div id="g-ai1-160" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:58.9094%;margin-top:-14.6px;left:48.9949%;margin-left:-61px;width:122px;">
+      <p class="g-pstyle2"># 11 <span class="g-cstyle1">-</span> / 0.80 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 33.2 %</p>
+    </div>
+    <div id="g-ai1-161" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:58.9094%;margin-top:-14.6px;left:79.4792%;margin-left:-62px;width:124px;">
+      <p class="g-pstyle2"># 14 <span class="g-cstyle2">&darr;</span>/ 0.67 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 27.1 % </p>
+    </div>
+    <div id="g-ai1-162" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:59.8464%;margin-top:-12.2px;left:2.9899%;width:74px;">
+      <p class="g-pstyle0">ARABIC</p>
+    </div>
+    <div id="g-ai1-163" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:59.7756%;margin-top:-5.3px;left:83.4379%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-164" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:59.7756%;margin-top:-5.3px;left:67.6594%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-165" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:59.7756%;margin-top:-5.3px;left:76.6788%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-166" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:59.7756%;margin-top:-5.3px;left:90.0323%;width:61px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai1-167" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:60.5959%;margin-top:-14.5px;left:18.9015%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-168" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:60.5959%;margin-top:-14.5px;left:49.361%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-169" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:60.5959%;margin-top:-14.5px;left:79.6596%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-170" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:62.8493%;margin-top:-14.6px;left:18.6457%;margin-left:-59px;width:118px;">
+      <p class="g-pstyle2"># 17 / 0.59 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 12.3 % </p>
+    </div>
+    <div id="g-ai1-171" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:62.8493%;margin-top:-14.6px;left:49.4981%;margin-left:-63px;width:126px;">
+      <p class="g-pstyle2"># 15 <span class="g-cstyle0">&uarr;</span> / 0.66 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 11.2 %</p>
+    </div>
+    <div id="g-ai1-172" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:62.8493%;margin-top:-14.6px;left:79.5125%;margin-left:-61px;width:122px;">
+      <p class="g-pstyle2"># 15 <span class="g-cstyle1">-</span> / 0.67 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 10.6 % </p>
+    </div>
+    <div id="g-ai1-173" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:63.8407%;margin-top:-12.2px;left:3.1005%;width:69px;">
+      <p class="g-pstyle0">GREEK</p>
+    </div>
+    <div id="g-ai1-174" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:63.7518%;margin-top:-5.3px;left:74.9393%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-175" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:63.7518%;margin-top:-5.3px;left:83.8475%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-176" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:63.7518%;margin-top:-5.3px;left:90.6064%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-177" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:64.5903%;margin-top:-14.5px;left:18.9963%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-178" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:64.5903%;margin-top:-14.5px;left:49.4559%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-179" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:64.5903%;margin-top:-14.5px;left:79.7543%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-180" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:66.8255%;margin-top:-14.6px;left:49.4981%;margin-left:-63px;width:126px;">
+      <p class="g-pstyle2"># 17 <span class="g-cstyle2">&darr;</span> / 0.60 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 10 %</p>
+    </div>
+    <div id="g-ai1-181" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:66.8255%;margin-top:-14.6px;left:18.7842%;margin-left:-59px;width:118px;">
+      <p class="g-pstyle2"># 15 / 0.68 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 11.3 % </p>
+    </div>
+    <div id="g-ai1-182" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:66.8255%;margin-top:-14.6px;left:79.3689%;margin-left:-62px;width:124px;">
+      <p class="g-pstyle2"># 16 <span class="g-cstyle0">&uarr;</span>/ 0.53 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 8.31 % </p>
+    </div>
+    <div id="g-ai1-183" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:67.7988%;margin-top:-12.2px;left:2.9578%;width:81px;">
+      <p class="g-pstyle0">PUNJABI</p>
+    </div>
+    <div id="g-ai1-184" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:67.7099%;margin-top:-5.3px;left:68.0575%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-185" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:67.7099%;margin-top:-5.3px;left:76.9656%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-186" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:67.7099%;margin-top:-5.3px;left:83.7247%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-187" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:67.7099%;margin-top:-5.3px;left:90.3191%;width:61px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai1-188" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:68.5484%;margin-top:-14.5px;left:18.7794%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-189" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:68.5484%;margin-top:-14.5px;left:49.239%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-190" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:68.5484%;margin-top:-14.5px;left:79.5376%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-191" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:70.7836%;margin-top:-14.6px;left:49.2411%;margin-left:-63px;width:126px;">
+      <p class="g-pstyle2"># 14 <span class="g-cstyle2">&darr;</span> / 0.66 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 22.8 %</p>
+    </div>
+    <div id="g-ai1-192" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:70.7836%;margin-top:-14.6px;left:79.3747%;margin-left:-63px;width:126px;">
+      <p class="g-pstyle2"># 17 <span class="g-cstyle2">&darr;</span> / 0.49 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 19.8 % </p>
+    </div>
+    <div id="g-ai1-193" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:70.7836%;margin-top:-14.6px;left:19.0139%;margin-left:-59px;width:118px;">
+      <p class="g-pstyle2"># 13 / 0.79 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 31.2 % </p>
+    </div>
+    <div id="g-ai1-194" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:71.7387%;margin-top:-12.2px;left:3.0979%;width:73px;">
+      <p class="g-pstyle0">POLISH</p>
+    </div>
+    <div id="g-ai1-195" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:71.668%;margin-top:-5.3px;left:74.7124%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-196" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:71.668%;margin-top:-5.3px;left:83.6207%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-197" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:71.668%;margin-top:-5.3px;left:90.3797%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-198" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:72.4883%;margin-top:-14.5px;left:18.8851%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-199" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:72.4883%;margin-top:-14.5px;left:49.3446%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-200" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:72.4883%;margin-top:-14.5px;left:79.6432%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-201" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:74.7235%;margin-top:-14.6px;left:18.7453%;margin-left:-57px;width:114px;">
+      <p class="g-pstyle2"># 14 / 0.7 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 9.79 % </p>
+    </div>
+    <div id="g-ai1-202" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:74.7235%;margin-top:-14.6px;left:49.1357%;margin-left:-64px;width:128px;">
+      <p class="g-pstyle2"># 18 <span class="g-cstyle2">&darr;</span> / 0.55 % of Total Responses </p>
+      <p class="g-pstyle2">Highest CT: 8.07 %</p>
+    </div>
+    <div id="g-ai1-203" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:74.7235%;margin-top:-14.6px;left:79.4432%;margin-left:-61px;width:122px;">
+      <p class="g-pstyle2"># 18 <span class="g-cstyle1">-</span> / 0.43 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 6.15 % </p>
+    </div>
+    <div id="g-ai1-204" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.6968%;margin-top:-12.2px;left:3.0739%;width:84px;">
+      <p class="g-pstyle0">SERBIAN</p>
+    </div>
+    <div id="g-ai1-205" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.6442%;margin-top:-5.3px;left:90.6154%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-206" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.6442%;margin-top:-5.3px;left:74.9479%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-207" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.6442%;margin-top:-5.3px;left:83.8561%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-208" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:76.4463%;margin-top:-14.5px;left:18.8744%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-209" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:76.4463%;margin-top:-14.5px;left:49.3341%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-210" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:76.4463%;margin-top:-14.5px;left:79.6325%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-211" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:78.6997%;margin-top:-14.6px;left:79.6473%;margin-left:-63px;width:126px;">
+      <p class="g-pstyle2"># 19 <span class="g-cstyle0">&uarr;</span> / 0.33 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 6.72 % </p>
+    </div>
+    <div id="g-ai1-212" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:78.6997%;margin-top:-14.6px;left:19.0817%;margin-left:-59px;width:118px;">
+      <p class="g-pstyle2"># 19 / 0.39 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 7.41 % </p>
+    </div>
+    <div id="g-ai1-213" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:78.6997%;margin-top:-14.6px;left:49.4981%;margin-left:-63px;width:126px;">
+      <p class="g-pstyle2"># 20 <span class="g-cstyle2">&darr;</span> / 0.37 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 5.34 %</p>
+    </div>
+    <div id="g-ai1-214" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:79.6548%;margin-top:-12.2px;left:3.5778%;width:62px;">
+      <p class="g-pstyle0">HINDI</p>
+    </div>
+    <div id="g-ai1-215" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:79.5841%;margin-top:-5.3px;left:75.1043%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-216" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:79.5841%;margin-top:-5.3px;left:83.9012%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-217" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:79.5841%;margin-top:-5.3px;left:90.6605%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-218" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:80.4044%;margin-top:-14.5px;left:79.6325%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-219" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:82.6578%;margin-top:-14.6px;left:79.3639%;margin-left:-59px;width:118px;">
+      <p class="g-pstyle2"># 20 / 0.32 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 2.46 % </p>
+    </div>
+    <div id="g-ai1-220" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:83.5947%;margin-top:-12.2px;left:3.1224%;width:95px;">
+      <p class="g-pstyle0">UKRANIAN</p>
+    </div>
+    <div id="g-ai1-221" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:83.524%;margin-top:-5.3px;left:67.9386%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-222" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:83.524%;margin-top:-5.3px;left:76.8469%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-223" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:83.524%;margin-top:-5.3px;left:83.6061%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-224" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:83.524%;margin-top:-5.3px;left:90.2003%;width:61px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai1-225" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:84.3443%;margin-top:-14.5px;left:18.7631%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-226" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:84.3443%;margin-top:-14.5px;left:49.2228%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-227" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:84.3443%;margin-top:-14.5px;left:79.5212%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-228" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:86.5977%;margin-top:-14.6px;left:18.9195%;margin-left:-59px;width:118px;">
+      <p class="g-pstyle2"># 20 / 0.36 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 11.6 % </p>
+    </div>
+    <div id="g-ai1-229" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:86.5977%;margin-top:-14.6px;left:49.1299%;margin-left:-63px;width:126px;">
+      <p class="g-pstyle2"># 21 <span class="g-cstyle2">&darr;</span> / 0.32 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 8.07 %</p>
+    </div>
+    <div id="g-ai1-230" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:86.5977%;margin-top:-14.6px;left:79.4416%;margin-left:-61px;width:122px;">
+      <p class="g-pstyle2"># 21 <span class="g-cstyle1">-</span> / 0.30 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 8.29 % </p>
+    </div>
+    <div id="g-ai1-231" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:87.571%;margin-top:-12.2px;left:3.1607%;width:76px;">
+      <p class="g-pstyle0">SOMALI</p>
+    </div>
+    <div id="g-ai1-232" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:87.5002%;margin-top:-5.3px;left:67.6128%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-233" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:87.5002%;margin-top:-5.3px;left:76.5211%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-234" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:87.5002%;margin-top:-5.3px;left:83.28%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-235" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:87.5002%;margin-top:-5.3px;left:89.8744%;width:61px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai1-236" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:88.3387%;margin-top:-14.5px;left:49.3339%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-237" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:88.3387%;margin-top:-14.5px;left:79.6325%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-238" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:90.5739%;margin-top:-14.6px;left:49.0249%;margin-left:-59px;width:118px;">
+      <p class="g-pstyle2"># 19 / 0.37 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 15.8 %</p>
+    </div>
+    <div id="g-ai1-239" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:90.5739%;margin-top:-14.6px;left:79.6474%;margin-left:-63px;width:126px;">
+      <p class="g-pstyle2"># 22 <span class="g-cstyle2">&darr;</span> / 0.28 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 18 % </p>
+    </div>
+    <div id="g-ai1-240" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:91.8195%;margin-top:-12.2px;left:3.5314%;width:106px;">
+      <p class="g-pstyle0">CANTONESE</p>
+    </div>
+    <div id="g-ai1-241" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:91.7488%;margin-top:-5.3px;left:61.2473%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-242" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:91.7488%;margin-top:-5.3px;left:69.9368%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-243" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:91.7488%;margin-top:-5.3px;left:76.6959%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-244" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:91.7488%;margin-top:-5.3px;left:83.2902%;width:61px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai1-245" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:91.7488%;margin-top:-5.3px;left:92.1126%;width:42px;">
+      <p class="g-pstyle3">50% +</p>
+    </div>
+    <div id="g-ai1-246" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:92.5691%;margin-top:-14.5px;left:18.9619%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-247" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:92.5691%;margin-top:-14.5px;left:49.4215%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-248" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:92.5691%;margin-top:-14.5px;left:79.7201%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-249" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:94.8225%;margin-top:-14.6px;left:18.9987%;margin-left:-48.5px;width:97px;">
+      <p class="g-pstyle2">3.19 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 41.5 %</p>
+    </div>
+    <div id="g-ai1-250" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:94.8225%;margin-top:-14.6px;left:49.5142%;margin-left:-56px;width:112px;">
+      <p class="g-pstyle2"><span class="g-cstyle0">&uarr; </span>/ 2.80 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 57.8 %</p>
+    </div>
+    <div id="g-ai1-251" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:94.8225%;margin-top:-14.6px;left:79.9368%;margin-left:-56px;width:112px;">
+      <p class="g-pstyle2"><span class="g-cstyle0">&uarr; </span>/ 3.39 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 78.7 %</p>
+    </div>
+    <div id="g-ai1-252" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:95.7957%;margin-top:-12.2px;left:3.4529%;width:98px;">
+      <p class="g-pstyle0">MANDARIN</p>
+    </div>
+    <div id="g-ai1-253" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:95.7068%;margin-top:-5.3px;left:68.2251%;width:64px;">
+      <p class="g-pstyle3">No Responses</p>
+    </div>
+    <div id="g-ai1-254" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:95.7068%;margin-top:-5.3px;left:77.1332%;width:53px;">
+      <p class="g-pstyle3">0.1% - 1%</p>
+    </div>
+    <div id="g-ai1-255" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:95.7068%;margin-top:-5.3px;left:83.8922%;width:57px;">
+      <p class="g-pstyle3">1.1% - 10%</p>
+    </div>
+    <div id="g-ai1-256" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:95.7068%;margin-top:-5.3px;left:90.4865%;width:61px;">
+      <p class="g-pstyle3">10.1% - 50%</p>
+    </div>
+    <div id="g-ai1-257" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.5453%;margin-top:-14.5px;left:19.097%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai1-258" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.5453%;margin-top:-14.5px;left:49.5567%;margin-left:-19.5px;width:39px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai1-259" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.5453%;margin-top:-14.5px;left:79.8552%;margin-left:-18.5px;width:37px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai1-260" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:98.7805%;margin-top:-14.6px;left:19.3861%;margin-left:-48.5px;width:97px;">
+      <p class="g-pstyle2">1.61 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 13.7 %</p>
+    </div>
+    <div id="g-ai1-261" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:98.7805%;margin-top:-14.6px;left:49.4452%;margin-left:-48.5px;width:97px;">
+      <p class="g-pstyle2"><span class="g-cstyle0">&uarr; </span>/ 2.10 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 18.2 %</p>
+    </div>
+    <div id="g-ai1-262" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:98.7805%;margin-top:-14.6px;left:79.8694%;margin-left:-56px;width:112px;">
+      <p class="g-pstyle2"><span class="g-cstyle0">&uarr; </span>/ 3.57 % of Total Responses</p>
+      <p class="g-pstyle2">Highest CT: 34.4 %</p>
+    </div>
+  </div>
+
+  <!-- Artboard: Artboard_3 -->
+  <div id="g-Languages_900px-Artboard_3" class="g-artboard" style="width:350px; height:3198.25943458423px;" data-aspect-ratio="0.109" data-min-width="350" data-max-width="601">
+    <img id="g-Languages_900px-Artboard_3-img" class="g-aiImg g-aiAbs" src="./assets/img/language_spt/Languages_900px-Artboard_3.jpg"/>
+    <div id="g-ai2-1" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:0.4665%;margin-top:-6.9px;left:3.2597%;width:350px;">
+      <p class="g-pstyle0">CITY OF TORONTO TOP NON-OFFICIAL LANGUAGES SPOKEN MOST OFTEN AT HOME</p>
+    </div>
+    <div id="g-ai2-2" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:1.2206%;margin-top:-8px;left:49.3839%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-3" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:1.2206%;margin-top:-8px;left:79.6919%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-4" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:1.2206%;margin-top:-8px;left:18.9609%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-5" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:3.3217%;margin-top:-4.2px;left:18.8448%;margin-left:-33.5px;width:67px;">
+      <p class="g-pstyle1">2,372,060 Total Responses</p>
+    </div>
+    <div id="g-ai2-6" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:3.3217%;margin-top:-4.2px;left:49.1581%;margin-left:-37px;width:74px;">
+      <p class="g-pstyle1">2,406,525 Total Responses <span class="g-cstyle0">&uarr;</span>  </p>
+    </div>
+    <div id="g-ai2-7" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:3.4516%;margin-top:-8.4px;left:79.57%;margin-left:-36.5px;width:73px;">
+      <p class="g-pstyle1">2,458,460 Total Responses <span class="g-cstyle0">&uarr;</span> </p>
+    </div>
+    <div id="g-ai2-8" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.4061%;margin-top:-6.9px;left:3.1595%;width:58px;">
+      <p class="g-pstyle0">CHINESE</p>
+    </div>
+    <div id="g-ai2-9" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.3771%;margin-top:-3px;left:61.2446%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-10" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.3771%;margin-top:-3px;left:69.9302%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-11" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.3771%;margin-top:-3px;left:76.6866%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-12" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.3771%;margin-top:-3px;left:83.2775%;width:45px;">
+      <p class="g-pstyle2">10.1% - 50%</p>
+    </div>
+    <div id="g-ai2-13" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:4.3771%;margin-top:-3px;left:92.0962%;width:33px;">
+      <p class="g-pstyle2">50% +</p>
+    </div>
+    <div id="g-ai2-14" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:5.1602%;margin-top:-8px;left:79.7594%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-15" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:5.1602%;margin-top:-8px;left:19.0281%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-16" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:5.1602%;margin-top:-8px;left:49.4514%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-17" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:7.5211%;margin-top:-12.5px;left:79.4413%;margin-left:-40px;width:80px;">
+      <p class="g-pstyle1">  # 1 <span class="g-cstyle1">-</span> / 7. 3 % of Total Responses </p>
+      <p class="g-pstyle1">Highest CT: 90.2 % </p>
+    </div>
+    <div id="g-ai2-18" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:7.4225%;margin-top:-8.4px;left:18.8604%;margin-left:-37.5px;width:75px;">
+      <p class="g-pstyle1"> # 1 / 8.3 % of Total Responses </p>
+      <p class="g-pstyle1">Highest CT: 63.3 % </p>
+    </div>
+    <div id="g-ai2-19" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:7.4225%;margin-top:-8.4px;left:49.1274%;margin-left:-40.5px;width:81px;">
+      <p class="g-pstyle1"> # 1<span class="g-cstyle1"> -</span> / 7. 56 % of Total Responses </p>
+      <p class="g-pstyle1">Highest CT: 90.1 % </p>
+    </div>
+    <div id="g-ai2-20" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.377%;margin-top:-6.9px;left:3.229%;width:59px;">
+      <p class="g-pstyle0">TAGALOG</p>
+    </div>
+    <div id="g-ai2-21" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.2855%;margin-top:-3px;left:67.9159%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-22" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.2855%;margin-top:-3px;left:76.7089%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-23" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.2855%;margin-top:-3px;left:83.465%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-24" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:8.2855%;margin-top:-3px;left:90.0566%;width:45px;">
+      <p class="g-pstyle2">10.1% - 50%</p>
+    </div>
+    <div id="g-ai2-25" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:9.0998%;margin-top:-8px;left:18.7711%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-26" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:9.0998%;margin-top:-8px;left:49.1941%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-27" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:9.0998%;margin-top:-8px;left:79.5024%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-28" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:11.3622%;margin-top:-8.4px;left:48.9104%;margin-left:-41px;width:82px;">
+      <p class="g-pstyle1"> # 4 <span class="g-cstyle0">&uarr;</span> / 1.54 % of Total Responses </p>
+      <p class="g-pstyle1">Highest CT: 15.6 % </p>
+    </div>
+    <div id="g-ai2-29" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:11.3622%;margin-top:-8.4px;left:79.277%;margin-left:-41px;width:82px;">
+      <p class="g-pstyle1"> # 2 <span class="g-cstyle0">&uarr;</span> / 1.73 % of Total Responses </p>
+      <p class="g-pstyle1">Highest CT: 14.5 % </p>
+    </div>
+    <div id="g-ai2-30" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:11.3622%;margin-top:-8.4px;left:19.1224%;margin-left:-39px;width:78px;">
+      <p class="g-pstyle1"> # 6 / 1.42 % of Total Responses </p>
+      <p class="g-pstyle1">Highest CT: 14 % </p>
+    </div>
+    <div id="g-ai2-31" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.3479%;margin-top:-6.9px;left:3.3674%;width:45px;">
+      <p class="g-pstyle0">TAMIL</p>
+    </div>
+    <div id="g-ai2-32" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.2564%;margin-top:-3px;left:67.9159%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-33" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.2564%;margin-top:-3px;left:76.7089%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-34" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.2564%;margin-top:-3px;left:83.465%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-35" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:12.2564%;margin-top:-3px;left:90.0566%;width:45px;">
+      <p class="g-pstyle2">10.1% - 50%</p>
+    </div>
+    <div id="g-ai2-36" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:13.102%;margin-top:-8px;left:79.57%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-37" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:13.102%;margin-top:-8px;left:18.8387%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-38" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:13.102%;margin-top:-8px;left:49.2619%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-39" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:15.3331%;margin-top:-8.4px;left:19.1224%;margin-left:-39px;width:78px;">
+      <p class="g-pstyle1"> # 2 / 2.12 % of Total Responses </p>
+      <p class="g-pstyle1">Highest CT: 19.1 % </p>
+    </div>
+    <div id="g-ai2-40" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:15.3331%;margin-top:-8.4px;left:49.2031%;margin-left:-40px;width:80px;">
+      <p class="g-pstyle1"> # 2 <span class="g-cstyle1">-</span> / 2.03 % of Total Responses </p>
+      <p class="g-pstyle1">Highest CT: 30.9 % </p>
+    </div>
+    <div id="g-ai2-41" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:15.3331%;margin-top:-8.4px;left:79.3872%;margin-left:-41px;width:82px;">
+      <p class="g-pstyle1"> # 3 <span class="g-cstyle2">&darr;</span> / 1.71 % of Total Responses </p>
+      <p class="g-pstyle1">Highest CT: 32.5 % </p>
+    </div>
+    <div id="g-ai2-42" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.3188%;margin-top:-6.9px;left:3.2653%;width:58px;">
+      <p class="g-pstyle0">SPANISH</p>
+    </div>
+    <div id="g-ai2-43" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.2586%;margin-top:-3px;left:83.2728%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-44" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.2586%;margin-top:-3px;left:76.5169%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-45" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.2586%;margin-top:-3px;left:89.8643%;width:45px;">
+      <p class="g-pstyle2">10.1% - 50%</p>
+    </div>
+    <div id="g-ai2-46" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:16.2586%;margin-top:-3px;left:67.7396%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-47" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:17.0729%;margin-top:-8px;left:19.0281%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-48" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:17.0729%;margin-top:-8px;left:49.4514%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-49" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:17.0729%;margin-top:-8px;left:79.7594%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-50" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:19.3352%;margin-top:-8.4px;left:18.8462%;margin-left:-39px;width:78px;">
+      <p class="g-pstyle1"> # 4 / 1.84 % of Total Responses </p>
+      <p class="g-pstyle1">Highest CT: 14.9 % </p>
+    </div>
+    <div id="g-ai2-51" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:19.3352%;margin-top:-8.4px;left:49.3635%;margin-left:-40.5px;width:81px;">
+      <p class="g-pstyle1"> # 3 <span class="g-cstyle0">&uarr;</span> / 1.88 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 15.8 % </p>
+    </div>
+    <div id="g-ai2-52" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:19.3352%;margin-top:-8.4px;left:79.4567%;margin-left:-41px;width:82px;">
+      <p class="g-pstyle1"> # 4 <span class="g-cstyle2">&darr;</span> / 1.69 % of Total Responses </p>
+      <p class="g-pstyle1">Highest CT: 13.1 % </p>
+    </div>
+    <div id="g-ai2-53" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.2897%;margin-top:-6.9px;left:3.1835%;width:77px;">
+      <p class="g-pstyle0">PORTUGUESE</p>
+    </div>
+    <div id="g-ai2-54" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.2295%;margin-top:-3px;left:68.1422%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-55" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.2295%;margin-top:-3px;left:77.0139%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-56" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.2295%;margin-top:-3px;left:83.77%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-57" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:20.2295%;margin-top:-3px;left:90.3618%;width:45px;">
+      <p class="g-pstyle2">10.1% - 50%</p>
+    </div>
+    <div id="g-ai2-58" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.0438%;margin-top:-8px;left:19.0959%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-59" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.0438%;margin-top:-8px;left:49.5189%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-60" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:21.0438%;margin-top:-8px;left:79.8269%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-61" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:23.3062%;margin-top:-8.4px;left:49.3635%;margin-left:-40.5px;width:81px;">
+      <p class="g-pstyle1"># 6 <span class="g-cstyle2">&darr;</span> / 1.44 % of Total Responses </p>
+      <p class="g-pstyle1">Highest CT: 25.9 % </p>
+    </div>
+    <div id="g-ai2-62" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:23.3062%;margin-top:-8.4px;left:79.4913%;margin-left:-40px;width:80px;">
+      <p class="g-pstyle1"> # 5 <span class="g-cstyle0">&uarr;</span>/ 1.36 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 25.5 % </p>
+    </div>
+    <div id="g-ai2-63" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:23.3062%;margin-top:-8.4px;left:19.1224%;margin-left:-39px;width:78px;">
+      <p class="g-pstyle1"> # 5 / 1.58 % of Total Responses </p>
+      <p class="g-pstyle1">Highest CT: 28 % </p>
+    </div>
+    <div id="g-ai2-64" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.2607%;margin-top:-6.9px;left:2.9996%;width:45px;">
+      <p class="g-pstyle0">FARSI</p>
+    </div>
+    <div id="g-ai2-65" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.1692%;margin-top:-3px;left:67.7206%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-66" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.1692%;margin-top:-3px;left:76.5139%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-67" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.1692%;margin-top:-3px;left:83.2697%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-68" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:24.1692%;margin-top:-3px;left:89.8613%;width:45px;">
+      <p class="g-pstyle2">10.1% - 50%</p>
+    </div>
+    <div id="g-ai2-69" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:25.0148%;margin-top:-8px;left:18.9062%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-70" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:25.0148%;margin-top:-8px;left:49.3292%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-71" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:25.0148%;margin-top:-8px;left:79.6375%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-72" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:27.2458%;margin-top:-8.4px;left:18.9101%;margin-left:-38px;width:76px;">
+      <p class="g-pstyle1"> # 9 / 1.15 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 12.8 % </p>
+    </div>
+    <div id="g-ai2-73" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:27.2458%;margin-top:-8.4px;left:49.2416%;margin-left:-40.5px;width:81px;">
+      <p class="g-pstyle1"> # 7 <span class="g-cstyle0">&uarr;</span> / 1.27 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 16.3 % </p>
+    </div>
+    <div id="g-ai2-74" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:27.2458%;margin-top:-8.4px;left:79.5245%;margin-left:-39px;width:78px;">
+      <p class="g-pstyle1"> 6 <span class="g-cstyle0">&uarr;</span> / 1.36 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 17.9 % </p>
+    </div>
+    <div id="g-ai2-75" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.2003%;margin-top:-6.9px;left:3.159%;width:52px;">
+      <p class="g-pstyle0">ITALIAN</p>
+    </div>
+    <div id="g-ai2-76" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.1401%;margin-top:-3px;left:67.7962%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-77" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.1401%;margin-top:-3px;left:76.7005%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-78" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.1401%;margin-top:-3px;left:83.4564%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-79" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.1401%;margin-top:-3px;left:90.0479%;width:45px;">
+      <p class="g-pstyle2">10.1% - 50%</p>
+    </div>
+    <div id="g-ai2-80" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.9544%;margin-top:-8px;left:18.9062%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-81" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.9544%;margin-top:-8px;left:49.3292%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-82" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:28.9544%;margin-top:-8px;left:79.6375%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-83" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:31.2167%;margin-top:-8.4px;left:18.9969%;margin-left:-38px;width:76px;">
+      <p class="g-pstyle1"> # 3 / 1.86 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 24.2 % </p>
+    </div>
+    <div id="g-ai2-84" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:31.2167%;margin-top:-8.4px;left:49.2089%;margin-left:-39.5px;width:79px;">
+      <p class="g-pstyle1"># 5<span class="g-cstyle2">&darr;</span> / 1.46 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 20 % </p>
+    </div>
+    <div id="g-ai2-85" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:31.2167%;margin-top:-8.4px;left:79.5744%;margin-left:-39.5px;width:79px;">
+      <p class="g-pstyle1"># 7 <span class="g-cstyle2">&darr;</span>/ 1.10 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 17.7 % </p>
+    </div>
+    <div id="g-ai2-86" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.1712%;margin-top:-6.9px;left:2.9712%;width:46px;">
+      <p class="g-pstyle0">URDU</p>
+    </div>
+    <div id="g-ai2-87" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.111%;margin-top:-3px;left:67.8959%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-88" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.111%;margin-top:-3px;left:76.7999%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-89" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.111%;margin-top:-3px;left:83.556%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-90" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.111%;margin-top:-3px;left:90.1475%;width:45px;">
+      <p class="g-pstyle2">10.1% - 50%</p>
+    </div>
+    <div id="g-ai2-91" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.9253%;margin-top:-8px;left:18.7985%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-92" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.9253%;margin-top:-8px;left:49.2215%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-93" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:32.9253%;margin-top:-8px;left:79.5295%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-94" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:35.1876%;margin-top:-8.4px;left:19.0317%;margin-left:-37px;width:74px;">
+      <p class="g-pstyle1"> # 7 / 1.3 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 44.2 % </p>
+    </div>
+    <div id="g-ai2-95" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:35.1876%;margin-top:-8.4px;left:48.9514%;margin-left:-40.5px;width:81px;">
+      <p class="g-pstyle1"># 9 <span class="g-cstyle2">&darr; </span>/ 1.10 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 37.6 % </p>
+    </div>
+    <div id="g-ai2-96" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:35.1876%;margin-top:-8.4px;left:79.4567%;margin-left:-41px;width:82px;">
+      <p class="g-pstyle1"> # 8 <span class="g-cstyle0">&uarr;</span> / 0.96 % of Total Responses </p>
+      <p class="g-pstyle1">Highest CT: 33.6 % </p>
+    </div>
+    <div id="g-ai2-97" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.1421%;margin-top:-6.9px;left:3.0398%;width:56px;">
+      <p class="g-pstyle0">KOREAN</p>
+    </div>
+    <div id="g-ai2-98" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.0506%;margin-top:-3px;left:67.9517%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-99" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.0506%;margin-top:-3px;left:76.8562%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-100" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.0506%;margin-top:-3px;left:83.6121%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-101" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.0506%;margin-top:-3px;left:90.2033%;width:45px;">
+      <p class="g-pstyle2">10.1% - 50%</p>
+    </div>
+    <div id="g-ai2-102" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.8962%;margin-top:-8px;left:18.9062%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-103" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.8962%;margin-top:-8px;left:49.3292%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-104" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:36.8962%;margin-top:-8px;left:79.6375%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-105" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:39.1273%;margin-top:-8.4px;left:18.9137%;margin-left:-39px;width:78px;">
+      <p class="g-pstyle1"># 10 / 0.99 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 11.2 % </p>
+    </div>
+    <div id="g-ai2-106" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:39.1273%;margin-top:-8.4px;left:48.957%;margin-left:-40px;width:80px;">
+      <p class="g-pstyle1"># 10 <span class="g-cstyle1">-</span> / 0.97 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 14 % </p>
+    </div>
+    <div id="g-ai2-107" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:39.1273%;margin-top:-8.4px;left:79.4916%;margin-left:-40px;width:80px;">
+      <p class="g-pstyle1"># 9 <span class="g-cstyle0">&uarr;</span> / 0.96 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 13.6 % </p>
+    </div>
+    <div id="g-ai2-108" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.113%;margin-top:-6.9px;left:3.0677%;width:59px;">
+      <p class="g-pstyle0">RUSSIAN</p>
+    </div>
+    <div id="g-ai2-109" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.0215%;margin-top:-3px;left:67.8066%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-110" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.0215%;margin-top:-3px;left:76.7109%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-111" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.0215%;margin-top:-3px;left:83.4667%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-112" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.0215%;margin-top:-3px;left:90.0582%;width:45px;">
+      <p class="g-pstyle2">10.1% - 50%</p>
+    </div>
+    <div id="g-ai2-113" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.8671%;margin-top:-8px;left:18.6601%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-114" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.8671%;margin-top:-8px;left:49.0831%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-115" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:40.8671%;margin-top:-8px;left:79.3914%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-116" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:43.0982%;margin-top:-8.4px;left:18.8604%;margin-left:-37.5px;width:75px;">
+      <p class="g-pstyle1"># 8 / 1.18 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 36.2 % </p>
+    </div>
+    <div id="g-ai2-117" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:43.0982%;margin-top:-8.4px;left:49.1299%;margin-left:-39px;width:78px;">
+      <p class="g-pstyle1"># 8 <span class="g-cstyle1">-</span> / 1.12 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 35.1 % </p>
+    </div>
+    <div id="g-ai2-118" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:43.0982%;margin-top:-8.4px;left:79.2187%;margin-left:-41.5px;width:83px;">
+      <p class="g-pstyle1"> # 10 <span class="g-cstyle2">&darr;</span> / 0.94 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 26.9 % </p>
+    </div>
+    <div id="g-ai2-119" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.0839%;margin-top:-6.9px;left:3.1883%;width:57px;">
+      <p class="g-pstyle0">BENGALI</p>
+    </div>
+    <div id="g-ai2-120" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:43.9924%;margin-top:-3px;left:67.6107%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-121" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:43.9924%;margin-top:-3px;left:76.515%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-122" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:43.9924%;margin-top:-3px;left:83.2714%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-123" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:43.9924%;margin-top:-3px;left:89.8624%;width:45px;">
+      <p class="g-pstyle2">10.1% - 50%</p>
+    </div>
+    <div id="g-ai2-124" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.838%;margin-top:-8px;left:18.866%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-125" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.838%;margin-top:-8px;left:49.289%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-126" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:44.838%;margin-top:-8px;left:79.597%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-127" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.0691%;margin-top:-8.4px;left:18.7787%;margin-left:-39px;width:78px;">
+      <p class="g-pstyle1"># 16 / 0.61 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 23.4 % </p>
+    </div>
+    <div id="g-ai2-128" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.0691%;margin-top:-8.4px;left:49.224%;margin-left:-41px;width:82px;">
+      <p class="g-pstyle1"># 12 <span class="g-cstyle0">&uarr;</span> / 0.74 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 28.6 % </p>
+    </div>
+    <div id="g-ai2-129" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.0691%;margin-top:-8.4px;left:79.3451%;margin-left:-41px;width:82px;">
+      <p class="g-pstyle1"># 11 <span class="g-cstyle0">&uarr;</span> / 0.77 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 29.2 % </p>
+    </div>
+    <div id="g-ai2-130" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.0236%;margin-top:-6.9px;left:3.0298%;width:73px;">
+      <p class="g-pstyle0">VIETNAMESE</p>
+    </div>
+    <div id="g-ai2-131" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.9633%;margin-top:-3px;left:67.8819%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-132" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.9633%;margin-top:-3px;left:76.897%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-133" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.9633%;margin-top:-3px;left:83.6534%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-134" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:47.9633%;margin-top:-3px;left:90.2449%;width:45px;">
+      <p class="g-pstyle2">10.1% - 50%</p>
+    </div>
+    <div id="g-ai2-135" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.7777%;margin-top:-8px;left:18.7276%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-136" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.7777%;margin-top:-8px;left:49.1506%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-137" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:48.7777%;margin-top:-8px;left:79.4586%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-138" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.04%;margin-top:-8.4px;left:18.8735%;margin-left:-39px;width:78px;">
+      <p class="g-pstyle1"># 12 / 0.88 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 12.3 % </p>
+    </div>
+    <div id="g-ai2-139" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.04%;margin-top:-8.4px;left:48.9779%;margin-left:-41px;width:82px;">
+      <p class="g-pstyle1"># 13 <span class="g-cstyle2">&darr;</span> / 0.74 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 10.9 % </p>
+    </div>
+    <div id="g-ai2-140" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.04%;margin-top:-8.4px;left:79.5222%;margin-left:-41px;width:82px;">
+      <p class="g-pstyle1"># 12 <span class="g-cstyle0">&uarr;</span> / 0.69 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 11.7 % </p>
+    </div>
+    <div id="g-ai2-141" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.9945%;margin-top:-6.9px;left:3.1121%;width:55px;">
+      <p class="g-pstyle0">FRENCH</p>
+    </div>
+    <div id="g-ai2-142" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.903%;margin-top:-3px;left:74.8085%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-143" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.903%;margin-top:-3px;left:83.7128%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-144" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:51.903%;margin-top:-3px;left:90.469%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-145" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:52.7486%;margin-top:-8px;left:18.8387%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-146" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:52.7486%;margin-top:-8px;left:49.2619%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-147" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:52.7486%;margin-top:-8px;left:79.5702%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-148" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:54.9796%;margin-top:-8.4px;left:19.1224%;margin-left:-39px;width:78px;">
+      <p class="g-pstyle1"># 18 / 0.56 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 3.72 % </p>
+    </div>
+    <div id="g-ai2-149" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:54.9796%;margin-top:-8.4px;left:49.3632%;margin-left:-40.5px;width:81px;">
+      <p class="g-pstyle1"># 16 <span class="g-cstyle0">&uarr;</span>/ 0.65 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 2.65 % </p>
+    </div>
+    <div id="g-ai2-150" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:54.9796%;margin-top:-8.4px;left:79.3451%;margin-left:-41px;width:82px;">
+      <p class="g-pstyle1"># 13 <span class="g-cstyle0">&uarr;</span> / 0.69 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 2.97 % </p>
+    </div>
+    <div id="g-ai2-151" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.9341%;margin-top:-6.9px;left:3.0923%;width:60px;">
+      <p class="g-pstyle0">GUJARATI</p>
+    </div>
+    <div id="g-ai2-152" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.8739%;margin-top:-3px;left:83.4486%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-153" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.8739%;margin-top:-3px;left:67.7882%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-154" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.8739%;margin-top:-3px;left:76.6927%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-155" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:55.8739%;margin-top:-3px;left:90.0398%;width:45px;">
+      <p class="g-pstyle2">10.1% - 50%</p>
+    </div>
+    <div id="g-ai2-156" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.6882%;margin-top:-8px;left:18.8389%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-157" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.6882%;margin-top:-8px;left:49.2619%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-158" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:56.6882%;margin-top:-8px;left:79.5702%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-159" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:58.9505%;margin-top:-8.4px;left:18.9137%;margin-left:-39px;width:78px;">
+      <p class="g-pstyle1"># 11 / 0.93 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 31.8 % </p>
+    </div>
+    <div id="g-ai2-160" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:58.9505%;margin-top:-8.4px;left:48.957%;margin-left:-40px;width:80px;">
+      <p class="g-pstyle1"># 11 <span class="g-cstyle1">-</span> / 0.80 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 33.2 %</p>
+    </div>
+    <div id="g-ai2-161" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:58.9505%;margin-top:-8.4px;left:79.4045%;margin-left:-40.5px;width:81px;">
+      <p class="g-pstyle1"># 14 <span class="g-cstyle2">&darr;</span>/ 0.67 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 27.1 % </p>
+    </div>
+    <div id="g-ai2-162" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:59.905%;margin-top:-6.9px;left:2.9885%;width:52px;">
+      <p class="g-pstyle0">ARABIC</p>
+    </div>
+    <div id="g-ai2-163" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:59.8135%;margin-top:-3px;left:83.4009%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-164" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:59.8135%;margin-top:-3px;left:67.6294%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-165" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:59.8135%;margin-top:-3px;left:76.6447%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-166" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:59.8135%;margin-top:-3px;left:89.9924%;width:45px;">
+      <p class="g-pstyle2">10.1% - 50%</p>
+    </div>
+    <div id="g-ai2-167" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:60.6591%;margin-top:-8px;left:18.9335%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-168" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:60.6591%;margin-top:-8px;left:49.3565%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-169" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:60.6591%;margin-top:-8px;left:79.6645%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-170" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:62.8902%;margin-top:-8.4px;left:18.6676%;margin-left:-39px;width:78px;">
+      <p class="g-pstyle1"># 17 / 0.59 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 12.3 % </p>
+    </div>
+    <div id="g-ai2-171" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:62.8902%;margin-top:-8.4px;left:49.4137%;margin-left:-41px;width:82px;">
+      <p class="g-pstyle1"># 15 <span class="g-cstyle0">&uarr;</span> / 0.66 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 11.2 %</p>
+    </div>
+    <div id="g-ai2-172" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:62.8902%;margin-top:-8.4px;left:79.4609%;margin-left:-40px;width:80px;">
+      <p class="g-pstyle1"># 15 <span class="g-cstyle1">-</span> / 0.67 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 10.6 % </p>
+    </div>
+    <div id="g-ai2-173" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:63.876%;margin-top:-6.9px;left:3.099%;width:50px;">
+      <p class="g-pstyle0">GREEK</p>
+    </div>
+    <div id="g-ai2-174" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:63.8157%;margin-top:-3px;left:74.9062%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-175" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:63.8157%;margin-top:-3px;left:83.8105%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-176" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:63.8157%;margin-top:-3px;left:90.5661%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-177" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:64.63%;margin-top:-8px;left:19.0281%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-178" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:64.63%;margin-top:-8px;left:49.4514%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-179" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:64.63%;margin-top:-8px;left:79.7594%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-180" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:66.8924%;margin-top:-8.4px;left:49.4137%;margin-left:-41px;width:82px;">
+      <p class="g-pstyle1"># 17 <span class="g-cstyle2">&darr;</span> / 0.60 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 10 %</p>
+    </div>
+    <div id="g-ai2-181" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:66.8924%;margin-top:-8.4px;left:18.806%;margin-left:-39px;width:78px;">
+      <p class="g-pstyle1"># 15 / 0.68 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 11.3 % </p>
+    </div>
+    <div id="g-ai2-182" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:66.8924%;margin-top:-8.4px;left:79.2943%;margin-left:-40.5px;width:81px;">
+      <p class="g-pstyle1"># 16 <span class="g-cstyle0">&uarr;</span>/ 0.53 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 8.31 % </p>
+    </div>
+    <div id="g-ai2-183" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:67.8469%;margin-top:-6.9px;left:2.9564%;width:56px;">
+      <p class="g-pstyle0">PUNJABI</p>
+    </div>
+    <div id="g-ai2-184" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:67.7554%;margin-top:-3px;left:68.0275%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-185" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:67.7554%;margin-top:-3px;left:76.9316%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-186" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:67.7554%;margin-top:-3px;left:83.6877%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-187" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:67.7554%;margin-top:-3px;left:90.2792%;width:45px;">
+      <p class="g-pstyle2">10.1% - 50%</p>
+    </div>
+    <div id="g-ai2-188" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:68.601%;margin-top:-8px;left:18.8113%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-189" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:68.601%;margin-top:-8px;left:49.2343%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-190" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:68.601%;margin-top:-8px;left:79.5426%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-191" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:70.832%;margin-top:-8.4px;left:49.1567%;margin-left:-41px;width:82px;">
+      <p class="g-pstyle1"># 14 <span class="g-cstyle2">&darr;</span> / 0.66 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 22.8 %</p>
+    </div>
+    <div id="g-ai2-192" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:70.832%;margin-top:-8.4px;left:79.277%;margin-left:-41px;width:82px;">
+      <p class="g-pstyle1"># 17 <span class="g-cstyle2">&darr;</span> / 0.49 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 19.8 % </p>
+    </div>
+    <div id="g-ai2-193" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:70.832%;margin-top:-8.4px;left:19.0356%;margin-left:-39px;width:78px;">
+      <p class="g-pstyle1"># 13 / 0.79 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 31.2 % </p>
+    </div>
+    <div id="g-ai2-194" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:71.7865%;margin-top:-6.9px;left:3.0967%;width:52px;">
+      <p class="g-pstyle0">POLISH</p>
+    </div>
+    <div id="g-ai2-195" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:71.7263%;margin-top:-3px;left:74.6793%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-196" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:71.7263%;margin-top:-3px;left:83.5836%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-197" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:71.7263%;margin-top:-3px;left:90.3398%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-198" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:72.5406%;margin-top:-8px;left:18.9171%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-199" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:72.5406%;margin-top:-8px;left:49.34%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-200" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:72.5406%;margin-top:-8px;left:79.6484%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-201" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:74.8029%;margin-top:-8.4px;left:18.6707%;margin-left:-37.5px;width:75px;">
+      <p class="g-pstyle1"># 14 / 0.7 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 9.79 % </p>
+    </div>
+    <div id="g-ai2-202" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:74.8029%;margin-top:-8.4px;left:49.0281%;margin-left:-41.5px;width:83px;">
+      <p class="g-pstyle1"># 18 <span class="g-cstyle2">&darr;</span> / 0.55 % of Total Responses </p>
+      <p class="g-pstyle1">Highest CT: 8.07 %</p>
+    </div>
+    <div id="g-ai2-203" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:74.8029%;margin-top:-8.4px;left:79.3917%;margin-left:-40px;width:80px;">
+      <p class="g-pstyle1"># 18 <span class="g-cstyle1">-</span> / 0.43 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 6.15 % </p>
+    </div>
+    <div id="g-ai2-204" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.7574%;margin-top:-6.9px;left:3.0727%;width:58px;">
+      <p class="g-pstyle0">SERBIAN</p>
+    </div>
+    <div id="g-ai2-205" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.6972%;margin-top:-3px;left:90.5753%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-206" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.6972%;margin-top:-3px;left:74.9148%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-207" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:75.6972%;margin-top:-3px;left:83.8188%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-208" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:76.5115%;margin-top:-8px;left:18.9062%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-209" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:76.5115%;margin-top:-8px;left:49.3294%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-210" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:76.5115%;margin-top:-8px;left:79.6375%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-211" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:78.7426%;margin-top:-8.4px;left:19.1034%;margin-left:-39px;width:78px;">
+      <p class="g-pstyle1"># 19 / 0.39 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 7.41 % </p>
+    </div>
+    <div id="g-ai2-212" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:78.7426%;margin-top:-8.4px;left:49.4137%;margin-left:-41px;width:82px;">
+      <p class="g-pstyle1"># 20 <span class="g-cstyle2">&darr;</span> / 0.37 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 5.34 %</p>
+    </div>
+    <div id="g-ai2-213" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:78.7426%;margin-top:-8.4px;left:79.5493%;margin-left:-41px;width:82px;">
+      <p class="g-pstyle1"># 19 <span class="g-cstyle0">&uarr;</span> / 0.33 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 6.72 % </p>
+    </div>
+    <div id="g-ai2-214" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:79.7283%;margin-top:-6.9px;left:3.5761%;width:45px;">
+      <p class="g-pstyle0">HINDI</p>
+    </div>
+    <div id="g-ai2-215" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:79.6368%;margin-top:-3px;left:75.0711%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-216" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:79.6368%;margin-top:-3px;left:83.864%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-217" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:79.6368%;margin-top:-3px;left:90.6205%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-218" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:80.4824%;margin-top:-8px;left:79.6375%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-219" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:82.7135%;margin-top:-8.4px;left:79.3587%;margin-left:-39px;width:78px;">
+      <p class="g-pstyle1"># 20 / 0.32 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 2.46 % </p>
+    </div>
+    <div id="g-ai2-220" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:83.668%;margin-top:-6.9px;left:3.121%;width:65px;">
+      <p class="g-pstyle0">UKRANIAN</p>
+    </div>
+    <div id="g-ai2-221" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:83.5765%;margin-top:-3px;left:67.9087%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-222" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:83.5765%;margin-top:-3px;left:76.8127%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-223" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:83.5765%;margin-top:-3px;left:83.5691%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-224" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:83.5765%;margin-top:-3px;left:90.1604%;width:45px;">
+      <p class="g-pstyle2">10.1% - 50%</p>
+    </div>
+    <div id="g-ai2-225" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:84.4221%;margin-top:-8px;left:18.7951%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-226" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:84.4221%;margin-top:-8px;left:49.2181%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-227" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:84.4221%;margin-top:-8px;left:79.5262%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-228" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:86.6531%;margin-top:-8.4px;left:18.9411%;margin-left:-39px;width:78px;">
+      <p class="g-pstyle1"># 20 / 0.36 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 11.6 % </p>
+    </div>
+    <div id="g-ai2-229" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:86.6531%;margin-top:-8.4px;left:49.0454%;margin-left:-41px;width:82px;">
+      <p class="g-pstyle1"># 21 <span class="g-cstyle2">&darr;</span> / 0.32 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 8.07 %</p>
+    </div>
+    <div id="g-ai2-230" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:86.6531%;margin-top:-8.4px;left:79.39%;margin-left:-40px;width:80px;">
+      <p class="g-pstyle1"># 21 <span class="g-cstyle1">-</span> / 0.30 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 8.29 % </p>
+    </div>
+    <div id="g-ai2-231" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:87.6389%;margin-top:-6.9px;left:3.1592%;width:53px;">
+      <p class="g-pstyle0">SOMALI</p>
+    </div>
+    <div id="g-ai2-232" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:87.5786%;margin-top:-3px;left:67.5828%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-233" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:87.5786%;margin-top:-3px;left:76.4874%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-234" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:87.5786%;margin-top:-3px;left:83.2429%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-235" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:87.5786%;margin-top:-3px;left:89.8345%;width:45px;">
+      <p class="g-pstyle2">10.1% - 50%</p>
+    </div>
+    <div id="g-ai2-236" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:88.393%;margin-top:-8px;left:49.3292%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-237" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:88.393%;margin-top:-8px;left:79.6375%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-238" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:90.6553%;margin-top:-8.4px;left:49.0331%;margin-left:-39px;width:78px;">
+      <p class="g-pstyle1"># 19 / 0.37 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 15.8 %</p>
+    </div>
+    <div id="g-ai2-239" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:90.6553%;margin-top:-8.4px;left:79.5496%;margin-left:-41px;width:82px;">
+      <p class="g-pstyle1"># 22 <span class="g-cstyle2">&darr;</span> / 0.28 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 18 % </p>
+    </div>
+    <div id="g-ai2-240" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:91.6723%;margin-top:-6.9px;left:2.9731%;width:71px;">
+      <p class="g-pstyle0">CANTONESE</p>
+    </div>
+    <div id="g-ai2-241" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:91.6121%;margin-top:-3px;left:60.6637%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-242" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:91.6121%;margin-top:-3px;left:69.3493%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-243" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:91.6121%;margin-top:-3px;left:76.1051%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-244" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:91.6121%;margin-top:-3px;left:82.6966%;width:45px;">
+      <p class="g-pstyle2">10.1% - 50%</p>
+    </div>
+    <div id="g-ai2-245" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:91.6121%;margin-top:-3px;left:91.5153%;width:33px;">
+      <p class="g-pstyle2">50% +</p>
+    </div>
+    <div id="g-ai2-246" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:92.4264%;margin-top:-8px;left:18.4371%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-247" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:92.4264%;margin-top:-8px;left:48.8604%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-248" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:92.4264%;margin-top:-8px;left:79.1685%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-249" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:94.6887%;margin-top:-8.4px;left:18.4929%;margin-left:-33px;width:66px;">
+      <p class="g-pstyle1">3.19 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 41.5 %</p>
+    </div>
+    <div id="g-ai2-250" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:94.6887%;margin-top:-8.4px;left:48.8925%;margin-left:-37px;width:74px;">
+      <p class="g-pstyle1"><span class="g-cstyle0">&uarr; </span>/ 2.80 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 57.8 %</p>
+    </div>
+    <div id="g-ai2-251" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:94.6887%;margin-top:-8.4px;left:79.3015%;margin-left:-37px;width:74px;">
+      <p class="g-pstyle1"><span class="g-cstyle0">&uarr; </span>/ 3.39 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 78.7 %</p>
+    </div>
+    <div id="g-ai2-252" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:95.6432%;margin-top:-6.9px;left:2.8947%;width:66px;">
+      <p class="g-pstyle0">MANDARIN</p>
+    </div>
+    <div id="g-ai2-253" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:95.583%;margin-top:-3px;left:67.638%;width:46px;">
+      <p class="g-pstyle2">No Responses</p>
+    </div>
+    <div id="g-ai2-254" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:95.583%;margin-top:-3px;left:76.5426%;width:40px;">
+      <p class="g-pstyle2">0.1% - 1%</p>
+    </div>
+    <div id="g-ai2-255" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:95.583%;margin-top:-3px;left:83.2985%;width:42px;">
+      <p class="g-pstyle2">1.1% - 10%</p>
+    </div>
+    <div id="g-ai2-256" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:95.583%;margin-top:-3px;left:89.8897%;width:45px;">
+      <p class="g-pstyle2">10.1% - 50%</p>
+    </div>
+    <div id="g-ai2-257" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.3973%;margin-top:-8px;left:18.5722%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2006</p>
+    </div>
+    <div id="g-ai2-258" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.3973%;margin-top:-8px;left:48.9955%;margin-left:-16px;width:32px;">
+      <p class="g-pstyle1">2011 </p>
+    </div>
+    <div id="g-ai2-259" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:96.3973%;margin-top:-8px;left:79.3035%;margin-left:-15.5px;width:31px;">
+      <p class="g-pstyle1">2016</p>
+    </div>
+    <div id="g-ai2-260" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:98.6596%;margin-top:-8.4px;left:18.8802%;margin-left:-33px;width:66px;">
+      <p class="g-pstyle1">1.61 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 13.7 %</p>
+    </div>
+    <div id="g-ai2-261" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:98.6596%;margin-top:-8.4px;left:48.926%;margin-left:-33px;width:66px;">
+      <p class="g-pstyle1"><span class="g-cstyle0">&uarr; </span> /2.10 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 18.2 %</p>
+    </div>
+    <div id="g-ai2-262" class="g-Layer_1 g-aiAbs g-aiPointText" style="top:98.6596%;margin-top:-8.4px;left:79.234%;margin-left:-37px;width:74px;">
+      <p class="g-pstyle1"><span class="g-cstyle0">&uarr; </span>/ 3.57 % of Total Responses</p>
+      <p class="g-pstyle1">Highest CT: 34.4 %</p>
+    </div>
+  </div>
+
+        </div>
+
+    <div class="row centered mt mb" style="margin-left: 10px; text-align: justify; margin-top:0; margin-bottom: 0 !important; ">
+      
+      <div class="col-lg-8 col-lg-offset-2" >
+      <p> 
+      The language category Chinese refers to all Chinese languages and dialects, however maps for Cantonese and Mandarin home language speakers were also produced. Chinese was used due to the differences in the recording of Chinese home languages during the different census periods. In the 2011 and 2006 Census (and earlier census periods), tens of thousands of Chinese speakers had their home languages recorded as Chinese n.o.s, meaning Chinese, not otherwise specified. This occured either because people identified as speaking a chinese language that was not included in the census at the time or because they simply reported “Chinese” as their home langauge. To fully reflect the population that speak a chinese home langauge, Social Planning Toronto decided to include not only Cantonese and Mandarin but also the broad category of Chinese home language. For more 
+      </p>
+      <p>
+      <br>
+      To read more about the Toronto Language Map visit the document <a href="https://d3n8a8pro7vhmx.cloudfront.net/socialplanningtoronto/pages/1828/attachments/original/1530894440/Toronto_Language_Map.pdf?1530894440">HERE</a>
+      <br>
+      Visit the interactive Toronto Language map <a href="https://www.socialplanningtoronto.org/languages_map">HERE</a>
+      </p>
+      </div>
+    </div>
+
+    </div>
+	</div><!--/container -->
+	
+	<div id="social">
+		<div class="container" >
+			<div class="row centered">
+				<div class="col-md-4">
+					<a href="mailto:jonathan.critchley@me.com" ><i class="fa fa-envelope-o"></i></a>
+				</div>
+				<div class="col-md-4">
+					
+				</div>	
+				<div class="col-md-4">
+					<a href="https://twitter.com/Afrikanadese" target="_blank"><i class="fa fa-twitter"></i></a>
+				</div>			
+			</div><!--/row -->
+		</div><!--/container -->
+	</div><!--/social -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
