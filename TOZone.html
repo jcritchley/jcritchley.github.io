@@ -550,7 +550,7 @@
       width: 100vw;
       height: 100vh;
       padding: 10% 45%;
-      position: fixed;
+      position: absolute;
       top: 0;
       left:0;
       right:0;
@@ -559,6 +559,8 @@
       display:none;
       overflow:hidden;
       transform: translate3d(0, 0, 0);
+      overflow-y:scroll !important;
+      -webkit-overflow-scrolling:touch !important;
       /*background: none !important;*/
       /*pointer-events:none;*/
     }
