@@ -46,14 +46,20 @@
 
     /* Full Screen Mapbox + Navbar edits */
 
-    html, body, #mapboxfull {
-      height:100%;
+    html, #mapboxfull {
+      height: 100%;
       width: 100%;
+      overflow: hidden;
       z-index:1;
-      position:absolute;
-      overflow:hidden;
-      overflow-y:hidden !important;
-      -webkit-overflow-scrolling:touch !important;
+    }
+
+    body {
+      z-index:1;
+      height: 100%;
+      padding: 0;
+      overflow: auto;
+      margin: 0;
+      -webkit-overflow-scrolling: touch;
     }
 
     .navbar-brand {
