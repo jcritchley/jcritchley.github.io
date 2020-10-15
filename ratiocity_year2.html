@@ -59,66 +59,170 @@
         
         <h1>Ratio.City - Year 2</h1>
         <br>
+        <h3 class="lead">I have been forunate to be involved from the early days at <a href="https://www.ratio.city">Ratio.City</a>, helping develop the ideas and concepts from proof of concept all the way to a fully realized commercial product.</h3> 
+        <p>Below is a summary of various UI, UX, Datasets and services I was involved in developing in my second year.</p>
+      </div>   
 
-        <h3>I have been forunate to be involved from the early days at <a href="https://www.ratio.city">Ratio.City</a>, helping develop the ideas and concepts from a proof of concept all the way to a fully realized commercial product, that some of Toronto's largest real estate companies rely on.</h3> 
-
-      </div>
-
-      <div class="col-lg-8 col-lg-offset-2">
-        <p>By the end of the first year we had focused on single massing developments, collected and cleaned a lot of data layers and started to polish and define workflows.</p>
-        <p>While users were impressed with what they could do with the tools and quick access to data, they were keen to also export information, with report generation quickly becoming a requested feature. The second year included responding to customer requests, reinvisioning in our own technical ways.</p>
-      </div>
-
-      <div class="col-lg-8 col-lg-offset-2">
-
-        <h2>Layer List and Layer Styles</h2>
-        
-        <h4>List Design</h4>
-        <p>As the platform has expandd geographically and added significantly more data, layer list has been updated.</p>
-
-        <h4>Layers Styling - 100+ layers</h4>
-        <p></p>
-
-        <h4>Data Processing</h4>
-        <p>Interesting layers like coverage and FAR.</p>
-
-      </div>
-
-      <div class="col-lg-8 col-lg-offset-2">
-
-        <h2>Reports</h2>
-        
-        <p>The data users are interested in many cases is only available as difficult to interpret PDFs, slow and limited web maps, and web based tables. We knew that having the various datasets in one location, in a geospatial format where they can be overlaid in an interactive map and queried provides valuable and new insights to our users. However, due to the collaborative nature of the industry and planning process, we recognize the value in being able to easily summarize, export and share with colleagues in consistantly reliable format.</p>
-
-        <h4>Planning Policy Summary:</h4>
-        <p>Single page report providing an instant summary of all policy layers intersecting a site, including two maps of Zoning By-Law Categories and Official Plan Land Use Layers.</p>
-
-        <h4>Dynamic Legends</h4>
-        <p>An interesting challenge of converting web content to print is limited space</p>
-
-        <h4>Development Potential</h4>
-        <p>Multi-page report providing an instant summary of site analysis and built form evaluation, including a customizable view of the 3D Massing Model, list of parcels in land assembly, total site area, GCA, GFA, NSA, density. A second page records the assumptions and inputs (setbacks, angular planes) and provides a detailed floor by floor breakdown of areas.</p>
-
-        <h4>Development Applications</h4>
-        <p></p>
-
-        <h4>Shadow Studies</h4>
-        <p>Multi-page report based on Development Potential 3D Massing Model, with built in checks if net new shadows intersect with over 2,000 public green areas within the City of Toronto, a summary map of the shadow spread for all hours, and 8-10 hourly maps (depending on month), displaying hour by hour shadow spread, neighbourhood shadows and net new shadows.</p>
+      <div class="col-md-8 col-md-offset-2">
         <br>
+        <h2 style="font-weight: bold; text-align: left;">Layer List Design</h2>
+        <p>As the platform has expanded geographically, adding significantly more layers, the layer list has had to adapt and keep up, wesigned with integrated legend per layer and quick access to jump between Geographies. Individually responsible for creating +100 map styles, combining multiple datasets using the Mapbox GL style specification.</p>
+      </div>
 
+      <div class="col-lg-10 col-lg-offset-1 mt" style="margin-top: 0px"> 
+        <br>
+        <!-- <h4 >Map Layers: Official Plan - Land Use </h4> --> 
+        <img class="img-responsive" src="assets/img/ratio_city_2/layer_list.png">   
+        <br>
+      </div>
+
+      <div class="col-md-8 col-md-offset-2">
+        <br>
+        <br>
+        <h2 style="font-weight: bold; text-align: left;">Data Processing + Visualization</h2>
+        <p>Produced original map layers combining multiple data layers, generating new insight into different aspects of the built environment. Layers were processed and combined using PostGIS with SQL functions used to create a repeatable process. Calculated properties like parcel coverage and Floor Area Ratio presented interesting opportunities to visualize in the map.</p>
+      </div> 
+
+      <div class="col-lg-10 col-lg-offset-1 mt" style="margin-top: 0px">
+        <p style="text-align: center;"></p>
+        <img class="img-responsive" style="margin-left: auto; margin-right: auto; display: block;" src="assets/img/ratio_city_2/layers.png">
+        <br>                                                                                                     
+      </div> 
+
+      <div class="col-md-8 col-md-offset-2">
+        <br>
+        <br>
+        <h2 style="font-weight: bold; text-align: left;">Aerial Imagery</h2>
+        <p>Using Historical (1939 - 2009) and more recent Orthorectified (2011 - 2018) aerial imagery from the City of Toronto Open Data. Allow users to explore Historical and Ortho at the same time to compare and contrast with each other, and other map layers like Development Applications to review site change over time.</p>
+      </div>
+
+      <div class="col-lg-10 col-lg-offset-1 mt" style="margin-top: 0px">
+        <p style="text-align: center;"></p>
+        <img class="img-responsive" style="margin-left: auto; margin-right: auto; display: block;" src="assets/img/ratio_city_2/historical.gif">
+        <br>                                                                                                     
       </div>
 
       <div class="col-lg-8 col-lg-offset-2">
+        <br>
+        <br>
+        <h2 style="font-weight: bold; text-align: left;">Reports</h2>
+      
+        <p>Due to the collaborative nature of the industry and planning process, we recognize the value in being able to easily summarize, export and share work. One way of helping users achieve that was printable reports.</p>
+      </div>
 
-        <h2>Multi-Massing + Split</h2>
-        <p>Turf.js </p>
+      <div class="col-lg-10 col-lg-offset-2">
+        <div class="row">
+          <div class="col-md-4">
 
+            <h3 style="font-weight: bold">Planning Policy Summary:</h3>
+            <p>Single page report providing instant summary of all policy layers intersecting a site, including two maps of Zoning By-Law Categories and Official Plan Land Use Layers.</p> 
+          
+          </div>
+          <div class="col-md-8">
+
+            <!-- <div class="col-lg-6 col-lg-offset-1 mt" style="margin-top: 0px"> -->
+            <p style="text-align: center;"></p>
+            <img class="img-responsive" style="margin-left: auto; margin-right: auto; display: block;" src="assets/img/ratio_city_2/policy_report.png">
+            <br>                                                                                                     
+            <!-- </div>  -->
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            
+            <h3 style="font-weight: bold">Development Potential</h3>
+            <p>Multi-page report providing instant summary of site analysis and built form evaluation, including a customizable view of the 3D Massing Model, list of parcels in land assembly, total site area, GCA, GFA, NSA, density. Additional pages record the assumptions and inputs (setbacks, angular planes) and provides a detailed floor by floor breakdown of areas. <a href="https://d3js.org">D3.js</a> was used to create mini key maps for multi-massing developments.</p>
+
+          </div>
+          <div class="col-md-8">
+
+            <!-- <div class="col-lg-6 col-lg-offset-1 mt" style="margin-top: 0px"> -->
+            <p style="text-align: center;"></p>
+            <img class="img-responsive" style="margin-left: auto; margin-right: auto; display: block;" src="assets/img/ratio_city_2/dev_potential.png">
+            <br>                                                                                                     
+            <!-- </div>  -->
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            
+            <h3 style="font-weight: bold">Development Applications</h3>
+            <p>Multi-page report providing exploratory Spatio-temporal Data Visualisation of development applications at the neighbourhood and ward level, allowing users to explore and compare status of other applications over time around a site of interest.</p>
+
+          </div>
+          <div class="col-md-8">
+
+            <!-- <div class="col-lg-6 col-lg-offset-1 mt" style="margin-top: 0px"> -->
+            <p style="text-align: center;"></p>
+            <img class="img-responsive" style="margin-left: auto; margin-right: auto; display: block;" src="assets/img/ratio_city_2/dev_apps.png">
+            <br>                                                                                                        
+            <!-- </div>  -->
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            
+            <h3 style="font-weight: bold">Shadow Studies</h3>
+            <p>Multi-page report based on Development Potential 3D Massing Model, with built in checks if net new shadows intersect with over 2,000 public green areas within the City of Toronto, a summary map of the shadow spread for all hours, and 8-10 hourly maps (depending on month), displaying hour by hour shadow spread, neighbourhood shadows and net new shadows.</p>
+
+          </div>
+          <div class="col-md-8">
+
+            <!-- <div class="col-lg-6 col-lg-offset-1 mt" style="margin-top: 0px"> -->
+            <p style="text-align: center;"></p>
+            <img class="img-responsive" style="margin-left: auto; margin-right: auto; display: block;" src="assets/img/ratio_city_2/shadow_report.png">
+            <br>                                                                                                        
+            <!-- </div>  -->
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-8 col-md-offset-2">
+        <br>
+        <br>
+        <h2 style="font-weight: bold; text-align: left;">Dynamic Legends</h2>
+        <p>Created for Planning Policy Summary reports in order to reduce the size of the map legends that occupy a printed page. They serve a secondary function to help users understand what is in view as they navigate around a map. The maps are synced using <a href="https://github.com/mapbox/mapbox-gl-sync-move">Mapbox GL Sync Move</a> so that both maps and their legends update at the same time. </p>
+
+      </div>
+
+      <div class="col-lg-10 col-lg-offset-1 mt" style="margin-top: 0px">
+        <p style="text-align: center;"></p>
+        <img class="img-responsive" style="margin-left: auto; margin-right: auto; display: block;" src="assets/img/ratio_city_2/policy_legend.gif">
+        <br>                                                                                                     
+      </div> 
+
+      <div class="col-lg-8 col-lg-offset-2">
+        <br>
+        <br>
+        <h2 style="font-weight: bold; text-align: left;">Multi-Massing + Split</h2>
+        <p> A popular request was the ability to subdivide parcels in order to generate multiple massing. The split tool uses<a href="https://github.com/mapbox/mapbox-gl-draw">Mapbox GL Draw</a> and <a href="https://turfjs.org">Turf.js</a> to help visualize the resulting areas, calculating length of sides and avoiding generating invalid geometry.</p>
+
+      </div>
+
+      <div class="col-lg-10 col-lg-offset-1 mt" style="margin-top: 0px"> 
+        <br>
+        <img class="img-responsive" style="margin-left: auto; margin-right: auto; display: block;" src="assets/img/ratio_city_2/split_tool.gif">    
+        <br>
+      </div> 
+
+      <div class="col-lg-8 col-lg-offset-2">
+        <br>
+        <br>
+        <h2 style="font-weight: bold; text-align: left;">Measure Tool</h2>
+        <p> Using <a href="https://github.com/mapbox/mapbox-gl-draw">Mapbox GL Draw</a> and <a href="https://turfjs.org">Turf.js</a> to create a quick access measure tool to allow users to measure custom drawn lines and areas. </p>
       </div>
       
       <div class="col-lg-10 col-lg-offset-1 mt" style="margin-top: 0px"> 
         <br>
-        <!-- <h4 >Map Layers: Official Plan - Land Use </h4> --> 
-        <a href="https://www.ratio.city"><img class="img-responsive" src="assets/img/ratiocity/main.png"></a>      
+        <img class="img-responsive" style="margin-left: auto; margin-right: auto; display: block;" src="assets/img/ratio_city_2/measure.gif">    
         <br>
       </div> 
 
