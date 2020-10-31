@@ -59,20 +59,27 @@
         
         <h1>Ratio.City - Year 2</h1>
         <br>
-        <h3 class="lead">I have been fortunate to be involved from the early days at <a href="https://www.ratio.city">Ratio.City</a>, helping develop the ideas and concepts from proof of concept all the way to a fully realized commercial product, helping to define a template to be reused as we expand geographically.</h3> 
-        <p>Below is a summary of various UI, UX, Datasets and services I was involved in planning, designing, and developing.</p>
+        <h3 class="lead">I have been involved from the early days at <a href="https://www.ratio.city">Ratio.City</a>, helping develop the ideas and concepts from proof of concept all the way to a fully realized commercial product, helping to define a template to be reused as we expand geographically.</h3> 
+        <p>Below is a summary of various UI, UX, Datasets and services I was involved in planning, designing, and developing during the second year.</p>
       </div>   
 
       <div class="col-md-8 col-md-offset-2">
         <br>
-        <h2 style="font-weight: bold; text-align: left;">Layer List Design</h2>
-        <p>As the platform has expanded geographically, adding significantly more layers, the layer list has had to adapt and keep up, designed with integrated legend per layer and quick access to jump between Geographies. Individually responsible for creating +100 map styles, combining multiple datasets using the Mapbox GL style specification.</p>
+        <h2 style="font-weight: bold; text-align: left;">Layer List Design + Legends</h2>
+        <p>As the platform has expanded geographically, adding significantly more layers, the layer list has had to adapt and keep up, designed with integrated legend per layer and quick access to jump between Geographies. Individually responsible for creating +100 map styles, combining multiple datasets using the Mapbox GL style specification. A legend service was created to display categorical and numeric legends, in many cases converting Mabpox GL styles directly into legends.</p>
       </div>
 
       <div class="col-lg-10 col-lg-offset-1 mt" style="margin-top: 0px"> 
         <br>
         <!-- <h4 >Map Layers: Official Plan - Land Use </h4> --> 
         <img class="img-responsive" src="assets/img/ratio_city_2/layer_list.png">   
+        <!-- <br> -->
+      </div>
+
+      <div class="col-lg-10 col-lg-offset-1 mt" style="margin-top: 0px"> 
+        <br>
+        <!-- <h4 >Map Layers: Official Plan - Land Use </h4> --> 
+        <img class="img-responsive" src="assets/img/ratio_city_2/numeric_legend.png">   
         <br>
       </div>
 
@@ -100,6 +107,32 @@
         <p style="text-align: center;"></p>
         <img class="img-responsive" style="margin-left: auto; margin-right: auto; display: block;" src="assets/img/ratio_city_2/historical.gif">
         <br>                                                                                                     
+      </div>
+
+      <div class="col-md-8 col-md-offset-2">
+        <br>
+        <h2 style="font-weight: bold; text-align: left;">Multi-Massing</h2>
+        <p>A significant time was spent modifying the Development Potential Massing tools to allow users to split sites and manage multiple independent massings at the same time. It required a complete overhaul of the web app logic which previously only handled a single massing, requiring rethinking user interactions to switch active selections and interfaces to summarize even more complex information accross the app.</p>
+      </div>
+
+      <div class="col-lg-10 col-lg-offset-1 mt" style="margin-top: 0px"> 
+        <br>
+        <!-- <h4 >Map Layers: Official Plan - Land Use </h4> --> 
+        <img class="img-responsive" src="assets/img/ratio_city_2/multi_massing.png">   
+        <br>
+      </div>
+
+      <div class="col-md-8 col-md-offset-2">
+        <br>
+        <h2 style="font-weight: bold; text-align: left;">Automatic and Suggested Massing Input Values</h2>
+        <p>As we built up our database of spatial policy data we were able to start auto populating massing inputs using values relating to policy on parcels of land and relevant to where users had selected frontages on a site. The inputs were modified to tell users what suggested values were, and allowed resetting once modified.</p>
+      </div>
+
+      <div class="col-lg-10 col-lg-offset-1 mt" style="margin-top: 0px"> 
+        <br>
+        <!-- <h4 >Map Layers: Official Plan - Land Use </h4> --> 
+        <img class="img-responsive" src="assets/img/ratio_city_2/input_tooltips.png">   
+        <br>
       </div>
 
       <div class="col-lg-8 col-lg-offset-2">
@@ -210,6 +243,19 @@
       <div class="col-lg-10 col-lg-offset-1 mt" style="margin-top: 0px">
         <p style="text-align: center;"></p>
         <img class="img-responsive" style="margin-left: auto; margin-right: auto; display: block;" src="assets/img/ratio_city_2/policy_legend.gif">
+        <br>                                                                                                     
+      </div> 
+
+      <div class="col-md-8 col-md-offset-2">
+        <br>
+        <br>
+        <!-- <h2 style="font-weight: bold; text-align: left;">Dynamic Legends</h2> -->
+        <p>Dynamic legends were also created for development massings, providing quick feedback for the different colors highlighting errors and where the development was over the As of Right height.</p>
+
+      </div>
+      <div class="col-lg-10 col-lg-offset-1 mt" style="margin-top: 0px">
+        <p style="text-align: center;"></p>
+        <img class="img-responsive" style="margin-left: auto; margin-right: auto; display: block;" src="assets/img/ratio_city_2/massing_legend.gif">
         <br>                                                                                                     
       </div> 
 
