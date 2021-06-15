@@ -977,7 +977,7 @@
         },'sand');
 
         map.on('click', function (e) {
-            var features = map.queryRenderedFeatures(e.point, { layers: ['Cromulon_large-2xcluo'] });
+            var features = map.queryRenderedFeatures(e.point, { layers: ['ZONING_ZONE_CATAGORIES_WGS84-38skdf'] });
             if (!features.length) {
                 return;
             }
@@ -1108,20 +1108,20 @@
       });
 
       // controls displaying CN tower SVG and styling layers
-      $(document).ready(function(){
-      $("#mapboxfull").click(function(){
-        $("#cn_tower").toggle();  
-        $(".move-area").toggle(); 
-        map.setPaintProperty('ZONING_ZONE_CATAGORIES_WGS84-38skdf', 'fill-color', '#0A0A0A');
-        map.setPaintProperty('BuildingFootprint', 'fill-extrusion-color', '#666666');
-      }); 
+      // $(document).ready(function(){
+      // $("#mapboxfull").click(function(){
+      //   $("#cn_tower").toggle();  
+      //   $(".move-area").toggle(); 
+      //   map.setPaintProperty('ZONING_ZONE_CATAGORIES_WGS84-38skdf', 'fill-color', '#0A0A0A');
+      //   map.setPaintProperty('BuildingFootprint', 'fill-extrusion-color', '#666666');
+      // }); 
 
-      $("#XMLID_2_").click(function(){
-        location.href = 'ratiocity_linked.html'
-        $("#ratio_infoClose").toggle();
-        $("#ratio_infoBox").toggle(); 
-      });
-      });
+      // $("#XMLID_2_").click(function(){
+      //   location.href = 'ratiocity_linked.html'
+      //   $("#ratio_infoClose").toggle();
+      //   $("#ratio_infoBox").toggle(); 
+      // });
+      // });
      
 
       //This is a pen based off of Codewoofy's eyes follow mouse. It is just cleaned up, face removed, and then made to be a little more cartoony. https://codepen.io/Codewoofy/pen/VeBJEP
