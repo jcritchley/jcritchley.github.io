@@ -44,15 +44,16 @@ body { margin: 0; padding: 0; }
         bearing: 0
     };
     const end = {
-        center: [2.336071, 48.861178],
-        zoom: 17.25,
-        bearing: 85,
-        pitch: 50
+        center: [11.583888, 48.142957],
+        zoom: 17,
+        bearing: -161,
+        pitch: 53
     };
     const map = new mapboxgl.Map({
         container: 'map',
         // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
         style: 'mapbox://styles/mapbox/standard-beta',
+        hash: true,
         ...start
     });
 
